@@ -1,0 +1,250 @@
+/*
+
+Vivado v2017.2 (64-bit)
+SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+
+Process ID: 10992
+License: Customer
+
+Current time: 	9/26/19 4:11:20 PM CST
+Time zone: 	China Standard Time (Asia/Taipei)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 7 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Xilinx/Vivado/2017.2/tps/win64/jre
+JVM executable location: 	D:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/java.exe
+Java library paths: D:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o;C:/WINDOWS/Sun/Java/bin;C:/WINDOWS/system32;C:/WINDOWS;D:/Xilinx/Vivado/2017.2/bin;D:/Xilinx/Vivado/2017.2/lib/win64.o;D:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/server;D:/Xilinx/Vivado/2017.2/tps/win64/jre/bin;D:/Xilinx/SDK/2017.2/bin;D:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64;D:/Xilinx/Vivado_HLS/2017.2/bin;C:/Windows/system32;C:/Windows;C:/Windows/System32/Wbem;C:/Windows/System32/WindowsPowerShell/v1.0/;C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common;C:/WINDOWS/System32/OpenSSH/;C:/Program Files/dotnet/;C:/Users/adam/AppData/Local/Microsoft/WindowsApps;C:/Users/adam/AppData/Local/GitHubDesktop/bin;C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem;;D:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/bin;D:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/libexec/gcc/x86_64-w64-mingw32/6.2.0;.
+
+User name: 	adam
+User home directory: C:/Users/adam
+User working directory: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman
+User country: 	TW
+User language: 	zh
+User locale: 	zh_TW
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2017.2
+RDI_DATADIR: D:/Xilinx/Vivado/2017.2/data
+RDI_BINDIR: D:/Xilinx/Vivado/2017.2/bin
+
+User preferences location: C:/Users/adam/AppData/Roaming/Xilinx/Vivado
+Vivado preferences directory: C:/Users/adam/AppData/Roaming/Xilinx/Vivado/2017.2/vivado.xml
+Vivado layouts directory: C:/Users/adam/AppData/Roaming/Xilinx/Vivado/2017.2/layouts
+PlanAhead jar location: 	D:/Xilinx/Vivado/2017.2/lib/classes/planAhead.jar
+Vivado Look & Feel: 	[Synthetica - the extended Synth Look and Feel. - ui.g.i.H]
+Engine tmp dir: 	C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/.Xil/Vivado-10992-DESKTOP-L7VH7BR
+
+GUI allocated memory:	162 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 515 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 59 MB (+59219kb) [00:00:07]
+// [Engine Memory]: 460 MB (+330537kb) [00:00:07]
+// bs:g (cg:JFrame):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\adam\Documents\Quantaser_RP_FPGA\FOG_Klaman\project_tt.xpr. Version: Vivado v2017.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// Tcl Message: open_project C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.xpr 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 63 MB (+1558kb) [00:00:12]
+// [Engine Memory]: 599 MB (+122296kb) [00:00:12]
+// [Engine Memory]: 634 MB (+4654kb) [00:00:13]
+// [GUI Memory]: 67 MB (+263kb) [00:00:14]
+// [GUI Memory]: 75 MB (+5511kb) [00:00:15]
+// Tcl Message: open_project C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 640 MB. GUI used memory: 48 MB. Current time: 9/26/19 4:11:26 PM CST
+// Tcl Message: open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 839.133 ; gain = 136.480 
+// Project name: project_tt; location: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman; part: xc7z010clg400-1
+dismissDialog("Open Project"); // bs:g (cg:JFrame)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i:JideTabbedPane (N:aJ, cg:JFrame)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i:JideTabbedPane (N:aJ, cg:JFrame)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 2); // i:JideTabbedPane (N:aJ, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, red_pitaya_top.sv]", 26, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, red_pitaya_top.sv]", 26, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// Elapsed time: 17 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc", true); // l:X (ax:e, cg:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc"); // l:X (ax:e, cg:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc"); // l:X (ax:e, cg:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc"); // l:X (ax:e, cg:JFrame)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc_dat", true); // l:X (ax:e, cg:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc_dat"); // l:X (ax:e, cg:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc_dat"); // l:X (ax:e, cg:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc_dat"); // l:X (ax:e, cg:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc_dat"); // l:X (ax:e, cg:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc_dat"); // l:X (ax:e, cg:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc_dat"); // l:X (ax:e, cg:JFrame)
+// [GUI Memory]: 81 MB (+2328kb) [00:00:57]
+selectCodeEditor("red_pitaya_top.sv", 102, 331); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 11 seconds
+selectButton(RDIResource.HCodeEditor_CLOSE, (String) null); // k:JideButton (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("red_pitaya_top.sv", 144, 256); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("red_pitaya_top.sv", 144, 256, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'v'); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 86 MB (+109kb) [00:01:29]
+// [GUI Memory]: 91 MB (+682kb) [00:01:30]
+// HMemoryUtils.trashcanNow. Engine heap size: 665 MB. GUI used memory: 48 MB. Current time: 9/26/19 4:12:42 PM CST
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// [Engine Memory]: 680 MB (+14997kb) [00:01:38]
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Sep 26 16:12:49 2019] Launched synth_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.runs/synth_1/runme.log [Thu Sep 26 16:12:49 2019] Launched impl_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 847.039 ; gain = 7.906 
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// [Engine Memory]: 715 MB (+1353kb) [00:01:40]
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 96 MB (+909kb) [00:04:52]
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// ah:x (cg:JFrame): Bitstream Generation Failed: addNotify
+// Elapsed time: 508 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah:x (cg:JFrame)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aF:FrameContainer (ContainerContainer:JideSplitPane, cg:JFrame)
+// Elapsed time: 107 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Netlist, Design Level, Combinatorial Loop, [DRC LUTLP-1] Combinatorial Loop Alert: 1 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any net in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [net_nets <myHier/myNet>'. The cells in the loop are: i_id/dac_dat_a[0]_i_1.. ]", 14); // ah:i (JViewport:JComponent, cg:JFrame)
+// Elapsed time: 28 seconds
+selectCodeEditor("red_pitaya_top.sv", 174, 255); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 2); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Sep 26 16:23:57 2019] Launched synth_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.runs/synth_1/runme.log [Thu Sep 26 16:23:57 2019] Launched impl_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 888.031 ; gain = 0.000 
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 102 MB (+1701kb) [00:19:12]
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 452 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a:JRadioButton (JPanel:JComponent, ah:x)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ah:x (cg:JFrame)
+// Elapsed time: 240 seconds
+selectCodeEditor("red_pitaya_top.sv", 77, 273); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("red_pitaya_top.sv", 77, 273, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+selectCodeEditor("red_pitaya_top.sv", 49, 180); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("red_pitaya_top.sv", 49, 180, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+// Elapsed time: 19 seconds
+selectCodeEditor("red_pitaya_top.sv", 145, 389); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("red_pitaya_top.sv", 145, 389, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+// [GUI Memory]: 108 MB (+333kb) [00:28:59]
+// Elapsed time: 273 seconds
+selectCodeEditor("red_pitaya_top.sv", 145, 295); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("red_pitaya_top.sv", 145, 295, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+// Elapsed time: 48 seconds
+selectCodeEditor("red_pitaya_top.sv", 194, 347); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("red_pitaya_top.sv", 194, 347, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 25 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mod_stat_H"); // l:X (ax:e, cg:JFrame)
+selectCodeEditor("red_pitaya_top.sv", 71, 328); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("red_pitaya_top.sv", 71, 328, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("red_pitaya_top.sv", 165, 153); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("red_pitaya_top.sv", 165, 153, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 19 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reg_mod_freq_cnt"); // l:X (ax:e, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, red_pitaya_id.v]", 7, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, red_pitaya_id.v]", 7, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 715 MB. GUI used memory: 52 MB. Current time: 9/26/19 4:42:42 PM CST
+// Elapsed time: 21 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reg_mod_freq_cnt"); // l:X (ax:e, cg:JFrame)
+selectCodeEditor("red_pitaya_id.v", 174, 338); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("red_pitaya_id.v", 174, 338, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv", 1); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Sep 26 16:43:17 2019] Launched synth_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.runs/synth_1/runme.log [Thu Sep 26 16:43:17 2019] Launched impl_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 888.031 ; gain = 0.000 
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 454 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ah:x (cg:JFrame)

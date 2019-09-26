@@ -1,0 +1,85 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Sep 26 15:41:04 2019
+# Process ID: 13112
+# Current directory: C:/Users/adam/Desktop/新增資料夾/FOG/project_tt.runs/impl_1
+# Command line: vivado.exe -log red_pitaya_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source red_pitaya_top.tcl -notrace
+# Log file: C:/Users/adam/Desktop/新增資料夾/FOG/project_tt.runs/impl_1/red_pitaya_top.vdi
+# Journal file: C:/Users/adam/Desktop/新增資料夾/FOG/project_tt.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source red_pitaya_top.tcl -notrace
+Command: open_checkpoint red_pitaya_top_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 221.008 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1275 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/adam/Desktop/新增資料夾/FOG/project_tt.runs/impl_1/.Xil/Vivado-13112-DESKTOP-L7VH7BR/dcp3/red_pitaya_top_board.xdc]
+Finished Parsing XDC File [C:/Users/adam/Desktop/新增資料夾/FOG/project_tt.runs/impl_1/.Xil/Vivado-13112-DESKTOP-L7VH7BR/dcp3/red_pitaya_top_board.xdc]
+Parsing XDC File [C:/Users/adam/Desktop/新增資料夾/FOG/project_tt.runs/impl_1/.Xil/Vivado-13112-DESKTOP-L7VH7BR/dcp3/red_pitaya_top_early.xdc]
+Finished Parsing XDC File [C:/Users/adam/Desktop/新增資料夾/FOG/project_tt.runs/impl_1/.Xil/Vivado-13112-DESKTOP-L7VH7BR/dcp3/red_pitaya_top_early.xdc]
+Parsing XDC File [C:/Users/adam/Desktop/新增資料夾/FOG/project_tt.runs/impl_1/.Xil/Vivado-13112-DESKTOP-L7VH7BR/dcp3/red_pitaya_top.xdc]
+Finished Parsing XDC File [C:/Users/adam/Desktop/新增資料夾/FOG/project_tt.runs/impl_1/.Xil/Vivado-13112-DESKTOP-L7VH7BR/dcp3/red_pitaya_top.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 566.930 ; gain = 19.102
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 566.930 ; gain = 19.102
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 53 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 23 instances
+  RAM256X1S => RAM256X1S (RAMS64E, RAMS64E, RAMS64E, RAMS64E, MUXF7, MUXF7, MUXF8): 30 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2017.2 (64-bit) build 1909853
+open_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 569.938 ; gain = 350.051
+Command: write_bitstream -force red_pitaya_top.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010-clg400'
+Running DRC as a precondition to command write_bitstream
+Command: report_drc (run_mandatory_drcs) for: bitstream_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC DPIP-1] Input pipelining: DSP i_scope/i_dfilt1_cha/bb_mult input i_scope/i_dfilt1_cha/bb_mult/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP i_scope/i_dfilt1_cha/kk_mult input i_scope/i_dfilt1_cha/kk_mult/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP i_scope/i_dfilt1_chb/bb_mult input i_scope/i_dfilt1_chb/bb_mult/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP i_scope/i_dfilt1_chb/kk_mult input i_scope/i_dfilt1_chb/kk_mult/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_scope/i_dfilt1_cha/aa_mult output i_scope/i_dfilt1_cha/aa_mult/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_scope/i_dfilt1_cha/kk_mult output i_scope/i_dfilt1_cha/kk_mult/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_scope/i_dfilt1_cha/pp_mult output i_scope/i_dfilt1_cha/pp_mult/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_scope/i_dfilt1_chb/aa_mult output i_scope/i_dfilt1_chb/aa_mult/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_scope/i_dfilt1_chb/kk_mult output i_scope/i_dfilt1_chb/kk_mult/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_scope/i_dfilt1_chb/pp_mult output i_scope/i_dfilt1_chb/pp_mult/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/i_dfilt1_cha/aa_mult multiplier stage i_scope/i_dfilt1_cha/aa_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/i_dfilt1_cha/bb_mult multiplier stage i_scope/i_dfilt1_cha/bb_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/i_dfilt1_cha/kk_mult multiplier stage i_scope/i_dfilt1_cha/kk_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/i_dfilt1_cha/pp_mult multiplier stage i_scope/i_dfilt1_cha/pp_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/i_dfilt1_chb/aa_mult multiplier stage i_scope/i_dfilt1_chb/aa_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/i_dfilt1_chb/bb_mult multiplier stage i_scope/i_dfilt1_chb/bb_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/i_dfilt1_chb/kk_mult multiplier stage i_scope/i_dfilt1_chb/kk_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/i_dfilt1_chb/pp_mult multiplier stage i_scope/i_dfilt1_chb/pp_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port exp_n_io[0] expects both input and output buffering but the buffers are incomplete.
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 19 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./red_pitaya_top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] 'C:/Users/adam/Desktop/新增資料夾/FOG/project_tt.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Thu Sep 26 15:41:44 2019. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+16 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1038.891 ; gain = 468.953
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 26 15:41:44 2019...

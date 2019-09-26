@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Sep 26 15:48:02 2019
+# Process ID: 20416
+# Current directory: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8216 C:\Users\adam\Documents\Quantaser_RP_FPGA\FOG_Klaman\project_tt.xpr
+# Log file: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/vivado.log
+# Journal file: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'brd'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libps7.so'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libps7.dll'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libremoteport.so'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libremoteport.dll'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:13 . Memory (MB): peak = 830.805 ; gain = 151.457
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Thu Sep 26 15:49:56 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Thu Sep 26 15:54:10 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 26 16:00:22 2019...

@@ -1,0 +1,226 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Jul 29 19:31:03 2019
+# Process ID: 11904
+# Current directory: C:/Users/adam/Desktop/FPGA_Projects/FOG
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12044 C:\Users\adam\Desktop\FPGA_Projects\FOG\project_tt.xpr
+# Log file: C:/Users/adam/Desktop/FPGA_Projects/FOG/vivado.log
+# Journal file: C:/Users/adam/Desktop/FPGA_Projects/FOG\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'brd'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libps7.so'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libps7.dll'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libremoteport.so'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libremoteport.dll'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 743.340 ; gain = 73.453
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jul 30 16:34:35 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 833.598 ; gain = 0.000
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs impl_1 -jobs 2
+[Tue Jul 30 16:35:03 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Tue Jul 30 16:35:03 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 886.961 ; gain = 0.000
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jul 30 16:41:46 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jul 30 17:14:20 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Tue Jul 30 17:14:20 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 886.961 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jul 30 17:27:34 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Tue Jul 30 17:27:34 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 886.961 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jul 30 17:28:43 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Tue Jul 30 17:28:43 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jul 30 18:05:39 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Tue Jul 30 18:05:39 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 886.961 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jul 30 18:23:46 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Tue Jul 30 18:23:46 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 886.961 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jul 30 18:36:47 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Tue Jul 30 18:36:47 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 886.961 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jul 30 20:11:21 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Tue Jul 30 20:11:21 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 886.961 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jul 30 20:23:08 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Tue Jul 30 20:23:08 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 886.961 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jul 30 20:44:13 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Tue Jul 30 20:44:13 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 886.961 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jul 30 21:02:21 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Tue Jul 30 21:02:21 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 886.961 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jul 30 21:52:10 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Tue Jul 30 21:52:10 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 886.961 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jul 31 15:47:52 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Wed Jul 31 15:47:52 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 890.336 ; gain = 0.000
+set_property -dict [list CONFIG.PortBWidth {17} CONFIG.OutputWidthHigh {31}] [get_ips mult_gen_1]
+generate_target all [get_files  C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.srcs/sources_1/ip/mult_gen_1/mult_gen_1.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'mult_gen_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'mult_gen_1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'mult_gen_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'mult_gen_1'...
+export_ip_user_files -of_objects [get_files C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.srcs/sources_1/ip/mult_gen_1/mult_gen_1.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.srcs/sources_1/ip/mult_gen_1/mult_gen_1.xci] -directory C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.ip_user_files -ipstatic_source_dir C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.cache/compile_simlib/modelsim} {questa=C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.cache/compile_simlib/questa} {riviera=C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.cache/compile_simlib/riviera} {activehdl=C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jul 31 16:17:33 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Wed Jul 31 16:17:33 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 904.988 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jul 31 16:34:49 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Wed Jul 31 16:34:49 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 904.988 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jul 31 16:48:18 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Wed Jul 31 16:48:18 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 904.988 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jul 31 17:09:18 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Wed Jul 31 17:09:18 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 904.988 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jul 31 17:26:51 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Wed Jul 31 17:26:51 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 904.988 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jul 31 17:37:07 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Wed Jul 31 17:37:07 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 904.988 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jul 31 17:51:41 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Wed Jul 31 17:51:41 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 907.168 ; gain = 2.180
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jul 31 18:06:44 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Wed Jul 31 18:06:44 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 907.168 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jul 31 18:19:14 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Wed Jul 31 18:19:14 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 907.168 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Aug  1 15:15:45 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Thu Aug  1 15:15:45 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 914.094 ; gain = 0.000
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Aug  1 15:22:50 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Aug  1 15:24:03 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Thu Aug  1 15:24:03 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Aug  1 15:30:04 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/synth_1/runme.log
+[Thu Aug  1 15:30:04 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/FPGA_Projects/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 917.145 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Aug  5 15:24:08 2019...
