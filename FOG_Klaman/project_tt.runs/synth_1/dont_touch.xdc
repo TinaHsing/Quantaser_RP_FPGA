@@ -3,8 +3,38 @@
 
 # XDC: imports/sdc/red_pitaya.xdc
 
-# IP: ip/mult_gen_0/mult_gen_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mult_gen_0 || ORIG_REF_NAME==mult_gen_0}]
+# IP: ip/adder3/adder3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==adder3 || ORIG_REF_NAME==adder3}]
+
+# IP: ip/divider3/divider3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==divider3 || ORIG_REF_NAME==divider3}]
+
+# IP: ip/multiplier2/multiplier2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==multiplier2 || ORIG_REF_NAME==multiplier2}]
+
+# IP: ip/subtractor2/subtractor2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==subtractor2 || ORIG_REF_NAME==subtractor2}]
+
+# IP: ip/divider2/divider2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==divider2 || ORIG_REF_NAME==divider2}]
+
+# IP: ip/multiplier/multiplier.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==multiplier || ORIG_REF_NAME==multiplier}]
+
+# IP: ip/subtractor/subtractor.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==subtractor || ORIG_REF_NAME==subtractor}]
+
+# IP: ip/divider/divider.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==divider || ORIG_REF_NAME==divider}]
+
+# IP: ip/adder2/adder2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==adder2 || ORIG_REF_NAME==adder2}]
+
+# IP: ip/adder/adder.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==adder || ORIG_REF_NAME==adder}]
+
+# IP: ip/mult_gen_1/mult_gen_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mult_gen_1 || ORIG_REF_NAME==mult_gen_1}]
 
 # Block Designs: bd/system/system.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system || ORIG_REF_NAME==system}]
@@ -23,41 +53,5 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xadc_0 |
 
 # IP: bd/system/ip/system_xlconstant_0/system_xlconstant_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xlconstant_0 || ORIG_REF_NAME==system_xlconstant_0}]
-
-# IP: ip/mult_1_2/mult_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mult_1 || ORIG_REF_NAME==mult_1}]
-
-# IP: ip/mult_gen_1/mult_gen_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mult_gen_1 || ORIG_REF_NAME==mult_gen_1}]
-
-# IP: ip/adder/adder.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==adder || ORIG_REF_NAME==adder}]
-
-# IP: ip/adder2/adder2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==adder2 || ORIG_REF_NAME==adder2}]
-
-# IP: ip/divider/divider.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==divider || ORIG_REF_NAME==divider}]
-
-# IP: ip/subtractor/subtractor.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==subtractor || ORIG_REF_NAME==subtractor}]
-
-# IP: ip/multiplier/multiplier.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==multiplier || ORIG_REF_NAME==multiplier}]
-
-# IP: ip/divider2/divider2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==divider2 || ORIG_REF_NAME==divider2}]
-
-# IP: ip/subtractor2/subtractor2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==subtractor2 || ORIG_REF_NAME==subtractor2}]
-
-# IP: ip/multiplier2/multiplier2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==multiplier2 || ORIG_REF_NAME==multiplier2}]
-
-# IP: ip/divider3/divider3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==divider3 || ORIG_REF_NAME==divider3}]
-
-# IP: ip/adder3/adder3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==adder3 || ORIG_REF_NAME==adder3}]
 
 # XDC: bd/system/system_ooc.xdc

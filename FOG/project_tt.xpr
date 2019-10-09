@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="20" Path="C:/Users/adam/Desktop/新增資料夾/FOG/project_tt.xpr">
+<Project Version="7" Minor="20" Path="C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="46be28093db64e269a7ef843f5ee7326"/>
@@ -68,6 +68,9 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_proc_sys_reset_0/system_proc_sys_reset_0.xci">
+          <Proxy FileSetName="system_proc_sys_reset_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_xlconstant_0/system_xlconstant_0.xci">
           <Proxy FileSetName="system_xlconstant_0"/>
         </CompFileExtendedInfo>
@@ -76,9 +79,6 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_processing_system7_0/system_processing_system7_0.xci">
           <Proxy FileSetName="system_processing_system7_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_proc_sys_reset_0/system_proc_sys_reset_0.xci">
-          <Proxy FileSetName="system_proc_sys_reset_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_axi_protocol_converter_0_0/system_axi_protocol_converter_0_0.xci">
           <Proxy FileSetName="system_axi_protocol_converter_0_0"/>

@@ -108,8 +108,18 @@ module red_pitaya_top #(
   input  logic [ 2-1:0] daisy_n_i  ,
   // LED
   inout  logic [ 8-1:0] led_o
+  //simulation
+  // ,input clk
+  // ,input [13:0] measure
+  // ,input adc_rstn
+  // ,input ladder_start_strobe
+  // ,output [31:0] Q, Q2, Q3
+  // ,output reg [14-1:0] x_apo_est, P_apo_est  
+  
 );
-
+assign Q = K[47:16];
+assign Q2 = out_divider_P_apo_est[63:32];
+assign Q3 = out_divider_K_post_error[63:32];
 ////////////////////////////////////////////////////////////////////////////////
 // local signals
 //////////////////////////////////////////////////////////////////////////////// 
@@ -373,7 +383,8 @@ logic [6:0] deMOD_mv_cnt = 7'd64;
 //assign dac_b_sum = dac_ladder_2[14:0];
 
 assign dac_a_sum = measure; 
-assign dac_b_sum = out_adder_x_apri_est_divided_K_post_error[14:0];
+assign dac_b_sum = out_divider_P_apo_est[45:32]; 
+// assign dac_b_sum = x_apo_est;
 
 // saturation
 assign dac_a = (^dac_a_sum[15-1:15-2]) ? {dac_a_sum[15-1], {13{~dac_a_sum[15-1]}}} : dac_a_sum[14-1:0];
@@ -953,10 +964,10 @@ logic signed [15-1:0] P_apri_est;
 logic signed [16-1:0] out_adder_P_apri_est_R;
 logic signed [48-1:0] K;
 logic signed [32-1:0] out_subtractor_1_K;
-logic signed [64-1:0] out_multiplier_P_apo_est;
+logic signed [47-1:0] out_multiplier_P_apo_est;
 
-logic signed [14-1:0] post_error;
-logic signed [46-1:0] out_multiplier_K_post_error;
+logic signed [15-1:0] post_error;
+logic signed [47-1:0] out_multiplier_K_post_error;
 logic signed [64-1:0] out_divider_K_post_error;
 logic signed [31:0] out_adder_x_apri_est_divided_K_post_error;
 
@@ -987,15 +998,17 @@ divider P_apri_est_R_P_apri_est //P_apri_est/(R+P_apri_est)
 (
   .aclk(dac_clk_1x),                                      // input wire aclk
   .s_axis_divisor_tvalid(1'b1),    // input wire s_axis_divisor_tvalid
-  .s_axis_divisor_tdata(out_adder_P_apri_est_R),      // input wire [15 : 0] s_axis_divisor_tdata
+ .s_axis_divisor_tdata(out_adder_P_apri_est_R),      // input wire [15 : 0] s_axis_divisor_tdata
+  // .s_axis_divisor_tdata(1),      // input wire [15 : 0] s_axis_divisor_tdata
   .s_axis_dividend_tvalid(1'b1),  // input wire s_axis_dividend_tvalid
-  .s_axis_dividend_tdata(P_apri_est <<< 15),    // input wire [31 : 0] s_axis_dividend_tdata
+ .s_axis_dividend_tdata(P_apri_est <<< 13),    // input wire [31 : 0] s_axis_dividend_tdata
+  // .s_axis_dividend_tdata(1 <<< 15),    // input wire [31 : 0] s_axis_dividend_tdata
   .m_axis_dout_tvalid(),          // output wire m_axis_dout_tvalid
   .m_axis_dout_tdata(K)            // output wire [47 : 0] m_axis_dout_tdata
 );
 subtractor _1_K  //1-K
 (
-  .A(32'b1),      // input wire [31 : 0] A
+  .A(32'd8191),      // input wire [31 : 0] A
   .B(K[47:16]),      // input wire [31 : 0] B
   .CLK(dac_clk_1x),  // input wire CLK
   .CE(1'b1),    // input wire CE
@@ -1004,15 +1017,15 @@ subtractor _1_K  //1-K
 multiplier P_apri_est_1_K					//P_apri_est * (1-K) 
 (
   .CLK(dac_clk_1x),  // input wire CLK
-  .A(P_apri_est),      // input wire [31 : 0] A
+  .A(P_apri_est),      // input wire [14 : 0] A
   .B(out_subtractor_1_K),      // input wire [31 : 0] B
-  .P(out_multiplier_P_apo_est)      // output wire [63 : 0] P
+  .P(out_multiplier_P_apo_est)      // output wire [46 : 0] P
 );
-divider2 shifted_P_apo_est			//Divide by 2^15 
+divider2 shifted_P_apo_est			//Divide by 2^14
 (
   .aclk(dac_clk_1x),                                      // input wire aclk
   .s_axis_divisor_tvalid(1'b1),    // input wire s_axis_divisor_tvalid
-  .s_axis_divisor_tdata(32'd32768),      // input wire [31 : 0] s_axis_divisor_tdata
+  .s_axis_divisor_tdata(32'd8192),      // input wire [31 : 0] s_axis_divisor_tdata
   .s_axis_dividend_tvalid(1'b1),  // input wire s_axis_dividend_tvalid
   .s_axis_dividend_tdata(out_multiplier_P_apo_est[31:0]),    // input wire [31 : 0] s_axis_dividend_tdata
   .m_axis_dout_tvalid(),          // output wire m_axis_dout_tvalid
@@ -1026,20 +1039,21 @@ subtractor2 z_measured_x_apri_est //z_measure - x_apri_est
   .B(x_apo_est),      // input wire [13 : 0] B
   .CLK(dac_clk_1x),  // input wire CLK
   .CE(1'b1),    // input wire CE
-  .S(post_error)      // output wire [13 : 0] S
+  .S(post_error)      // output wire [14 : 0] S
 );
 multiplier2 K_post_error		//K * (z_measure-x_apri_est)
 (
   .CLK(dac_clk_1x),  // input wire CLK
   .A(K[47:16]),      // input wire [31 : 0] A
-  .B(post_error),      // input wire [13 : 0] B
-  .P(out_multiplier_K_post_error)      // output wire [45 : 0] P
+  // .A(32'd32768),      
+  .B(post_error),      // input wire [14 : 0] B
+  .P(out_multiplier_K_post_error)      // output wire [46 : 0] P
 );
 divider3 shifted_K_post_error  //K*(z_measure-x_apri_est) / 2^15
 (
   .aclk(dac_clk_1x),                                      // input wire aclk
   .s_axis_divisor_tvalid(1'b1),    // input wire s_axis_divisor_tvalid
-  .s_axis_divisor_tdata(32'd32768),      // input wire [31 : 0] s_axis_divisor_tdata
+  .s_axis_divisor_tdata(32'd8192), // input wire [31 : 0] s_axis_divisor_tdata
   .s_axis_dividend_tvalid(1'b1),  // input wire s_axis_dividend_tvalid
   .s_axis_dividend_tdata(out_multiplier_K_post_error[31:0]),    // input wire [31 : 0] s_axis_dividend_tdata
   .m_axis_dout_tvalid(),          // output wire m_axis_dout_tvalid
@@ -1070,7 +1084,27 @@ begin
 	end
 end
 
+reg [13:0] x_apo_est_r;
+reg [9:0] x_apo_cnt = 10'd0;
+localparam delay_cnt = 10'd125;
 
+always @(posedge dac_clk_1x) // dac_clk_1x
+begin
+    // if(ladder_start_strobe) x_apo_cnt <= 10'd0;
+    // if(x_apo_cnt != 10'd10) x_apo_cnt <= x_apo_cnt + 1'b1;
+    // else begin
+        // x_apo_cnt <= x_apo_cnt;
+        // x_apo_est_r <= x_apo_est;
+    // end
+	if(x_apo_cnt != delay_cnt) x_apo_cnt <= x_apo_cnt + 1'b1;
+	else if(x_apo_cnt == delay_cnt && ladder_start_strobe) begin
+		x_apo_cnt <= 10'd0;
+	end
+    else begin
+        x_apo_cnt <= x_apo_cnt;
+        x_apo_est_r <= x_apo_est;
+    end
+end
 // output registers + signed to unsigned (also to negative slope)
 always @(posedge dac_clk_1x)
 begin

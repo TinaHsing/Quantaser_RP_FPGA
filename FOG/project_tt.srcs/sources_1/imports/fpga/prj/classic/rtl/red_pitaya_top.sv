@@ -360,11 +360,11 @@ logic [6:0] deMOD_mv_cnt = 7'd64;
 //assign dac_b_sum = ADC_reg_Diff;  //fog_v1.bit
 //assign dac_b_sum = ADC_reg_Diff_MV; //fog_v1_1.bit ~ fog_v1_10.bit
 
-//assign dac_a_sum = dac_ladder_out_2[14:0]; //close loop, com2
-//assign dac_b_sum = dac_ladder_pre[14:0];
+assign dac_a_sum = dac_ladder_out_2[14:0]; //close loop, com2
+assign dac_b_sum = dac_ladder_pre[14:0];
 
-assign dac_a_sum = dac_ladder_out_2[14:0]; //com3
-assign dac_b_sum = ADC_reg_Diff;
+//assign dac_a_sum = dac_ladder_out_2[14:0]; //com3
+//assign dac_b_sum = ADC_reg_Diff;
 
 //assign dac_a_sum = mod; //com4
 //assign dac_b_sum = dac_ladder_2[14:0];
@@ -1020,7 +1020,8 @@ red_pitaya_id i_id (
   .dac_ladder_pre(dac_ladder_pre),
   .err_shift_idx_pre(err_shift_idx_pre),
   .err_signal_pre(err_signal_pre),
-  .dac_ladder_pre_vth(dac_ladder_pre_vth)
+  .dac_ladder_pre_vth(dac_ladder_pre_vth),
+  .dac_ladder_2(dac_ladder_2)
 );
 
 ////////////////////////////////////////////////////////////////////////////////

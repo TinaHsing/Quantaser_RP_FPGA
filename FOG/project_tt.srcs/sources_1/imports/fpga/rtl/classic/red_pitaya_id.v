@@ -54,8 +54,9 @@ module red_pitaya_id #(
   , output reg [31:0] test_add
   , output reg ladder_rst
   , output reg [4:0] err_shift_idx 
-  , output reg [4:0] err_shift_idx_pre
+  , output reg [4:0] err_shift_idx_pre 
   , input [31:0] dac_ladder
+  , input [31:0] dac_ladder_2
   , input [31:0] dac_ladder_pre 
   , input [31:0] dac_ladder_pre_vth
   , input [13:0] ADC_reg_H
@@ -214,7 +215,8 @@ end else begin
     20'h0016C: begin sys_ack <= sys_en;  sys_rdata <= {dac_ladder_pre      }; end
     20'h00170: begin sys_ack <= sys_en;  sys_rdata <= {err_shift_idx_pre      }; end 
     20'h00174: begin sys_ack <= sys_en;  sys_rdata <= {err_signal_pre      }; end 
-    20'h00178: begin sys_ack <= sys_en;  sys_rdata <= {dac_ladder_pre_vth      }; end
+    20'h00178: begin sys_ack <= sys_en;  sys_rdata <= {dac_ladder_pre_vth      }; end 
+    20'h0017C: begin sys_ack <= sys_en;  sys_rdata <= {dac_ladder_2      }; end
       default: begin sys_ack <= sys_en;  sys_rdata <=  32'h0   ; end 
   endcase
 end

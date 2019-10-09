@@ -133,7 +133,7 @@ BEGIN
       C_XDEVICEFAMILY => "zynq",
       C_HAS_ARESETN => 0,
       C_HAS_ACLKEN => 0,
-      C_LATENCY => 1,
+      C_LATENCY => 20,
       ALGORITHM_TYPE => 1,
       DIVISOR_WIDTH => 32,
       DIVIDEND_WIDTH => 32,

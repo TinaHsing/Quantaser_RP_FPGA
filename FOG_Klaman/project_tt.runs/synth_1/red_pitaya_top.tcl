@@ -26,52 +26,6 @@ read_verilog -library xil_defaultlib -sv {
   C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/sys_bus_interconnect.sv
   C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/sys_bus_stub.sv
   C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/prj/classic/rtl/red_pitaya_top.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/acq.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/evn_pkg.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/asg.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/asg_bst.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/asg_per.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/axi4_stream_cnt.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/axi4_stream_demux.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/axi4_stream_dly.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/interface/axi4_stream_if.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/axi4_stream_mux.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/axi4_stream_pas.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/axi4_stream_reg.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/bin_and.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/clb.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/clkdiv.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/ctrg.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/cts.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/debounce.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/gen.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/id.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/la.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/la_trg.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/lg.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/lin_add.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/lin_mul.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/mgmt.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/muxctl.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/old_acq.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/old_asg.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/old_asg_top.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/old_id.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/old_la_top.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/osc.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/osc_trg.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/pdm.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/pid.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/pid_block.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/pwm.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/rle.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/scope_dec_avg.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/scope_filter.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/str2mm.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/str_dec.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/sys_reg_array_o.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/interface/axi4_lite_if.sv
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/interface/spi_if.sv
 }
 read_verilog -library xil_defaultlib {
   C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/classic/axi_wr_fifo.v
@@ -82,12 +36,39 @@ read_verilog -library xil_defaultlib {
   C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/classic/red_pitaya_pid.v
   C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/classic/red_pitaya_pid_block.v
   C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/classic/red_pitaya_scope.v
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/axi4_lite_slave.v
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/classic/axi_master.v
-  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/imports/fpga/rtl/classic/red_pitaya_hk.v
 }
-read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/mult_gen_0/mult_gen_0.xci
-set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/mult_gen_0/mult_gen_0.xci]
+read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/adder3/adder3.xci
+set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/adder3/adder3.xci]
+
+read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/divider3/divider3.xci
+set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/divider3/divider3.xci]
+
+read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/multiplier2/multiplier2.xci
+set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/multiplier2/multiplier2.xci]
+
+read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/subtractor2/subtractor2.xci
+set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/subtractor2/subtractor2.xci]
+
+read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/divider2/divider2.xci
+set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/divider2/divider2.xci]
+
+read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/multiplier/multiplier.xci
+set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/multiplier/multiplier.xci]
+
+read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/subtractor/subtractor.xci
+set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/subtractor/subtractor.xci]
+
+read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/divider/divider.xci
+set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/divider/divider.xci]
+
+read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/adder2/adder2.xci
+set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/adder2/adder2.xci]
+
+read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/adder/adder.xci
+set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/adder/adder.xci]
+
+read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/mult_gen_1/mult_gen_1.xci
+set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/mult_gen_1/mult_gen_1.xci]
 
 add_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/bd/system/system.bd
 set_property used_in_implementation false [get_files -all c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/bd/system/ip/system_axi_protocol_converter_0_0/system_axi_protocol_converter_0_0_ooc.xdc]
@@ -99,42 +80,6 @@ set_property used_in_implementation false [get_files -all c:/Users/adam/Document
 set_property used_in_implementation false [get_files -all c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/bd/system/system_ooc.xdc]
 set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/bd/system/system.bd]
-
-read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/mult_1_2/mult_1.xci
-set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/mult_1_2/mult_1.xci]
-
-read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/mult_gen_1/mult_gen_1.xci
-set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/mult_gen_1/mult_gen_1.xci]
-
-read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/adder/adder.xci
-set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/adder/adder.xci]
-
-read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/adder2/adder2.xci
-set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/adder2/adder2.xci]
-
-read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/divider/divider.xci
-set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/divider/divider.xci]
-
-read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/subtractor/subtractor.xci
-set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/subtractor/subtractor.xci]
-
-read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/multiplier/multiplier.xci
-set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/multiplier/multiplier.xci]
-
-read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/divider2/divider2.xci
-set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/divider2/divider2.xci]
-
-read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/subtractor2/subtractor2.xci
-set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/subtractor2/subtractor2.xci]
-
-read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/multiplier2/multiplier2.xci
-set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/multiplier2/multiplier2.xci]
-
-read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/divider3/divider3.xci
-set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/divider3/divider3.xci]
-
-read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/adder3/adder3.xci
-set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_Klaman/project_tt.srcs/sources_1/ip/adder3/adder3.xci]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

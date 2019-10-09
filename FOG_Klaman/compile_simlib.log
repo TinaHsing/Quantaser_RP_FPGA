@@ -1,0 +1,57 @@
+##########################################################################
+#
+# Application : compile_simlib (2017.2)
+# File name   : compile_simlib.log
+#
+# #########################################################################
+INFO: [Vivado 12-4753] Extracting data from the IP repository...(this may take a while, please wait)...
+.......................................................................................................
+.......................................................................................................
+.......................................................................................................
+.......................................................................................................
+.......................................................................................................
+.......................................................................................................
+...............................................................................................
+INFO: [setup_ip_static_library-Tcl-23] Data extracted from repository. Inspected 356 IP libraries.
+
+setup_ip_static_library: Time (s): cpu = 00:01:05 ; elapsed = 00:04:06 . Memory (MB): peak = 1344.934 ; gain = 281.496
+Compiling libraries for 'modelsim' simulator in 'C:\Users\adam\Desktop\FPGA_Projects\devider\devider.cache\compile_simlib'
+Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+vmap -c 
+Copying C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+
+Compiling verilog library 'secureip'...INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+==============================================================================
+BEGIN_COMPILATION_MESSAGES(modelsim:verilog:secureip)
+** Warning: (vlog-159) Mode option -64 is not supported in this context and will be ignored.
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+Start time: 13:41:20 on Oct 01,2019
+vlog -source -novopt -64 -sv -suppress vlog-2583 -work secureip -f C:\Users\adam\Desktop\FPGA_Projects\devider\devider.cache\compile_simlib/secureip/.cxl.systemverilog.secureip.secureip.nt64.cmf 
+-- Compiling module SIP_FE
+-- Compiling module SIP_HSDAC
+-- Compiling module SIP_HSADC
+
+Top level modules:
+	SIP_FE
+	SIP_HSDAC
+	SIP_HSADC
+End time: 13:41:42 on Oct 01,2019, Elapsed time: 0:00:22
+Errors: 0, Warnings: 1, Suppressed Warnings: 142
+
+END_COMPILATION_MESSAGES(modelsim:verilog:secureip)
+==============================================================================
+
+compile_simlib: 0 error(s), 1 warning(s), 0.35 % complete
+
+***********************************************************************************************************************
+*                                                 COMPILATION SUMMARY                                                 *
+*                                                                                                                     *
+*  Simulator used: modelsim                                                                                           *
+*  Compiled on: Tue Oct  1 13:34:39 2019                                                                              *
+*                                                                                                                     *
+***********************************************************************************************************************
+*  Library                                | Language |          Mapped Library Name           | Error(s) | Warning(s) *
+*---------------------------------------------------------------------------------------------------------------------*
+*  secureip                               | verilog  | secureip                               | 0        | 1          *
+*---------------------------------------------------------------------------------------------------------------------*
+
