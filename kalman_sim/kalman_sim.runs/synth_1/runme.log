@@ -1,0 +1,534 @@
+
+*** Running vivado
+    with args -log kalman.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kalman.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source kalman.tcl -notrace
+Command: synth_design -top kalman -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13764 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 338.820 ; gain = 79.715
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'kalman' [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:90]
+INFO: [Synth 8-638] synthesizing module 'IBUFDS' [D:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:14485]
+INFO: [Synth 8-256] done synthesizing module 'IBUFDS' (1#1) [D:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:14485]
+INFO: [Synth 8-638] synthesizing module 'red_pitaya_pll' [C:/Users/adam/Desktop/red_pitaya_pll.sv:13]
+INFO: [Synth 8-638] synthesizing module 'PLLE2_ADV' [D:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:33019]
+INFO: [Synth 8-256] done synthesizing module 'PLLE2_ADV' (2#1) [D:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:33019]
+INFO: [Synth 8-256] done synthesizing module 'red_pitaya_pll' (3#1) [C:/Users/adam/Desktop/red_pitaya_pll.sv:13]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (4#1) [D:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-638] synthesizing module 'adder' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/adder/synth/adder.vhd:69]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_10' declared at 'c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/adder3/hdl/c_addsub_v12_0_vh_rfs.vhd:7026' bound to instance 'U0' of component 'c_addsub_v12_0_10' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/adder/synth/adder.vhd:130]
+INFO: [Synth 8-256] done synthesizing module 'adder' (11#1) [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/adder/synth/adder.vhd:69]
+WARNING: [Synth 8-689] width (14) of port connection 'A' does not match port width (15) of module 'adder' [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:171]
+INFO: [Synth 8-638] synthesizing module 'adder2' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/adder2/synth/adder2.vhd:69]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_10' declared at 'c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/adder3/hdl/c_addsub_v12_0_vh_rfs.vhd:7026' bound to instance 'U0' of component 'c_addsub_v12_0_10' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/adder2/synth/adder2.vhd:130]
+INFO: [Synth 8-256] done synthesizing module 'adder2' (12#1) [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/adder2/synth/adder2.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'divider' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/divider/synth/divider.vhd:72]
+INFO: [Synth 8-3491] module 'div_gen_v5_1_11' declared at 'c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/divider3/hdl/div_gen_v5_1_vh_rfs.vhd:13849' bound to instance 'U0' of component 'div_gen_v5_1_11' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/divider/synth/divider.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'divider' (24#1) [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/divider/synth/divider.vhd:72]
+WARNING: [Synth 8-689] width (15) of port connection 's_axis_dividend_tdata' does not match port width (32) of module 'divider' [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:192]
+INFO: [Synth 8-638] synthesizing module 'subtractor' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/subtractor/synth/subtractor.vhd:69]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_10' declared at 'c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/adder3/hdl/c_addsub_v12_0_vh_rfs.vhd:7026' bound to instance 'U0' of component 'c_addsub_v12_0_10' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/subtractor/synth/subtractor.vhd:130]
+INFO: [Synth 8-256] done synthesizing module 'subtractor' (25#1) [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/subtractor/synth/subtractor.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'multipler' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/multipler/synth/multipler.vhd:69]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/multipler/synth/multipler.vhd:72]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/multipler/synth/multipler.vhd:72]
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_12' declared at 'c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/divider3/hdl/mult_gen_v12_0_vh_rfs.vhd:21013' bound to instance 'U0' of component 'mult_gen_v12_0_12' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/multipler/synth/multipler.vhd:117]
+INFO: [Synth 8-256] done synthesizing module 'multipler' (30#1) [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/multipler/synth/multipler.vhd:69]
+WARNING: [Synth 8-689] width (46) of port connection 'P' does not match port width (47) of module 'multipler' [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:211]
+INFO: [Synth 8-638] synthesizing module 'divider2' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/divider2/synth/divider2.vhd:72]
+INFO: [Synth 8-3491] module 'div_gen_v5_1_11' declared at 'c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/divider3/hdl/div_gen_v5_1_vh_rfs.vhd:13849' bound to instance 'U0' of component 'div_gen_v5_1_11' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/divider2/synth/divider2.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'divider2' (31#1) [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/divider2/synth/divider2.vhd:72]
+WARNING: [Synth 8-689] width (46) of port connection 's_axis_dividend_tdata' does not match port width (32) of module 'divider2' [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:220]
+INFO: [Synth 8-638] synthesizing module 'subtractor2' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/subtractor2/synth/subtractor2.vhd:69]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_10' declared at 'c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/adder3/hdl/c_addsub_v12_0_vh_rfs.vhd:7026' bound to instance 'U0' of component 'c_addsub_v12_0_10' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/subtractor2/synth/subtractor2.vhd:130]
+INFO: [Synth 8-256] done synthesizing module 'subtractor2' (32#1) [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/subtractor2/synth/subtractor2.vhd:69]
+WARNING: [Synth 8-689] width (15) of port connection 'S' does not match port width (14) of module 'subtractor2' [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:231]
+INFO: [Synth 8-638] synthesizing module 'multiplier2' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/multiplier2/synth/multiplier2.vhd:69]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/multiplier2/synth/multiplier2.vhd:72]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/multiplier2/synth/multiplier2.vhd:72]
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_12' declared at 'c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/divider3/hdl/mult_gen_v12_0_vh_rfs.vhd:21013' bound to instance 'U0' of component 'mult_gen_v12_0_12' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/multiplier2/synth/multiplier2.vhd:117]
+INFO: [Synth 8-256] done synthesizing module 'multiplier2' (33#1) [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/multiplier2/synth/multiplier2.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'divider3' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/divider3/synth/divider3.vhd:72]
+INFO: [Synth 8-3491] module 'div_gen_v5_1_11' declared at 'c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/divider3/hdl/div_gen_v5_1_vh_rfs.vhd:13849' bound to instance 'U0' of component 'div_gen_v5_1_11' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/divider3/synth/divider3.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'divider3' (34#1) [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/divider3/synth/divider3.vhd:72]
+WARNING: [Synth 8-689] width (47) of port connection 's_axis_dividend_tdata' does not match port width (32) of module 'divider3' [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:248]
+INFO: [Synth 8-638] synthesizing module 'adder3' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/adder3/synth/adder3.vhd:69]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_10' declared at 'c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/adder3/hdl/c_addsub_v12_0_vh_rfs.vhd:7026' bound to instance 'U0' of component 'c_addsub_v12_0_10' [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/adder3/synth/adder3.vhd:130]
+INFO: [Synth 8-256] done synthesizing module 'adder3' (35#1) [c:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/ip/adder3/synth/adder3.vhd:69]
+WARNING: [Synth 8-6014] Unused sequential element adc_dat_raw_reg was removed.  [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:158]
+INFO: [Synth 8-256] done synthesizing module 'kalman' (36#1) [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:3]
+WARNING: [Synth 8-3917] design kalman has port adc_clk_o[1] driven by constant 1
+WARNING: [Synth 8-3917] design kalman has port adc_clk_o[0] driven by constant 0
+WARNING: [Synth 8-3917] design kalman has port adc_cdcs_o driven by constant 1
+WARNING: [Synth 8-3917] design kalman has port diverder_clken driven by constant 1
+WARNING: [Synth 8-3917] design kalman has port diverder2_clken driven by constant 1
+WARNING: [Synth 8-3917] design kalman has port post_error[14] driven by constant 0
+WARNING: [Synth 8-3331] design c_reg_fd_v12_0_3_viv__parameterized3 has unconnected port AINIT
+WARNING: [Synth 8-3331] design c_reg_fd_v12_0_3_viv__parameterized3 has unconnected port ACLR
+WARNING: [Synth 8-3331] design c_reg_fd_v12_0_3_viv__parameterized3 has unconnected port ASET
+WARNING: [Synth 8-3331] design c_reg_fd_v12_0_3_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design c_reg_fd_v12_0_3_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design c_reg_fd_v12_0_3_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design c_addsub_v12_0_10_lut6_legacy__parameterized7 has unconnected port add
+WARNING: [Synth 8-3331] design c_addsub_v12_0_10_lut6_legacy__parameterized7 has unconnected port c_in
+WARNING: [Synth 8-3331] design c_addsub_v12_0_10_lut6_legacy__parameterized7 has unconnected port bypass
+WARNING: [Synth 8-3331] design c_addsub_v12_0_10_lut6_legacy__parameterized7 has unconnected port sclr
+WARNING: [Synth 8-3331] design c_addsub_v12_0_10_lut6_legacy__parameterized7 has unconnected port sset
+WARNING: [Synth 8-3331] design c_addsub_v12_0_10_lut6_legacy__parameterized7 has unconnected port sinit
+WARNING: [Synth 8-3331] design c_addsub_v12_0_10_legacy__parameterized7 has unconnected port c_in
+WARNING: [Synth 8-3331] design c_addsub_v12_0_10_legacy__parameterized7 has unconnected port b_in
+WARNING: [Synth 8-3331] design c_addsub_v12_0_10_legacy__parameterized7 has unconnected port a_signed
+WARNING: [Synth 8-3331] design c_addsub_v12_0_10_legacy__parameterized7 has unconnected port b_signed
+WARNING: [Synth 8-3331] design c_addsub_v12_0_10_viv__parameterized7 has unconnected port C_IN
+WARNING: [Synth 8-3331] design c_twos_comp_viv__parameterized1 has unconnected port aclr
+WARNING: [Synth 8-3331] design c_twos_comp_viv__parameterized1 has unconnected port aset
+WARNING: [Synth 8-3331] design c_twos_comp_viv__parameterized1 has unconnected port ainit
+WARNING: [Synth 8-3331] design c_twos_comp_viv__parameterized1 has unconnected port sclr
+WARNING: [Synth 8-3331] design c_twos_comp_viv__parameterized1 has unconnected port sset
+WARNING: [Synth 8-3331] design c_twos_comp_viv__parameterized1 has unconnected port sinit
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized157 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized157 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized157 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized252 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized252 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized252 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized135 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized135 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized135 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized248 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized248 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized248 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized244 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized244 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized244 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized240 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized240 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized240 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized236 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized236 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized236 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized115 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized115 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized115 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized232 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized232 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized232 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized228 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized228 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized228 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized224 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized224 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized224 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized220 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized220 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized220 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized95 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized95 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized95 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized216 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized216 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized216 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized212 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized212 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized212 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized17 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized17 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized17 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized79 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized79 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized79 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized205 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized205 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized205 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized201 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized201 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized201 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized197 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized197 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized197 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized193 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized193 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized193 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized59 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized59 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized59 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized189 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized189 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized189 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized185 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized185 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized185 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized181 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized181 has unconnected port SSET
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 474.086 ; gain = 214.980
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 474.086 ; gain = 214.980
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 7093 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[*]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[*]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[*]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[0]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[1]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[2]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[3]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[4]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[5]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[6]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[7]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[8]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[9]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[10]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[11]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[12]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'dac_dat_o[13]'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'dac_*_o'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'dac_*_o'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:65]
+WARNING: [Vivado 12-584] No ports matched 'dac_*_o'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:66]
+WARNING: [Vivado 12-584] No ports matched 'dac_wrt_o'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'dac_sel_o'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'dac_clk_o'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'dac_rst_o'. [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc:72]
+Finished Parsing XDC File [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/kalman_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/constrs_1/new/kal.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/kalman_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/kalman_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 462 instances were transformed.
+  MULT_AND => LUT2: 462 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 748.305 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 748.305 ; gain = 489.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 748.305 ; gain = 489.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for K_post_error. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for P_apri_est_1_K. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for P_apri_est_R. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for P_apri_est_R_P_apri_est. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for _1_K. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for p_apo_est_shifted_Q. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for shifted_K_post_error. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for x_apri_est_shifted_K_post_error. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for your_instance_name. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for z_measured_x_apri_est. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 748.305 ; gain = 489.199
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'SM_diff_reg' in module 'kalman'
+WARNING: [Synth 8-6014] Unused sequential element SM_diff_reg was removed.  [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:90]
+INFO: [Synth 8-5545] ROM "mod_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mod_stat" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "measure" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ladder_start_strobe" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "SM_diff" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element initial_cnt_reg was removed.  [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:98]
+WARNING: [Synth 8-6014] Unused sequential element SM_diff_reg was removed.  [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:90]
+WARNING: [Synth 8-6014] Unused sequential element SM_diff_reg was removed.  [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:90]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+                 iSTATE0 |                              001 |                              001
+                 iSTATE1 |                              010 |                              010
+                 iSTATE2 |                              011 |                              011
+                 iSTATE3 |                              100 |                              100
+                 iSTATE4 |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'SM_diff_reg' using encoding 'sequential' in module 'kalman'
+WARNING: [Synth 8-6014] Unused sequential element SM_diff_reg was removed.  [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:90]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 748.305 ; gain = 489.199
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[3].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[4].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[3].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[5].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[3].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[6].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[8].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[9].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[8].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[10].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[8].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[11].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[13].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[14].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[13].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[15].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[13].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[16].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[18].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[19].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[18].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[20].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[22].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[23].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[22].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[24].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[22].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[25].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[27].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[28].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[27].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[29].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[27].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized13) to 'P_apri_est_R_P_apri_est/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[30].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[3].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[4].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[3].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[5].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[3].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[6].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[8].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[9].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[8].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[10].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[8].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[11].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[13].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[14].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[13].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[15].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[13].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[16].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[18].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[19].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[18].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[20].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[22].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[23].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[22].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[24].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[22].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[25].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[27].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[28].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[27].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[29].divisor_gen.divisor_dc1.del_divisor_msbs'
+INFO: [Synth 8-223] decloning instance 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[27].divisor_gen.divisor_dc1.del_divisor_msbs' (xbip_pipe_v3_0_3_viv__parameterized149) to 'your_instance_name/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[30].divisor_gen.divisor_dc1.del_divisor_msbs'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "mod_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mod_stat" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element initial_cnt_reg was removed.  [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:98]
+WARNING: [Synth 8-3917] design kalman has port adc_clk_o[1] driven by constant 1
+WARNING: [Synth 8-3917] design kalman has port adc_clk_o[0] driven by constant 0
+WARNING: [Synth 8-3917] design kalman has port adc_cdcs_o driven by constant 1
+WARNING: [Synth 8-3917] design kalman has port diverder_clken driven by constant 1
+WARNING: [Synth 8-3917] design kalman has port diverder2_clken driven by constant 1
+WARNING: [Synth 8-3917] design kalman has port post_error[14] driven by constant 0
+INFO: [Synth 8-3332] Sequential element (i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/sgned_input.cmp_dividend/twos_comp/i_reg_arch_simp.i_q.q_i_reg[32]) is unused and will be removed from module div_gen_v5_1_11_viv.
+INFO: [Synth 8-3332] Sequential element (i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/sgned_input.cmp_divisor/twos_comp/i_reg_arch_simp.i_q.q_i_reg[16]) is unused and will be removed from module div_gen_v5_1_11_viv.
+INFO: [Synth 8-3332] Sequential element (i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/signed_output.cmp_quot/twos_comp/i_reg_arch_simp.i_q.q_i_reg[33]) is unused and will be removed from module div_gen_v5_1_11_viv.
+INFO: [Synth 8-3332] Sequential element (i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/signed_output.cmp_quot/twos_comp/i_reg_arch_simp.i_q.q_i_reg[32]) is unused and will be removed from module div_gen_v5_1_11_viv.
+INFO: [Synth 8-3332] Sequential element (i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/signed_output.remd_not_fract.cmp_remd/twos_comp/i_reg_arch_simp.i_q.q_i_reg[17]) is unused and will be removed from module div_gen_v5_1_11_viv.
+INFO: [Synth 8-3332] Sequential element (i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/signed_output.remd_not_fract.cmp_remd/twos_comp/i_reg_arch_simp.i_q.q_i_reg[16]) is unused and will be removed from module div_gen_v5_1_11_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][50]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][49]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][48]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][47]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][50]) is unused and will be removed from module mult_gen_v12_0_12_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][49]) is unused and will be removed from module mult_gen_v12_0_12_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][48]) is unused and will be removed from module mult_gen_v12_0_12_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][47]) is unused and will be removed from module mult_gen_v12_0_12_viv__parameterized1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 748.305 ; gain = 489.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 748.305 ; gain = 489.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 748.305 ; gain = 489.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 748.305 ; gain = 489.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5410] Found another clock driver bufg_dac_clk_1x:CLKOUT1 [C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.srcs/sources_1/new/kalman.v:151]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 748.305 ; gain = 489.199
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 748.305 ; gain = 489.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 748.305 ; gain = 489.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 748.305 ; gain = 489.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 748.305 ; gain = 489.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 748.305 ; gain = 489.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     8|
+|2     |CARRY4    |   234|
+|3     |LUT1      |   259|
+|4     |LUT2      |  1080|
+|5     |LUT3      |  2766|
+|6     |LUT4      |   456|
+|7     |LUT5      |    75|
+|8     |LUT6      |     7|
+|9     |MULT_AND  |   460|
+|10    |MUXCY     |  3305|
+|11    |PLLE2_ADV |     1|
+|12    |SRL16E    |     6|
+|13    |SRLC32E   |     6|
+|14    |XORCY     |  3324|
+|15    |FDCE      |    15|
+|16    |FDPE      |    13|
+|17    |FDRE      |  6608|
+|18    |FDSE      |     6|
+|19    |IBUF      |    15|
+|20    |IBUFDS    |     1|
+|21    |OBUF      |    95|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 748.305 ; gain = 489.199
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 97 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 748.305 ; gain = 214.980
+Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 748.305 ; gain = 489.199
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 7340 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1384 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 924 instances
+  MULT_AND => LUT2: 460 instances
+
+112 Infos, 155 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:12 ; elapsed = 00:01:16 . Memory (MB): peak = 757.449 ; gain = 501.977
+INFO: [Common 17-1381] The checkpoint 'C:/Users/adam/Desktop/FPGA_Projects/kalman_sim/kalman_sim.runs/synth_1/kalman.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 757.449 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  9 20:54:54 2019...
