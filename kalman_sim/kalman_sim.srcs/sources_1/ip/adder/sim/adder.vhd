@@ -58,11 +58,11 @@ USE c_addsub_v12_0_10.c_addsub_v12_0_10;
 
 ENTITY adder IS
   PORT (
-    A : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
-    B : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
+    A : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+    B : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
     CLK : IN STD_LOGIC;
     CE : IN STD_LOGIC;
-    S : OUT STD_LOGIC_VECTOR(14 DOWNTO 0)
+    S : OUT STD_LOGIC_VECTOR(13 DOWNTO 0)
   );
 END adder;
 
@@ -99,8 +99,8 @@ ARCHITECTURE adder_arch OF adder IS
       C_HAS_SINIT : INTEGER
     );
     PORT (
-      A : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
-      B : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
+      A : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+      B : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
       CLK : IN STD_LOGIC;
       ADD : IN STD_LOGIC;
       C_IN : IN STD_LOGIC;
@@ -110,7 +110,7 @@ ARCHITECTURE adder_arch OF adder IS
       SSET : IN STD_LOGIC;
       SINIT : IN STD_LOGIC;
       C_OUT : OUT STD_LOGIC;
-      S : OUT STD_LOGIC_VECTOR(14 DOWNTO 0)
+      S : OUT STD_LOGIC_VECTOR(13 DOWNTO 0)
     );
   END COMPONENT c_addsub_v12_0_10;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -125,16 +125,16 @@ BEGIN
       C_VERBOSITY => 0,
       C_XDEVICEFAMILY => "zynq",
       C_IMPLEMENTATION => 0,
-      C_A_WIDTH => 15,
-      C_B_WIDTH => 15,
-      C_OUT_WIDTH => 15,
+      C_A_WIDTH => 14,
+      C_B_WIDTH => 14,
+      C_OUT_WIDTH => 14,
       C_CE_OVERRIDES_SCLR => 0,
-      C_A_TYPE => 0,
-      C_B_TYPE => 0,
+      C_A_TYPE => 1,
+      C_B_TYPE => 1,
       C_LATENCY => 1,
       C_ADD_MODE => 0,
       C_B_CONSTANT => 0,
-      C_B_VALUE => "000000000000000",
+      C_B_VALUE => "00000000000000",
       C_AINIT_VAL => "0",
       C_SINIT_VAL => "0",
       C_CE_OVERRIDES_BYPASS => 1,

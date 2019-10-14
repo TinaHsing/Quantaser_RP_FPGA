@@ -5,43 +5,59 @@ module kalman(
 input rst_n,
 input [14-1:0] adc_dat_i,
 input [ 2-1:0] adc_clk_i,  // ADC clock {p,n}
-output reg ladder_start_strobe,
+
+//DAC
+output  [14-1:0] dac_dat_o  ,  // DAC combined data
+output           dac_wrt_o  ,  // DAC write
+output           dac_sel_o  ,  // DAC channel select
+output           dac_clk_o  ,  // DAC clock
+output           dac_rst_o  ,  // DAC reset
+
+
+output reg ladder_start_strobe = 1'b0,
 output [ 2-1:0] adc_clk_o,  // optional ADC clock source (unused)
 output adc_cdcs_o, // ADC clock duty cycle stabilizer
-output reg [14-1:0] measure,
+output reg [14-1:0] measure = 14'b0,
 output reg diverder_clken, diverder2_clken,
 output reg [14-1:0] x_apo_est, P_apo_est,
 output reg [13:0] x_apo_est_r,
-output [15-1:0] P_apri_est,
-//output [16-1:0] out_adder_P_apri_est_R,
+output [14-1:0] P_apri_est,
 // output [48-1:0] K,
-//output [31:0] Q, Q2, Q3,
 output divider_valid, divider2_valid, divider3_valid,
-// output [32-1:0] out_subtractor_1_K,
-//output [46-1:0] out_multiplier_P_apo_est,
-output [15-1:0] post_error
-// output [47-1:0] out_multiplier_K_post_error,
+output [14-1:0] post_error
 // output [64-1:0] out_divider_K_post_error,
-//output [31:0] out_adder_x_apri_est_divided_K_post_error,
 // output [64-1:0] out_divider_P_apo_est,
+, output reg [2:0] SM_diff = 3'd0
+, output reg mod_stat = mod_stat_H
+, output dac_clk_1x
+
+// p part
+, output [15-1:0] out_adder_P_apri_est_R
+, output [31:0] Q, Q2, Q3
+, output [32-1:0] out_subtractor_1_K
+, output [46-1:0] out_multiplier_P_apo_est
+// x part
+, output [47-1:0] out_multiplier_K_post_error
+, output [31:0] out_adder_x_apri_est_divided_K_post_error
     );
 	
 localparam mod_stat_H = 1'b1;
 localparam mod_stat_L = 1'b0;
-reg mod_stat = mod_stat_H;
-reg [2:0] SM_diff = 3'd0;
+// reg mod_stat = mod_stat_H;
+// reg [2:0] SM_diff = 3'd0;
 reg [31:0] mod_cnt = 32'd0, reg_mod_freq_cnt = 32'd125, initial_cnt = 32'd30;
 
 reg [9:0] x_apo_cnt = 10'd0;
-wire [31:0] Q, Q2, Q3;
+
 wire [64-1:0] out_divider_P_apo_est;
 wire [64-1:0] out_divider_K_post_error;
-wire [47-1:0] out_multiplier_K_post_error;
 wire [48-1:0] K;
-wire [32-1:0] out_subtractor_1_K;
-wire [31:0] out_adder_x_apri_est_divided_K_post_error;
-wire [46-1:0] out_multiplier_P_apo_est;
-wire  [16-1:0] out_adder_P_apri_est_R;
+// wire [47-1:0] out_multiplier_K_post_error;
+// wire [31:0] out_adder_x_apri_est_divided_K_post_error;
+// wire [46-1:0] out_multiplier_P_apo_est;
+// wire  [16-1:0] out_adder_P_apri_est_R;
+// wire [31:0] Q, Q2, Q3;
+// wire [32-1:0] out_subtractor_1_K;
 
 // PLL signals
 wire                 adc_clk_in;
@@ -54,15 +70,34 @@ wire                 pll_pwm_clk;
 wire                 pll_locked;
 
 wire adc_clk;
-wire dac_clk_1x;
+// wire dac_clk_1x;
 wire dac_clk_2x;
 wire dac_clk_2p;
 wire ser_clk;
 wire pwm_clk;
 
-// ADC clock/reset
-// wire                 adc_clk;
-// wire                 adc_rstn;
+// DAC
+
+wire signed [15-1:0] dac_a_sum, dac_b_sum;
+reg        [14-1:0] dac_dat_a, dac_dat_b;
+wire        [14-1:0] dac_a    , dac_b;   
+
+assign dac_a = (^dac_a_sum[15-1:15-2]) ? {dac_a_sum[15-1], {13{~dac_a_sum[15-1]}}} : dac_a_sum[14-1:0];
+assign dac_b = (^dac_b_sum[15-1:15-2]) ? {dac_b_sum[15-1], {13{~dac_b_sum[15-1]}}} : dac_b_sum[14-1:0];
+
+// output registers + signed to unsigned (also to negative slope)
+always @(posedge dac_clk_1x)
+begin
+  	dac_dat_a <= {dac_a[14-1], ~dac_a[14-2:0]};
+  	dac_dat_b <= {dac_b[14-1], ~dac_b[14-2:0]};
+end
+
+// DDR outputs
+ODDR oddr_dac_clk          (.Q(dac_clk_o), .D1(1'b0     ), .D2(1'b1     ), .C(dac_clk_2p), .CE(1'b1), .R(1'b0   ), .S(1'b0));
+ODDR oddr_dac_wrt          (.Q(dac_wrt_o), .D1(1'b0     ), .D2(1'b1     ), .C(dac_clk_2x), .CE(1'b1), .R(1'b0   ), .S(1'b0));
+ODDR oddr_dac_sel          (.Q(dac_sel_o), .D1(1'b1     ), .D2(1'b0     ), .C(dac_clk_1x), .CE(1'b1), .R(1'b0), .S(1'b0));
+ODDR oddr_dac_rst          (.Q(dac_rst_o), .D1(dac_rst  ), .D2(dac_rst  ), .C(dac_clk_1x), .CE(1'b1), .R(1'b0   ), .S(1'b0));
+ODDR oddr_dac_dat [14-1:0] (.Q(dac_dat_o), .D1(dac_dat_b), .D2(dac_dat_a), .C(dac_clk_1x), .CE(1'b1), .R(1'b0), .S(1'b0));
 
 // generating ADC clock is disabled
 assign adc_clk_o = 2'b10;
@@ -170,21 +205,21 @@ end
 adder p_apo_est_shifted_Q ( 
   .A(P_apo_est),      // input wire [13 : 0] A
   .B(14'd819),      // input wire [13 : 0] B
-  .CLK(pll_dac_clk_1x),  // input wire CLK
+  .CLK(dac_clk_1x),  // input wire CLK
   .CE(1'b1),    // input wire CE
-  .S(P_apri_est)      // output wire [14 : 0] S
+  .S(P_apri_est)      // output wire [13 : 0] S
 );
 //R + P_apri_est
 adder2 P_apri_est_R ( 
-  .A(P_apri_est),      // input wire [14 : 0] A
+  .A(P_apri_est),      // input wire [13 : 0] A
   .B(14'd8191),      // input wire [13 : 0] B
-  .CLK(pll_dac_clk_1x),  // input wire CLK
+  .CLK(dac_clk_1x),  // input wire CLK
   .CE(1'b1),    // input wire CE
-  .S(out_adder_P_apri_est_R)      // output wire [15 : 0] S
+  .S(out_adder_P_apri_est_R)      // output wire [14 : 0] S
 );
 //P_apri_est * 2^13/(R+P_apri_est)
 divider P_apri_est_R_P_apri_est (
-  .aclk(pll_dac_clk_1x),                                      // input wire aclk
+  .aclk(dac_clk_1x),                                      // input wire aclk
   .aclken(diverder_clken),                                  // input wire aclken
   .s_axis_divisor_tvalid(1'b1),    // input wire s_axis_divisor_tvalid
   .s_axis_divisor_tdata(out_adder_P_apri_est_R),      // input wire [15 : 0] s_axis_divisor_tdata
@@ -198,13 +233,13 @@ assign Q = K[47:16];
 subtractor _1_K (
   .A(32'd8191),      // input wire [31 : 0] A
   .B(K[47:16]),      // input wire [31 : 0] B
-  .CLK(pll_dac_clk_1x),  // input wire CLK
+  .CLK(dac_clk_1x),  // input wire CLK
   .CE(1'b1),    // input wire CE
   .S(out_subtractor_1_K)      // output wire [31 : 0] S
 );
 //P_apri_est * (1-K) 
  multipler P_apri_est_1_K (
-  .CLK(pll_dac_clk_1x),  // input wire CLK
+  .CLK(dac_clk_1x),  // input wire CLK
   .A(P_apri_est),      // input wire [14 : 0] A
   .B(out_subtractor_1_K),      // input wire [31 : 0] B
   .CE(1'b1),    // input wire CE
@@ -212,7 +247,7 @@ subtractor _1_K (
 );
 //Divide by 2^14
 divider2 your_instance_name (
-  .aclk(pll_dac_clk_1x),                                      // input wire aclk
+  .aclk(dac_clk_1x),                                      // input wire aclk
   .aclken(diverder2_clken),
   .s_axis_divisor_tvalid(1'b1),    // input wire s_axis_divisor_tvalid
   .s_axis_divisor_tdata(32'd8192),      // input wire [31 : 0] s_axis_divisor_tdata
@@ -226,13 +261,13 @@ assign Q2 = out_divider_P_apo_est[63:32];
 subtractor2 z_measured_x_apri_est (
   .A(measure),      // input wire [13 : 0] A
   .B(x_apo_est),      // input wire [13 : 0] B
-  .CLK(pll_dac_clk_1x),  // input wire CLK
+  .CLK(dac_clk_1x),  // input wire CLK
   .CE(1'b1),    // input wire CE
   .S(post_error)      // output wire [14 : 0] S
 );
 //K * (z_measure-x_apri_est)
 multiplier2 K_post_error (
-  .CLK(pll_dac_clk_1x),  // input wire CLK
+  .CLK(dac_clk_1x),  // input wire CLK
   .A(K[47:16]),      // input wire [31 : 0] A
   .B(post_error),      // input wire [14 : 0] B
   .CE(1'b1),    // input wire CE
@@ -240,7 +275,7 @@ multiplier2 K_post_error (
 );
 //K*(z_measure-x_apri_est) / 2^13
 divider3 shifted_K_post_error (
-  .aclk(pll_dac_clk_1x),                                      // input wire aclk
+  .aclk(dac_clk_1x),                                      // input wire aclk
   .aclken(1'b1),                                  // input wire aclken
   .s_axis_divisor_tvalid(1'b1),    // input wire s_axis_divisor_tvalid
   .s_axis_divisor_tdata(32'd8192),      // input wire [31 : 0] s_axis_divisor_tdata
@@ -255,7 +290,7 @@ assign Q3 = out_divider_K_post_error[63:32];
 adder3 x_apri_est_shifted_K_post_error (
   .A(x_apo_est),      // input wire [13 : 0] A
   .B(out_divider_K_post_error[63:32]),      // input wire [31 : 0] B
-  .CLK(pll_dac_clk_1x),  // input wire CLK
+  .CLK(dac_clk_1x),  // input wire CLK
   .CE(1'b1),    // input wire CE
   .S(out_adder_x_apri_est_divided_K_post_error)      // output wire [31 : 0] S
 );
@@ -278,7 +313,7 @@ end
 
 
 localparam delay_cnt = 10'd20;
-always @(posedge pll_dac_clk_1x) // dac_clk_1x
+always @(posedge dac_clk_1x) // dac_clk_1x
 begin
     // if(ladder_start_strobe) x_apo_cnt <= 10'd0;
     if(x_apo_cnt != delay_cnt) x_apo_cnt <= x_apo_cnt + 1'b1;

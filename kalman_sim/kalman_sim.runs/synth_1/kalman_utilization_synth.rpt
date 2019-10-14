@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Wed Oct  9 20:54:54 2019
-| Host         : DESKTOP-L7VH7BR running 64-bit major release  (build 9200)
+| Date         : Fri Oct 11 00:21:27 2019
+| Host         : LAPTOP-MFH2O9HI running 64-bit major release  (build 9200)
 | Command      : report_utilization -file kalman_utilization_synth.rpt -pb kalman_utilization_synth.pb
 | Design       : kalman
 | Device       : 7z010clg400-1
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 4521 |     0 |     17600 | 25.69 |
-|   LUT as Logic             | 4509 |     0 |     17600 | 25.62 |
-|   LUT as Memory            |   12 |     0 |      6000 |  0.20 |
+| Slice LUTs*                | 4321 |     0 |     17600 | 24.55 |
+|   LUT as Logic             | 4311 |     0 |     17600 | 24.49 |
+|   LUT as Memory            |   10 |     0 |      6000 |  0.17 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
-|     LUT as Shift Register  |   12 |     0 |           |       |
-| Slice Registers            | 6642 |     0 |     35200 | 18.87 |
-|   Register as Flip Flop    | 6642 |     0 |     35200 | 18.87 |
+|     LUT as Shift Register  |   10 |     0 |           |       |
+| Slice Registers            | 6588 |     0 |     35200 | 18.72 |
+|   Register as Flip Flop    | 6588 |     0 |     35200 | 18.72 |
 |   Register as Latch        |    0 |     0 |     35200 |  0.00 |
 | F7 Muxes                   |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                   |    0 |     0 |      4400 |  0.00 |
@@ -59,7 +59,7 @@ Table of Contents
 | 13    |          Yes |           - |          Set |
 | 15    |          Yes |           - |        Reset |
 | 6     |          Yes |         Set |            - |
-| 6608  |          Yes |       Reset |            - |
+| 6554  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -92,7 +92,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+--------+
 |          Site Type          | Used | Fixed | Available |  Util% |
 +-----------------------------+------+-------+-----------+--------+
-| Bonded IOB                  |  112 |     0 |       100 | 112.00 |
+| Bonded IOB                  |  401 |     0 |       100 | 401.00 |
 | Bonded IPADs                |    0 |     0 |         2 |   0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |   0.00 |
 | PHY_CONTROL                 |    0 |     0 |         2 |   0.00 |
@@ -105,7 +105,8 @@ Table of Contents
 | PHASER_IN/PHASER_IN_PHY     |    0 |     0 |         8 |   0.00 |
 | IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       100 |   0.00 |
 | ILOGIC                      |    0 |     0 |       100 |   0.00 |
-| OLOGIC                      |    0 |     0 |       100 |   0.00 |
+| OLOGIC                      |   18 |     0 |       100 |  18.00 |
+|   ODDR                      |   18 |       |           |        |
 +-----------------------------+------+-------+-----------+--------+
 
 
@@ -115,7 +116,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    8 |     0 |        32 | 25.00 |
+| BUFGCTRL   |    7 |     0 |        32 | 21.88 |
 | BUFIO      |    0 |     0 |         8 |  0.00 |
 | MMCME2_ADV |    0 |     0 |         2 |  0.00 |
 | PLLE2_ADV  |    1 |     0 |         2 | 50.00 |
@@ -148,22 +149,23 @@ Table of Contents
 +-----------+------+---------------------+
 |  Ref Name | Used | Functional Category |
 +-----------+------+---------------------+
-| FDRE      | 6608 |        Flop & Latch |
-| LUT3      | 2766 |                 LUT |
-| LUT2      | 1540 |                 LUT |
-| CARRY4    | 1158 |          CarryLogic |
+| FDRE      | 6554 |        Flop & Latch |
+| LUT3      | 2599 |                 LUT |
+| LUT2      | 1450 |                 LUT |
+| CARRY4    | 1105 |          CarryLogic |
 | LUT4      |  456 |                 LUT |
-| LUT1      |  259 |                 LUT |
-| OBUF      |   95 |                  IO |
+| OBUF      |  384 |                  IO |
+| LUT1      |  306 |                 LUT |
 | LUT5      |   75 |                 LUT |
+| ODDR      |   18 |                  IO |
 | IBUF      |   15 |                  IO |
 | FDCE      |   15 |        Flop & Latch |
 | FDPE      |   13 |        Flop & Latch |
-| BUFG      |    8 |               Clock |
 | LUT6      |    7 |                 LUT |
+| BUFG      |    7 |               Clock |
 | SRLC32E   |    6 |  Distributed Memory |
-| SRL16E    |    6 |  Distributed Memory |
 | FDSE      |    6 |        Flop & Latch |
+| SRL16E    |    4 |  Distributed Memory |
 | PLLE2_ADV |    1 |               Clock |
 | IBUFDS    |    1 |                  IO |
 +-----------+------+---------------------+

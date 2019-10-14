@@ -57,9 +57,9 @@
 multiplier2 your_instance_name (
   .CLK(CLK),  // input wire CLK
   .A(A),      // input wire [31 : 0] A
-  .B(B),      // input wire [14 : 0] B
+  .B(B),      // input wire [13 : 0] B
   .CE(CE),    // input wire CE
-  .P(P)      // output wire [46 : 0] P
+  .P(P)      // output wire [45 : 0] P
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

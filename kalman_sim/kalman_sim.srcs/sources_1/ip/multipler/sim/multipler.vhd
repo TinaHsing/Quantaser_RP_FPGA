@@ -59,10 +59,10 @@ USE mult_gen_v12_0_12.mult_gen_v12_0_12;
 ENTITY multipler IS
   PORT (
     CLK : IN STD_LOGIC;
-    A : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
+    A : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
     B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     CE : IN STD_LOGIC;
-    P : OUT STD_LOGIC_VECTOR(46 DOWNTO 0)
+    P : OUT STD_LOGIC_VECTOR(45 DOWNTO 0)
   );
 END multipler;
 
@@ -94,11 +94,11 @@ ARCHITECTURE multipler_arch OF multipler IS
     );
     PORT (
       CLK : IN STD_LOGIC;
-      A : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
+      A : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
       B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       CE : IN STD_LOGIC;
       SCLR : IN STD_LOGIC;
-      P : OUT STD_LOGIC_VECTOR(46 DOWNTO 0)
+      P : OUT STD_LOGIC_VECTOR(45 DOWNTO 0)
     );
   END COMPONENT mult_gen_v12_0_12;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -117,11 +117,11 @@ BEGIN
       C_HAS_CE => 1,
       C_HAS_SCLR => 0,
       C_LATENCY => 1,
-      C_A_WIDTH => 15,
-      C_A_TYPE => 0,
+      C_A_WIDTH => 14,
+      C_A_TYPE => 1,
       C_B_WIDTH => 32,
-      C_B_TYPE => 0,
-      C_OUT_HIGH => 46,
+      C_B_TYPE => 1,
+      C_OUT_HIGH => 45,
       C_OUT_LOW => 0,
       C_MULT_TYPE => 0,
       C_CE_OVERRIDES_SCLR => 0,
