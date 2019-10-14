@@ -105,9 +105,9 @@ architecture tb of tb_divider is
   -- Breakout signals. These signals are the application-specific operands which
   -- become subfields of the TDATA fields.
   signal dividend : std_logic_vector(31 downto 0) := (others => '0');
-  signal divisor  : std_logic_vector(15 downto 0) := (others => '0');
+  signal divisor  : std_logic_vector(14 downto 0) := (others => '0');
   signal quotient : std_logic_vector(31 downto 0) := (others => '0');
-  signal remainder : std_logic_vector(15 downto 0) := (others => '0');
+  signal remainder : std_logic_vector(14 downto 0) := (others => '0');
   -----------------------------------------------------------------------
   -- DUT output signals
   -----------------------------------------------------------------------
@@ -132,7 +132,7 @@ architecture tb of tb_divider is
   constant IP_dividend_DEPTH : integer := 30;
   constant IP_dividend_WIDTH : integer := 32;
   constant IP_divisor_DEPTH : integer := 32;
-  constant IP_divisor_WIDTH : integer := 16;
+  constant IP_divisor_WIDTH : integer := 15;
   subtype T_IP_dividend_ENTRY is std_logic_vector(IP_dividend_WIDTH-1 downto 0);
   subtype T_IP_divisor_ENTRY is std_logic_vector(IP_divisor_WIDTH-1 downto 0);
   type T_IP_dividend_TABLE is array (0 to IP_dividend_DEPTH-1) of T_IP_dividend_ENTRY;
@@ -305,7 +305,7 @@ begin
       if divisor_tvalid_nxt /= '1' then
         s_axis_divisor_tdata <= (others => INVALID);
       else
-        -- TDATA: Holds the divisor operand. It is 16 bits wide and byte-aligned with the operand in the LSBs
+        -- TDATA: Holds the divisor operand. It is 15 bits wide and byte-aligned with the operand in the LSBs
             s_axis_divisor_tdata <= std_logic_vector(resize(signed(IP_divisor_DATA(ip_divisor_index)),16));
       end if;
 
@@ -361,9 +361,9 @@ begin
   -- Assign TDATA fields to aliases, for easy simulator waveform viewing
   -----------------------------------------------------------------------
 
-  divisor  <= s_axis_divisor_tdata(15 downto 0);
+  divisor  <= s_axis_divisor_tdata(14 downto 0);
   dividend <= s_axis_dividend_tdata(31 downto 0);
-  remainder <= m_axis_dout_tdata(15 downto 0);
+  remainder <= m_axis_dout_tdata(14 downto 0);
   quotient  <= m_axis_dout_tdata(47 downto 16);
 
 end tb;
