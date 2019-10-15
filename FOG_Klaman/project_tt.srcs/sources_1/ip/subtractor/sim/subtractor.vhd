@@ -129,7 +129,7 @@ BEGIN
       C_B_WIDTH => 32,
       C_OUT_WIDTH => 32,
       C_CE_OVERRIDES_SCLR => 0,
-      C_A_TYPE => 1,
+      C_A_TYPE => 0,
       C_B_TYPE => 0,
       C_LATENCY => 1,
       C_ADD_MODE => 1,

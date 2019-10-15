@@ -55,9 +55,10 @@
 COMPONENT multiplier
   PORT (
     CLK : IN STD_LOGIC;
-    A : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
+    A : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
     B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    P : OUT STD_LOGIC_VECTOR(46 DOWNTO 0)
+    CE : IN STD_LOGIC;
+    P : OUT STD_LOGIC_VECTOR(45 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -71,6 +72,7 @@ your_instance_name : multiplier
     CLK => CLK,
     A => A,
     B => B,
+    CE => CE,
     P => P
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------

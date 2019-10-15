@@ -62,7 +62,7 @@ ENTITY adder IS
     B : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
     CLK : IN STD_LOGIC;
     CE : IN STD_LOGIC;
-    S : OUT STD_LOGIC_VECTOR(14 DOWNTO 0)
+    S : OUT STD_LOGIC_VECTOR(13 DOWNTO 0)
   );
 END adder;
 
@@ -110,7 +110,7 @@ ARCHITECTURE adder_arch OF adder IS
       SSET : IN STD_LOGIC;
       SINIT : IN STD_LOGIC;
       C_OUT : OUT STD_LOGIC;
-      S : OUT STD_LOGIC_VECTOR(14 DOWNTO 0)
+      S : OUT STD_LOGIC_VECTOR(13 DOWNTO 0)
     );
   END COMPONENT c_addsub_v12_0_10;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -127,9 +127,9 @@ BEGIN
       C_IMPLEMENTATION => 0,
       C_A_WIDTH => 14,
       C_B_WIDTH => 14,
-      C_OUT_WIDTH => 15,
+      C_OUT_WIDTH => 14,
       C_CE_OVERRIDES_SCLR => 0,
-      C_A_TYPE => 0,
+      C_A_TYPE => 1,
       C_B_TYPE => 1,
       C_LATENCY => 1,
       C_ADD_MODE => 0,

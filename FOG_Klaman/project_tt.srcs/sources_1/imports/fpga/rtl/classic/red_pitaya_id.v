@@ -69,7 +69,21 @@ module red_pitaya_id #(
   , input [31:0] step_MV_sum
   , input [14:0] ADC_reg_Diff_MV
   , input [31:0] step_MV_sum_out
-  , input [31:0] err_signal_pre
+  , input [31:0] err_signal_pre  
+  //kalman filter
+  // , output reg [13:0 ] measure
+  // , output reg [13:0 ] x_apo_est
+  // , output reg [13:0 ] P_apo_est
+  , input [13:0] P_apri_est 
+  , input [14:0] out_adder_P_apri_est_R 
+  , input [31:0] K 
+  , input [31:0] out_subtractor_1_K 
+  , input [31:0] out_multiplier_P_apo_est
+  , input [13:0] out_divider_P_apo_est
+  , input [13:0] post_error
+  , input [31:0] out_multiplier_K_post_error
+  , input [31:0] out_divider_K_post_error
+  , input [13:0] out_adder_x_apri_est_divided_K_post_error
 );
 
 //---------------------------------------------------------------------------------
@@ -148,7 +162,9 @@ if (rstn_i == 1'b0) begin
   ladder_rst <= 1'b0;
   err_shift_idx <= 5'd0;
   err_shift_idx_pre <= 5'd0;
-  
+  // measure <= 14'd0;
+  // x_apo_est <= 14'd0;
+  // P_apo_est <= 14'd8191;
 end else if (sys_wen) begin
   if (sys_addr[19:0]==20'h0c)   digital_loop <= sys_wdata[0];
   if (sys_addr[19:0]==20'h100) reg_mod_H <= sys_wdata[31:0];
@@ -167,6 +183,10 @@ end else if (sys_wen) begin
   if (sys_addr[19:0]==20'h160) Diff_vth <= sys_wdata[31:0];
   if (sys_addr[19:0]==20'h168) reg_vth_1st_int <= 32'h3fff & sys_wdata[31:0]; //0011_1111_1111_1111 & sys_wdata[31:0]
   if (sys_addr[19:0]==20'h170) err_shift_idx_pre <= sys_wdata[31:0]; 
+  // if (sys_addr[19:0]==20'h180) P_apo_est <= sys_wdata[31:0]; 
+  // if (sys_addr[19:0]==20'h19C) measure <= sys_wdata[31:0]; 
+  // if (sys_addr[19:0]==20'h1A0) x_apo_est <= sys_wdata[31:0]; 
+
 end
 
 wire sys_en;
@@ -215,6 +235,21 @@ end else begin
     20'h00170: begin sys_ack <= sys_en;  sys_rdata <= {err_shift_idx_pre      }; end 
     20'h00174: begin sys_ack <= sys_en;  sys_rdata <= {err_signal_pre      }; end 
     20'h00178: begin sys_ack <= sys_en;  sys_rdata <= {dac_ladder_pre_vth      }; end
+	// 20'h00180: begin sys_ack <= sys_en;  sys_rdata <= {P_apo_est      }; end
+	20'h00184: begin sys_ack <= sys_en;  sys_rdata <= {   P_apri_est   }; end
+	20'h00188: begin sys_ack <= sys_en;  sys_rdata <= {   out_adder_P_apri_est_R   }; end
+	20'h0018C: begin sys_ack <= sys_en;  sys_rdata <= {  K    }; end
+	20'h00190: begin sys_ack <= sys_en;  sys_rdata <= {  out_subtractor_1_K    }; end
+	20'h00194: begin sys_ack <= sys_en;  sys_rdata <= {  out_multiplier_P_apo_est    }; end
+	20'h00198: begin sys_ack <= sys_en;  sys_rdata <= {   out_divider_P_apo_est   }; end
+	// 20'h0019C: begin sys_ack <= sys_en;  sys_rdata <= {   measure   }; end
+	// 20'h001A0: begin sys_ack <= sys_en;  sys_rdata <= {   x_apo_est   }; end
+	20'h001A4: begin sys_ack <= sys_en;  sys_rdata <= {  post_error    }; end
+	20'h001A8: begin sys_ack <= sys_en;  sys_rdata <= {  out_multiplier_K_post_error    }; end
+	20'h001AC: begin sys_ack <= sys_en;  sys_rdata <= {  out_divider_K_post_error    }; end
+	20'h001B0: begin sys_ack <= sys_en;  sys_rdata <= {   out_adder_x_apri_est_divided_K_post_error   }; end
+
+
       default: begin sys_ack <= sys_en;  sys_rdata <=  32'h0   ; end 
   endcase
 end
