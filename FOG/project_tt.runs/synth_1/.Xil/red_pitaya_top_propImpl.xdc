@@ -1,5 +1,4 @@
 set_property SRC_FILE_INFO {cfile:C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc rfile:../../../project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc id:1} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.runs/synth_1/dont_touch.xdc rfile:../dont_touch.xdc id:2} [current_design]
 set_property src_info {type:XDC file:1 line:19 export:INPUT save:INPUT read:READ} [current_design]
 set_property IOB        TRUE     [get_ports {adc_dat_i[*][*]}]
 set_property src_info {type:XDC file:1 line:22 export:INPUT save:INPUT read:READ} [current_design]
@@ -228,7 +227,3 @@ set_property src_info {type:XDC file:1 line:221 export:INPUT save:INPUT read:REA
 set_false_path -from [get_clocks dac_clk_o] -to [get_clocks dac_clk_2x]
 set_property src_info {type:XDC file:1 line:222 export:INPUT save:INPUT read:READ} [current_design]
 set_false_path -from [get_clocks dac_clk_o] -to [get_clocks dac_clk_2p]
-set_property src_info {type:XDC file:2 line:7 export:INPUT save:INPUT read:READ} [current_design]
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mult_gen_0 || ORIG_REF_NAME==mult_gen_0}]
-set_property src_info {type:XDC file:2 line:28 export:INPUT save:INPUT read:READ} [current_design]
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mult_1 || ORIG_REF_NAME==mult_1}]

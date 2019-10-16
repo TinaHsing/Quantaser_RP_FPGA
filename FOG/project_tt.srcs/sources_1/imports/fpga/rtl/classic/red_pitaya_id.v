@@ -135,7 +135,7 @@ if (rstn_i == 1'b0) begin
   digital_loop <= 1'b0;
   reg_mod_H <= 32'd0 | {1'b0, 13'd4890};
   reg_mod_L <= 32'd0 | {1'b0, 13'd3276};
-  reg_mod_freq_cnt <= 32'd62500; // 1KHz
+  reg_mod_freq_cnt <= 32'd125; // 1KHz
   Init_stable_cnt <= 32'd30; //for 500KH
   reg_err_gain <= 17'd1;
   reg_vth <= 14'd4915; //8191 = 1V

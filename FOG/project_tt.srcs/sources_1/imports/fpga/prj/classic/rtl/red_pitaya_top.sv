@@ -360,8 +360,8 @@ logic [6:0] deMOD_mv_cnt = 7'd64;
 //assign dac_b_sum = ADC_reg_Diff;  //fog_v1.bit
 //assign dac_b_sum = ADC_reg_Diff_MV; //fog_v1_1.bit ~ fog_v1_10.bit
 
-assign dac_a_sum = dac_ladder_out_2[14:0]; //close loop, com2
-assign dac_b_sum = dac_ladder_pre[14:0];
+// assign dac_a_sum = dac_ladder_out_2[14:0]; //close loop, com2
+// assign dac_b_sum = dac_ladder_pre[14:0];
 
 //assign dac_a_sum = dac_ladder_out_2[14:0]; //com3
 //assign dac_b_sum = ADC_reg_Diff;
@@ -371,6 +371,10 @@ assign dac_b_sum = dac_ladder_pre[14:0];
 
 //assign dac_a_sum = dac_ladder[14:0]; //com5
 //assign dac_b_sum = dac_ladder_2[14:0];
+
+assign dac_a_sum = measure; //kalman filter
+// assign dac_b_sum = x_apo_est_r;
+assign dac_b_sum = x_apo_est;
 
 // saturation
 assign dac_a = (^dac_a_sum[15-1:15-2]) ? {dac_a_sum[15-1], {13{~dac_a_sum[15-1]}}} : dac_a_sum[14-1:0];
@@ -489,6 +493,7 @@ begin
             else 
                 ADC_reg_Diff <= ADC_reg_L - ADC_reg_H;
             SM_diff <= 3'd4;
+			measure <= adc_dat[0];
         end
         3'd4: begin
             if(ADC_reg_Diff>= $signed(Diff_vth) || ADC_reg_Diff<= $signed(-Diff_vth))
@@ -961,8 +966,6 @@ begin
 		pio_tt <= 1'b0;
 end
 
-
-
 //assign exp_n_io[0] = pio_tt;
 assign exp_n_io[0] = mod;
 // DDR outputs
@@ -972,6 +975,152 @@ ODDR oddr_dac_sel          (.Q(dac_sel_o), .D1(1'b1     ), .D2(1'b0     ), .C(da
 ODDR oddr_dac_rst          (.Q(dac_rst_o), .D1(dac_rst  ), .D2(dac_rst  ), .C(dac_clk_1x), .CE(1'b1), .R(1'b0   ), .S(1'b0));
 ODDR oddr_dac_dat [14-1:0] (.Q(dac_dat_o), .D1(dac_dat_b), .D2(dac_dat_a), .C(dac_clk_1x), .CE(1'b1), .R(dac_rst), .S(1'b0));
 
+////////////////////////////////////////////////////////////////////////////////
+//Kalman filter
+////////////////////////////////////////////////////////////////////////////////
+logic signed [14-1:0] x_apo_est, P_apo_est;
+logic signed [14-1:0] P_apri_est;
+logic signed [15-1:0] out_adder_P_apri_est_R;
+logic signed [48-1:0] K;
+logic signed [32-1:0] out_subtractor_1_K;
+logic signed [47-1:0] out_multiplier_P_apo_est;
+
+logic signed [14-1:0] post_error;
+logic signed [47-1:0] out_multiplier_K_post_error;
+logic signed [64-1:0] out_divider_K_post_error;
+logic signed [31:0] out_adder_x_apri_est_divided_K_post_error;
+logic signed [64-1:0] out_divider_P_apo_est;
+logic signed [13:0] measure;
+
+//  p
+adder P_apo_est_shifted_Q //P_apo_est + Q
+(
+  .A(P_apo_est),      
+  .B(14'd819),      //Q value set at 0.1 in decimal
+  .CLK(dac_clk_1x),  // input wire CLK
+  .CE(1'b1),    // input wire CE
+  .S(P_apri_est)      // output wire [14 : 0] S
+);
+adder2 P_apri_est_R //R + P_apri_est
+(
+  .A(P_apri_est),      // input wire [14 : 0] A
+  .B(14'd8191),      // input wire [13 : 0] B, R value set at 1 in decimal
+  .CLK(dac_clk_1x),  // input wire CLK
+  .CE(1'b1),    // input wire CE
+  .S(out_adder_P_apri_est_R)      // output wire [15 : 0] S
+);
+divider P_apri_est_R_P_apri_est //P_apri_est/(R+P_apri_est)
+(
+  .aclk(dac_clk_1x),                                      // input wire aclk
+  .aclken(1'b1),                                  // input wire aclken
+  .s_axis_divisor_tvalid(1'b1),    // input wire s_axis_divisor_tvalid
+ .s_axis_divisor_tdata(out_adder_P_apri_est_R),      // input wire [15 : 0] s_axis_divisor_tdata
+  // .s_axis_divisor_tdata(15'd1),
+  .s_axis_dividend_tvalid(1'b1),  // input wire s_axis_dividend_tvalid
+ .s_axis_dividend_tdata((32'b0|P_apri_est) << 13),    // input wire [31 : 0] s_axis_dividend_tdata
+  // .s_axis_dividend_tdata(32'b0 | P_apri_est),
+  .m_axis_dout_tvalid(),          // output wire m_axis_dout_tvalid
+  .m_axis_dout_tdata(K)            // output wire [47 : 0] m_axis_dout_tdata
+);
+
+subtractor _1_K  //1-K
+(
+  .A(32'd8191),      // input wire [31 : 0] A
+  .B(K[47:16]),      // input wire [31 : 0] B
+  .CLK(dac_clk_1x),  // input wire CLK
+  .CE(1'b1),    // input wire CE
+  .S(out_subtractor_1_K)      // output wire [31 : 0] S
+);
+multiplier P_apri_est_1_K					//P_apri_est * (1-K) 
+(
+  .CLK(dac_clk_1x),  // input wire CLK
+  .A(P_apri_est),      // input wire [14 : 0] A
+  .B(out_subtractor_1_K),      // input wire [31 : 0] B
+  .CE(1'b1),    // input wire CE
+  .P(out_multiplier_P_apo_est)      // output wire [46 : 0] P
+);
+divider2 shifted_P_apo_est			//Divide by 2^14
+(
+  .aclk(dac_clk_1x),                                      // input wire aclk
+  .aclken(1'b1),                                  // input wire aclken
+  .s_axis_divisor_tvalid(1'b1),    // input wire s_axis_divisor_tvalid
+  .s_axis_divisor_tdata(32'd8192),      // input wire [31 : 0] s_axis_divisor_tdata
+  // .s_axis_divisor_tdata(32'd1),      // input wire [31 : 0] s_axis_divisor_tdata
+  .s_axis_dividend_tvalid(1'b1),  // input wire s_axis_dividend_tvalid
+  .s_axis_dividend_tdata(out_multiplier_P_apo_est),    // input wire [31 : 0] s_axis_dividend_tdata
+  .m_axis_dout_tvalid(),          // output wire m_axis_dout_tvalid
+  .m_axis_dout_tdata(out_divider_P_apo_est)            // output wire [63 : 0] m_axis_dout_tdata
+);
+
+// x
+subtractor2 z_measured_x_apri_est //z_measure - x_apri_est
+(
+  .A(measure),      // input wire [13 : 0] A
+  .B(x_apo_est),      // input wire [13 : 0] B
+  .CLK(dac_clk_1x),  // input wire CLK
+  .CE(1'b1),    // input wire CE
+  .S(post_error)      // output wire [14 : 0] S
+);
+multiplier2 K_post_error		//K * (z_measure-x_apri_est)
+(
+  .CLK(dac_clk_1x),  // input wire CLK
+  .A(K[47:16]),      // input wire [31 : 0] A
+  // .A(32'd32768),      
+  .B(post_error),      // input wire [14 : 0] B
+  .CE(1'b1),
+  .P(out_multiplier_K_post_error)      // output wire [46 : 0] P
+);
+divider3 shifted_K_post_error  //K*(z_measure-x_apri_est) / 2^15
+(
+  .aclk(dac_clk_1x),                                      // input wire aclk
+  .aclken(1'b1),                                  // input wire aclken
+  .s_axis_divisor_tvalid(1'b1),    // input wire s_axis_divisor_tvalid
+  .s_axis_divisor_tdata(32'd8192), // input wire [31 : 0] s_axis_divisor_tdata
+  .s_axis_dividend_tvalid(1'b1),  // input wire s_axis_dividend_tvalid
+  .s_axis_dividend_tdata(out_multiplier_K_post_error),    // input wire [31 : 0] s_axis_dividend_tdata
+  .m_axis_dout_tvalid(),          // output wire m_axis_dout_tvalid
+  .m_axis_dout_tdata(out_divider_K_post_error)            // output wire [63 : 0] m_axis_dout_tdata
+);
+adder3 x_apri_est_shifted_K_post_error	//x_apri_est + K*(z_measure-x_apri_est)/2^15 
+(
+  .A(x_apo_est),      // input wire [13 : 0] A
+  .B(out_divider_K_post_error[63:32]),      // input wire [31 : 0] B
+  .CLK(dac_clk_1x),  // input wire CLK
+  .CE(1'b1),    // input wire CE
+  .S(out_adder_x_apri_est_divided_K_post_error)      // output wire [31 : 0] S
+);
+
+always @ (negedge adc_rstn or posedge ladder_start_strobe)
+begin
+	// Reset whenever the reset signal goes low, regardless of the busy
+	if (!adc_rstn)
+	begin
+		P_apo_est <= 14'd8191;		//covariance starting value set at 1
+		x_apo_est <= 14'd0;			//estimate starting value set at 0
+	end
+	// If not resetting, update the register output on the busy's falling edge
+	else
+	begin
+		P_apo_est <= out_divider_P_apo_est[45:32];
+		x_apo_est <= out_adder_x_apri_est_divided_K_post_error[13:0];
+	end
+end
+
+logic signed [13:0] x_apo_est_r;
+logic [9:0] x_apo_cnt = 10'd0;
+localparam delay_cnt = 10'd125;
+
+always @(posedge dac_clk_1x) // dac_clk_1x
+begin
+	if(x_apo_cnt != delay_cnt) x_apo_cnt <= x_apo_cnt + 1'b1;
+	else if(x_apo_cnt == delay_cnt && ladder_start_strobe) begin
+		x_apo_cnt <= 10'd0;
+	end
+    else begin
+        x_apo_cnt <= x_apo_cnt;
+        x_apo_est_r <= x_apo_est;
+    end
+end
 ////////////////////////////////////////////////////////////////////////////////
 //  House Keeping
 ////////////////////////////////////////////////////////////////////////////////
