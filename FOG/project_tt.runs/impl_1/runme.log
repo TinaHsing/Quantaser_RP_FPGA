@@ -9,86 +9,86 @@
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 source red_pitaya_top.tcl -notrace
-WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libps7.so'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libps7.dll'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libremoteport.so'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libremoteport.dll'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libps7.so'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libps7.dll'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libremoteport.so'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libremoteport.dll'. Please regenerate to continue.
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_axi_protocol_converter_0_0/system_axi_protocol_converter_0_0.dcp' for cell 'ps/system_i/axi_protocol_converter_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0/system_proc_sys_reset_0.dcp' for cell 'ps/system_i/proc_sys_reset'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/system_processing_system7_0.dcp' for cell 'ps/system_i/processing_system7'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0.dcp' for cell 'ps/system_i/xadc'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_xlconstant_0/system_xlconstant_0.dcp' for cell 'ps/system_i/xlconstant'
-INFO: [Netlist 29-17] Analyzing 2346 Unisim elements for replacement
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_axi_protocol_converter_0_0/system_axi_protocol_converter_0_0.dcp' for cell 'ps/system_i/axi_protocol_converter_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0/system_proc_sys_reset_0.dcp' for cell 'ps/system_i/proc_sys_reset'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/system_processing_system7_0.dcp' for cell 'ps/system_i/processing_system7'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0.dcp' for cell 'ps/system_i/xadc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_xlconstant_0/system_xlconstant_0.dcp' for cell 'ps/system_i/xlconstant'
+INFO: [Netlist 29-17] Analyzing 2378 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2017.2
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0/system_proc_sys_reset_0_board.xdc] for cell 'ps/system_i/proc_sys_reset/U0'
-Finished Parsing XDC File [c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0/system_proc_sys_reset_0_board.xdc] for cell 'ps/system_i/proc_sys_reset/U0'
-Parsing XDC File [c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0/system_proc_sys_reset_0.xdc] for cell 'ps/system_i/proc_sys_reset/U0'
-Finished Parsing XDC File [c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0/system_proc_sys_reset_0.xdc] for cell 'ps/system_i/proc_sys_reset/U0'
-Parsing XDC File [c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/system_processing_system7_0.xdc] for cell 'ps/system_i/processing_system7/inst'
-Finished Parsing XDC File [c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/system_processing_system7_0.xdc] for cell 'ps/system_i/processing_system7/inst'
-Parsing XDC File [c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0.xdc] for cell 'ps/system_i/xadc/inst'
-Finished Parsing XDC File [c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0.xdc] for cell 'ps/system_i/xadc/inst'
-Parsing XDC File [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc]
-INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:212]
-INFO: [Timing 38-2] Deriving generated clocks [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:212]
-WARNING: [Vivado 12-627] No clocks matched 'dac_clk_o'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:212]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:212]
-get_clocks: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1140.035 ; gain = 513.441
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_o]'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:212]
+Parsing XDC File [c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0/system_proc_sys_reset_0_board.xdc] for cell 'ps/system_i/proc_sys_reset/U0'
+Finished Parsing XDC File [c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0/system_proc_sys_reset_0_board.xdc] for cell 'ps/system_i/proc_sys_reset/U0'
+Parsing XDC File [c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0/system_proc_sys_reset_0.xdc] for cell 'ps/system_i/proc_sys_reset/U0'
+Finished Parsing XDC File [c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0/system_proc_sys_reset_0.xdc] for cell 'ps/system_i/proc_sys_reset/U0'
+Parsing XDC File [c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/system_processing_system7_0.xdc] for cell 'ps/system_i/processing_system7/inst'
+Finished Parsing XDC File [c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/system_processing_system7_0.xdc] for cell 'ps/system_i/processing_system7/inst'
+Parsing XDC File [c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0.xdc] for cell 'ps/system_i/xadc/inst'
+Finished Parsing XDC File [c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0.xdc] for cell 'ps/system_i/xadc/inst'
+Parsing XDC File [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:212]
+INFO: [Timing 38-2] Deriving generated clocks [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:212]
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_o'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:212]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:212]
+get_clocks: Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 1114.445 ; gain = 514.336
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_o]'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:212]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2x'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:213]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:213]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2x]'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:213]
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2x'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:213]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:213]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2x]'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:213]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2p'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:214]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:214]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2p]'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:214]
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2p'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:214]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:214]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2p]'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:214]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-627] No clocks matched 'dac_clk_1x'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:216]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:216]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_1x]'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:216]
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_1x'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:216]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:216]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_1x]'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:216]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2x'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:217]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:217]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2x]'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:217]
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2x'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:217]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:217]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2x]'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:217]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2p'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:218]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:218]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2p]'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:218]
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2p'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:218]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:218]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2p]'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:218]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-627] No clocks matched 'ser_clk'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:219]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:219]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks ser_clk]'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:219]
+WARNING: [Vivado 12-627] No clocks matched 'ser_clk'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:219]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:219]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks ser_clk]'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:219]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-627] No clocks matched 'pdm_clk'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:220]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:220]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks pdm_clk]'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:220]
+WARNING: [Vivado 12-627] No clocks matched 'pdm_clk'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:220]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:220]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks pdm_clk]'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:220]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-627] No clocks matched 'dac_clk_o'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:221]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:221]
-WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2x'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:221]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:221]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks dac_clk_o]'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:221]
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_o'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:221]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:221]
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2x'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:221]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:221]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks dac_clk_o]'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:221]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-627] No clocks matched 'dac_clk_o'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:222]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:222]
-WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2p'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:222]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:222]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks dac_clk_o]'. [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:222]
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_o'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:222]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:222]
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2p'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:222]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:222]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks dac_clk_o]'. [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc:222]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-Finished Parsing XDC File [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc]
+Finished Parsing XDC File [C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 53 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 23 instances
   RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 30 instances
 
-link_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1140.035 ; gain = 868.047
+link_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 1114.445 ; gain = 870.039
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010-clg400'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010-clg400'
@@ -101,7 +101,7 @@ report_drc (run_mandatory_drcs) completed successfully
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.907 . Memory (MB): peak = 1140.035 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1114.445 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
@@ -109,42 +109,42 @@ Starting Logic Optimization Task
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 33 inverter(s) to 711 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: bdc320af
+Phase 1 Retarget | Checksum: c2efba5a
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1140.035 ; gain = 0.000
-INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 472 cells
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1114.445 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 503 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: e76b55a5
+Phase 2 Constant propagation | Checksum: 1509ed41b
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1140.035 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1114.445 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 1983 cells and removed 2922 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: fef9c8fb
+Phase 3 Sweep | Checksum: db3d94a8
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1140.035 ; gain = 0.000
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 3489 cells
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1114.445 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 9924 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: fef9c8fb
+Phase 4 BUFG optimization | Checksum: db3d94a8
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1140.035 ; gain = 0.000
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1114.445 ; gain = 0.000
 INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: fef9c8fb
+Phase 5 Shift Register Optimization | Checksum: db3d94a8
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1140.035 ; gain = 0.000
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1114.445 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1140.035 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: fef9c8fb
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.139 . Memory (MB): peak = 1114.445 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: db3d94a8
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1140.035 ; gain = 0.000
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1114.445 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -161,25 +161,27 @@ Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 42 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 28 WE to EN ports
 Number of BRAM Ports augmented: 14 newly gated: 28 Total Ports: 84
-Ending PowerOpt Patch Enables Task | Checksum: 128b49d57
+Ending PowerOpt Patch Enables Task | Checksum: 108333af2
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 1365.266 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 128b49d57
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.200 . Memory (MB): peak = 1307.090 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 108333af2
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1365.266 ; gain = 225.230
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1307.090 ; gain = 192.645
 46 Infos, 16 Warnings, 10 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 1365.266 ; gain = 225.230
+opt_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:33 . Memory (MB): peak = 1307.090 ; gain = 192.645
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.148 . Memory (MB): peak = 1365.266 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.runs/impl_1/red_pitaya_top_opt.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.199 . Memory (MB): peak = 1307.090 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.runs/impl_1/red_pitaya_top_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1307.090 ; gain = 0.000
 Command: report_drc -file red_pitaya_top_drc_opted.rpt
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.runs/impl_1/red_pitaya_top_drc_opted.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.runs/impl_1/red_pitaya_top_drc_opted.rpt.
 report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1307.090 ; gain = 0.000
 INFO: [Chipscope 16-241] No debug cores found in the current design.
 Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
 or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
@@ -204,92 +206,92 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1365.266 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 12303a39c
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.107 . Memory (MB): peak = 1307.090 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: abefd5b3
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.135 . Memory (MB): peak = 1307.090 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 89068577
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 180c79bdf
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1b46845fc
+Phase 1.3 Build Placer Netlist Model | Checksum: f2ca6eea
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1b46845fc
+Phase 1.4 Constrain Clocks/Macros | Checksum: f2ca6eea
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 1365.266 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 1b46845fc
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1307.090 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: f2ca6eea
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 23903cbd0
+Phase 2 Global Placement | Checksum: 1241a575a
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:26 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:38 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 23903cbd0
+Phase 3.1 Commit Multi Column Macros | Checksum: 1241a575a
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:26 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:39 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 24596edba
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 125bb6772
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:30 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:44 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 27f5fe91f
+Phase 3.3 Area Swap Optimization | Checksum: b919a422
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:30 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:44 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 218edfbb4
+Phase 3.4 Pipeline Register Optimization | Checksum: 132e49275
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:30 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:44 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: 2873a404c
+Phase 3.5 Timing Path Optimizer | Checksum: c03b4bf1
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:31 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:46 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 3.6 Fast Optimization
-Phase 3.6 Fast Optimization | Checksum: 1ec622502
+Phase 3.6 Fast Optimization | Checksum: 89c814fc
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:33 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:47 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 3.7 Small Shape Detail Placement
-Phase 3.7 Small Shape Detail Placement | Checksum: 225590f59
+Phase 3.7 Small Shape Detail Placement | Checksum: 13f26c338
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:36 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:54 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 3.8 Re-assign LUT pins
-Phase 3.8 Re-assign LUT pins | Checksum: 19a12c823
+Phase 3.8 Re-assign LUT pins | Checksum: 10fd7d48d
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:37 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:55 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 3.9 Pipeline Register Optimization
-Phase 3.9 Pipeline Register Optimization | Checksum: 13e6ec7e1
+Phase 3.9 Pipeline Register Optimization | Checksum: 10fd7d48d
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:37 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:55 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 3.10 Fast Optimization
-Phase 3.10 Fast Optimization | Checksum: 2018614b2
+Phase 3.10 Fast Optimization | Checksum: 11371be42
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:39 . Memory (MB): peak = 1365.266 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 2018614b2
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:59 . Memory (MB): peak = 1307.090 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 11371be42
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:40 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:59 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -297,55 +299,56 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 12d199737
+Post Placement Optimization Initialization | Checksum: 1290de1d2
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
 INFO: [Place 46-38] Processed net i_scope/i_dfilt1_chb/aa_mult_0, BUFG insertion was skipped due to placement/routing conflicts.
 INFO: [Place 46-41] BUFG insertion identified 1 candidate nets, 0 success, 1 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 12d199737
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1290de1d2
 
-Time (s): cpu = 00:01:02 ; elapsed = 00:00:44 . Memory (MB): peak = 1365.266 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-6.816. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 1d7e32522
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:05 . Memory (MB): peak = 1307.090 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-1.357. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1375468f4
 
-Time (s): cpu = 00:02:05 ; elapsed = 00:01:53 . Memory (MB): peak = 1365.266 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 1d7e32522
+Time (s): cpu = 00:02:12 ; elapsed = 00:01:50 . Memory (MB): peak = 1307.090 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1375468f4
 
-Time (s): cpu = 00:02:05 ; elapsed = 00:01:53 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:02:12 ; elapsed = 00:01:50 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1d7e32522
+Phase 4.2 Post Placement Cleanup | Checksum: 1375468f4
 
-Time (s): cpu = 00:02:05 ; elapsed = 00:01:53 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:51 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 1d7e32522
+Phase 4.3 Placer Reporting | Checksum: 1375468f4
 
-Time (s): cpu = 00:02:05 ; elapsed = 00:01:53 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:51 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 185feb733
+Phase 4.4 Final Placement Cleanup | Checksum: 1931cd53e
 
-Time (s): cpu = 00:02:05 ; elapsed = 00:01:53 . Memory (MB): peak = 1365.266 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 185feb733
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:51 . Memory (MB): peak = 1307.090 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1931cd53e
 
-Time (s): cpu = 00:02:06 ; elapsed = 00:01:54 . Memory (MB): peak = 1365.266 ; gain = 0.000
-Ending Placer Task | Checksum: 128a0be83
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:51 . Memory (MB): peak = 1307.090 ; gain = 0.000
+Ending Placer Task | Checksum: 109c1a611
 
-Time (s): cpu = 00:02:06 ; elapsed = 00:01:54 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:51 . Memory (MB): peak = 1307.090 ; gain = 0.000
 66 Infos, 16 Warnings, 10 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:02:10 ; elapsed = 00:01:57 . Memory (MB): peak = 1365.266 ; gain = 0.000
+place_design: Time (s): cpu = 00:02:18 ; elapsed = 00:01:56 . Memory (MB): peak = 1307.090 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1365.266 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.runs/impl_1/red_pitaya_top_placed.dcp' has been generated.
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.091 . Memory (MB): peak = 1365.266 ; gain = 0.000
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.154 . Memory (MB): peak = 1365.266 ; gain = 0.000
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 1307.090 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.runs/impl_1/red_pitaya_top_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1307.090 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.344 . Memory (MB): peak = 1307.090 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.247 . Memory (MB): peak = 1307.090 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1307.090 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010-clg400'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010-clg400'
@@ -359,119 +362,123 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: ff98c5c2 ConstDB: 0 ShapeSum: 2907f8c1 RouteDB: 0
+Checksum: PlaceDB: 67c09634 ConstDB: 0 ShapeSum: a2010fdd RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 16b9a8184
+Phase 1 Build RT Design | Checksum: dd2665be
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 16b9a8184
+Phase 2.1 Create Timer | Checksum: dd2665be
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 16b9a8184
+Phase 2.2 Fix Topology Constraints | Checksum: dd2665be
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 16b9a8184
+Phase 2.3 Pre Route Cleanup | Checksum: dd2665be
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 1307.090 ; gain = 0.000
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 2490eeecb
+Phase 2.4 Update Timing | Checksum: 166c8d8ab
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 1365.266 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.552 | TNS=-2594.108| WHS=-0.348 | THS=-129.130|
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:32 . Memory (MB): peak = 1307.090 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.485 | TNS=-82.459| WHS=-0.358 | THS=-150.062|
 
-Phase 2 Router Initialization | Checksum: 253a5a3e8
+Phase 2 Router Initialization | Checksum: 1709fff48
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: e163b09c
+Phase 3 Initial Routing | Checksum: 2522d12ed
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:21 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:42 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 1649
- Number of Nodes with overlaps = 93
- Number of Nodes with overlaps = 20
+ Number of Nodes with overlaps = 2273
+ Number of Nodes with overlaps = 264
+ Number of Nodes with overlaps = 25
+ Number of Nodes with overlaps = 15
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-7.186 | TNS=-3604.377| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.394 | TNS=-367.940| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1e34a400c
+Phase 4.1 Global Iteration 0 | Checksum: 22d0c99ef
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:29 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:38 ; elapsed = 00:01:07 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 80
- Number of Nodes with overlaps = 25
- Number of Nodes with overlaps = 18
+ Number of Nodes with overlaps = 61
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 5
  Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 6
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-7.475 | TNS=-3584.569| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.432 | TNS=-337.468| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: cb4a8b7f
+Phase 4.2 Global Iteration 1 | Checksum: 1258c5793
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:32 . Memory (MB): peak = 1365.266 ; gain = 0.000
-Phase 4 Rip-up And Reroute | Checksum: cb4a8b7f
+Time (s): cpu = 00:01:43 ; elapsed = 00:01:11 . Memory (MB): peak = 1307.090 ; gain = 0.000
+Phase 4 Rip-up And Reroute | Checksum: 1258c5793
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:32 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:43 ; elapsed = 00:01:11 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: e5d51d54
+Phase 5.1.1 Update Timing | Checksum: 10e872d94
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:33 . Memory (MB): peak = 1365.266 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-7.186 | TNS=-3504.178| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:12 . Memory (MB): peak = 1307.090 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.381 | TNS=-289.915| WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 17c00519f
+Phase 5.1 Delay CleanUp | Checksum: 1af79f163
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:34 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:18 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 17c00519f
+Phase 5.2 Clock Skew Optimization | Checksum: 1af79f163
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:35 . Memory (MB): peak = 1365.266 ; gain = 0.000
-Phase 5 Delay and Skew Optimization | Checksum: 17c00519f
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:18 . Memory (MB): peak = 1307.090 ; gain = 0.000
+Phase 5 Delay and Skew Optimization | Checksum: 1af79f163
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:35 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:18 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 1a505c392
+Phase 6.1.1 Update Timing | Checksum: 276dbce4b
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:35 . Memory (MB): peak = 1365.266 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-7.168 | TNS=-3375.324| WHS=-2.164 | THS=-58.870|
+Time (s): cpu = 00:01:58 ; elapsed = 00:01:19 . Memory (MB): peak = 1307.090 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.245 | TNS=-101.596| WHS=-2.164 | THS=-58.870|
 
-Phase 6.1 Hold Fix Iter | Checksum: f1a2de7e
+Phase 6.1 Hold Fix Iter | Checksum: 2a4685237
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:36 . Memory (MB): peak = 1365.266 ; gain = 0.000
-Phase 6 Post Hold Fix | Checksum: 142aecc70
+Time (s): cpu = 00:01:58 ; elapsed = 00:01:19 . Memory (MB): peak = 1307.090 ; gain = 0.000
+Phase 6 Post Hold Fix | Checksum: 2533958f5
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:36 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:58 ; elapsed = 00:01:19 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 14.931 %
-  Global Horizontal Routing Utilization  = 16.875 %
+  Global Vertical Routing Utilization    = 11.9354 %
+  Global Horizontal Routing Utilization  = 14.7387 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -481,65 +488,67 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 63.964%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 73.8739%, No Congested Regions.
 South Dir 1x1 Area, Max Cong = 68.4685%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 73.5294%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 69.1176%, No Congested Regions.
-Phase 7 Route finalize | Checksum: 126b18fea
+East Dir 1x1 Area, Max Cong = 82.3529%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 80.8824%, No Congested Regions.
+Phase 7 Route finalize | Checksum: 227d929f8
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:36 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:59 ; elapsed = 00:01:19 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 126b18fea
+Phase 8 Verifying routed nets | Checksum: 227d929f8
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:36 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:01:59 ; elapsed = 00:01:19 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: dc746f59
+Phase 9 Depositing Routes | Checksum: 1ff5b7af5
 
-Time (s): cpu = 00:00:57 ; elapsed = 00:00:37 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:02:00 ; elapsed = 00:01:21 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Phase 10 Post Router Timing
 
 Phase 10.1 Update Timing
-Phase 10.1 Update Timing | Checksum: 13fc43c7d
+Phase 10.1 Update Timing | Checksum: 20c9fa7a8
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:38 . Memory (MB): peak = 1365.266 ; gain = 0.000
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-7.168 | TNS=-3375.324| WHS=-2.164 | THS=-58.870|
+Time (s): cpu = 00:02:03 ; elapsed = 00:01:23 . Memory (MB): peak = 1307.090 ; gain = 0.000
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-1.245 | TNS=-101.596| WHS=-2.164 | THS=-58.870|
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 13fc43c7d
+Phase 10 Post Router Timing | Checksum: 20c9fa7a8
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:38 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:02:03 ; elapsed = 00:01:23 . Memory (MB): peak = 1307.090 ; gain = 0.000
 WARNING: [Route 35-426] Router was unable to fix hold violation on unroutable pins. The router cannot add routing detours to improve hold time because the pins are part of one or more of the following unroutable types: partition pins, fixed routes and intra-site connections.
 Resolution: Run report_timing_summary to analyze the hold violations.
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:38 . Memory (MB): peak = 1365.266 ; gain = 0.000
+Time (s): cpu = 00:02:03 ; elapsed = 00:01:23 . Memory (MB): peak = 1307.090 ; gain = 0.000
 
 Routing Is Done.
 79 Infos, 18 Warnings, 10 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:01:03 ; elapsed = 00:00:41 . Memory (MB): peak = 1365.266 ; gain = 0.000
+route_design: Time (s): cpu = 00:02:11 ; elapsed = 00:01:28 . Memory (MB): peak = 1307.090 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 1365.266 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.runs/impl_1/red_pitaya_top_routed.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 1307.090 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.runs/impl_1/red_pitaya_top_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1307.090 ; gain = 0.000
 Command: report_drc -file red_pitaya_top_drc_routed.rpt -pb red_pitaya_top_drc_routed.pb -rpx red_pitaya_top_drc_routed.rpx
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.runs/impl_1/red_pitaya_top_drc_routed.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.runs/impl_1/red_pitaya_top_drc_routed.rpt.
 report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 1307.090 ; gain = 0.000
 Command: report_methodology -file red_pitaya_top_methodology_drc_routed.rpt -rpx red_pitaya_top_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
-INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.runs/impl_1/red_pitaya_top_methodology_drc_routed.rpt.
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.runs/impl_1/red_pitaya_top_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1365.266 ; gain = 0.000
+report_methodology: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 1307.090 ; gain = 0.000
 Command: report_power -file red_pitaya_top_power_routed.rpt -pb red_pitaya_top_power_summary_routed.pb -rpx red_pitaya_top_power_routed.rpx
 INFO: [Power 33-23] Power model is not available for i_DNA
 INFO: [Timing 38-35] Done setting XDC timing constraints.
@@ -550,7 +559,7 @@ WARNING: [Power 33-332] Found switching activity that implies high-fanout reset 
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
 87 Infos, 19 Warnings, 10 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1402.633 ; gain = 37.367
+report_power: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1342.223 ; gain = 35.133
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
 CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
@@ -593,8 +602,7 @@ Creating bitstream...
 Writing bitstream ./red_pitaya_top.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Wed Oct 16 15:41:07 2019. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
-98 Infos, 38 Warnings, 11 Critical Warnings and 0 Errors encountered.
+97 Infos, 38 Warnings, 11 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 1768.414 ; gain = 365.781
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 16 15:41:07 2019...
+write_bitstream: Time (s): cpu = 00:00:53 ; elapsed = 00:00:46 . Memory (MB): peak = 1711.953 ; gain = 369.730
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 17 17:35:23 2019...

@@ -356,12 +356,12 @@ logic [16:0] reg_err_gain;
 logic [2:0] mv_shift = 3'd6, mv_mode;
 logic [6:0] deMOD_mv_cnt = 7'd64;
 
-//assign dac_a_sum = mod; //open loop, com1
-//assign dac_b_sum = ADC_reg_Diff;  //fog_v1.bit
-//assign dac_b_sum = ADC_reg_Diff_MV; //fog_v1_1.bit ~ fog_v1_10.bit
+// assign dac_a_sum = mod; //open loop, com1
+// assign dac_b_sum = ADC_reg_Diff;  //fog_v1.bit
+// assign dac_b_sum = ADC_reg_Diff_MV; //fog_v1_1.bit ~ fog_v1_10.bit
 
-// assign dac_a_sum = dac_ladder_out_2[14:0]; //close loop, com2
-// assign dac_b_sum = dac_ladder_pre[14:0];
+assign dac_a_sum = dac_ladder_out_2[14:0]; //close loop, com2
+assign dac_b_sum = dac_ladder_pre[14:0];
 
 //assign dac_a_sum = dac_ladder_out_2[14:0]; //com3
 //assign dac_b_sum = ADC_reg_Diff;
@@ -372,9 +372,9 @@ logic [6:0] deMOD_mv_cnt = 7'd64;
 //assign dac_a_sum = dac_ladder[14:0]; //com5
 //assign dac_b_sum = dac_ladder_2[14:0];
 
-assign dac_a_sum = measure; //kalman filter
+// assign dac_a_sum = measure; //kalman filter
 // assign dac_b_sum = x_apo_est_r;
-assign dac_b_sum = x_apo_est;
+// assign dac_b_sum = x_apo_est;
 
 // saturation
 assign dac_a = (^dac_a_sum[15-1:15-2]) ? {dac_a_sum[15-1], {13{~dac_a_sum[15-1]}}} : dac_a_sum[14-1:0];
@@ -388,7 +388,7 @@ logic [6:0] mv_cnt = deMOD_mv_cnt;
 logic signed [13:0] mod = reg_mod_H[13:0] ;
 logic signed [13:0] ADC_reg_H, ADC_reg_L;
 logic signed [14:0] ADC_reg_Diff, ADC_reg_Diff_ex_vth, Diff_vth;
-logic signed [31:0] ADC_reg_H_sum=32'd0, ADC_reg_L_sum=32'd0, step_MV_sum = 32'd0, ADC_reg_H_offset;
+logic signed [31:0] ADC_reg_H_sum=32'd0, ADC_reg_L_sum=32'd0, step_MV_sum = 32'd0, ADC_reg_H_offset, ladder_1st_offset;
 logic [9:0] step_MV_index = 10'd0;
 logic mod_stat = mod_stat_H;
 logic ladder_start_strobe = 1'b0;
@@ -712,25 +712,25 @@ end
 always@(posedge dac_clk_1x) 
 begin 
     case(err_shift_idx_pre)
-        5'd0: dac_ladder_pre <= dac_ladder_pre_vth;
-        5'd1: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre);   
-        5'd2: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre);
-        5'd3: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre); 
-        5'd4: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre);
-        5'd5: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre); 
-        5'd6: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre); 
-        5'd7: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre);   
-        5'd8: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre);
-        5'd9: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre); 
-        5'd10: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre);
-        5'd11: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre); 
-        5'd12: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre); 
-        5'd13: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre);
-        5'd14: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre); 
-        5'd15: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre); 
-        5'd16: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre);
-        5'd17: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre); 
-        5'd18: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre); 
+        5'd0: dac_ladder_pre <= dac_ladder_pre_vth + ladder_1st_offset;
+        5'd1: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;   
+        5'd2: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
+        5'd3: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+        5'd4: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
+        5'd5: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+        5'd6: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+        5'd7: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;   
+        5'd8: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
+        5'd9: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+        5'd10: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
+        5'd11: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+        5'd12: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+        5'd13: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
+        5'd14: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+        5'd15: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+        5'd16: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
+        5'd17: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+        5'd18: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
      endcase
 end
 
@@ -1170,7 +1170,8 @@ red_pitaya_id i_id (
   .err_shift_idx_pre(err_shift_idx_pre),
   .err_signal_pre(err_signal_pre),
   .dac_ladder_pre_vth(dac_ladder_pre_vth),
-  .dac_ladder_2(dac_ladder_2)
+  .dac_ladder_2(dac_ladder_2),
+  .ladder_1st_offset(ladder_1st_offset)
 );
 
 ////////////////////////////////////////////////////////////////////////////////

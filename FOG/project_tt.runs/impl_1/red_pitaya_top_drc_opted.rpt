@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Wed Oct 16 15:37:38 2019
-| Host         : DESKTOP-L7VH7BR running 64-bit major release  (build 9200)
+| Date         : Thu Oct 17 17:30:25 2019
+| Host         : LAPTOP-MFH2O9HI running 64-bit major release  (build 9200)
 | Command      : report_drc -file red_pitaya_top_drc_opted.rpt
 | Design       : red_pitaya_top
 | Device       : xc7z010clg400-1

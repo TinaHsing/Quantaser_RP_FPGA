@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc rfile:../../../project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc} rfile:../../../project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:19 export:INPUT save:INPUT read:READ} [current_design]
 set_property IOB        TRUE     [get_ports {adc_dat_i[*][*]}]
 set_property src_info {type:XDC file:1 line:22 export:INPUT save:INPUT read:READ} [current_design]
