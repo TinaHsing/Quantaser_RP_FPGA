@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Oct 17 13:36:40 2019
+# Process ID: 15656
+# Current directory: C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16908 C:\Users\adam\Desktop\Quantaser projects\Quantaser_RP_FPGA-master\FOG\project_tt.xpr
+# Log file: C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/vivado.log
+# Journal file: C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'brd'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libps7.so'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libps7.dll'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libremoteport.so'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0' generated file not found 'c:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.srcs/sources_1/bd/system/ip/system_processing_system7_0/sim/libremoteport.dll'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 771.949 ; gain = 91.254
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Oct 17 17:22:37 2019] Launched synth_1...
+Run output will be captured here: C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.runs/synth_1/runme.log
+[Thu Oct 17 17:22:37 2019] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Desktop/Quantaser projects/Quantaser_RP_FPGA-master/FOG/project_tt.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 831.840 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 18 18:14:22 2019...

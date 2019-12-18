@@ -360,8 +360,8 @@ logic [6:0] deMOD_mv_cnt = 7'd64;
 // assign dac_b_sum = ADC_reg_Diff;  //fog_v1.bit
 // assign dac_b_sum = ADC_reg_Diff_MV; //fog_v1_1.bit ~ fog_v1_10.bit
 
-assign dac_a_sum = dac_ladder_out_2[14:0]; //close loop, com2
-assign dac_b_sum = dac_ladder_pre[14:0];
+// assign dac_a_sum = dac_ladder_out_2[14:0]; //close loop, com2
+// assign dac_b_sum = dac_ladder_pre[14:0];
 
 //assign dac_a_sum = dac_ladder_out_2[14:0]; //com3
 //assign dac_b_sum = ADC_reg_Diff;
@@ -373,8 +373,9 @@ assign dac_b_sum = dac_ladder_pre[14:0];
 //assign dac_b_sum = dac_ladder_2[14:0];
 
 // assign dac_a_sum = measure; //kalman filter
+assign dac_a_sum = dac_ladder_out_2[14:0]; //kalman filter
 // assign dac_b_sum = x_apo_est_r;
-// assign dac_b_sum = x_apo_est;
+assign dac_b_sum = x_apo_est;
 
 // saturation
 assign dac_a = (^dac_a_sum[15-1:15-2]) ? {dac_a_sum[15-1], {13{~dac_a_sum[15-1]}}} : dac_a_sum[14-1:0];
@@ -393,7 +394,7 @@ logic [9:0] step_MV_index = 10'd0;
 logic mod_stat = mod_stat_H;
 logic ladder_start_strobe = 1'b0;
 logic err_polarity;
-logic signed [31:0] test_sum = 32'd0, test_add = $signed(-32'd1000), test;
+logic signed [31:0] test_sum = 32'd0, test_add = $signed(-32'd1000), test, test_reg1, test_reg2;
 
 logic [2:0] SM_diff = 3'd0;
 
@@ -493,7 +494,7 @@ begin
             else 
                 ADC_reg_Diff <= ADC_reg_L - ADC_reg_H;
             SM_diff <= 3'd4;
-			measure <= adc_dat[0];
+			// measure <= adc_dat[0];
         end
         3'd4: begin
             if(ADC_reg_Diff>= $signed(Diff_vth) || ADC_reg_Diff<= $signed(-Diff_vth))
@@ -732,6 +733,7 @@ begin
         5'd17: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
         5'd18: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
      endcase
+	 measure <= dac_ladder_pre[13:0];
 end
 
 always@(posedge dac_clk_1x) //ladder wave mid
@@ -943,11 +945,13 @@ begin
         begin
             mod <= reg_mod_H[13:0];
             mod_stat <= mod_stat_H;
+			// measure <= mod;
         end
         else if(mod_stat == mod_stat_H)
         begin
             mod <= reg_mod_L[13:0];
             mod_stat <= mod_stat_L;
+			// measure <= mod;
         end      
     end
     else
@@ -1172,6 +1176,7 @@ red_pitaya_id i_id (
   .dac_ladder_pre_vth(dac_ladder_pre_vth),
   .dac_ladder_2(dac_ladder_2),
   .ladder_1st_offset(ladder_1st_offset)
+  
 );
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1229,7 +1234,9 @@ red_pitaya_asg i_asg (
   .sys_ren         (sys[2].ren  ),
   .sys_rdata       (sys[2].rdata),
   .sys_err         (sys[2].err  ),
-  .sys_ack         (sys[2].ack  )
+  .sys_ack         (sys[2].ack  ),
+  .test_reg1(test_reg1),
+  .test_reg2(test_reg2)
 );
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -170,7 +170,7 @@ end else if (sys_wen) begin
   if (sys_addr[19:0]==20'h160) Diff_vth <= sys_wdata[31:0];
   if (sys_addr[19:0]==20'h168) reg_vth_1st_int <= 32'h3fff & sys_wdata[31:0]; //0011_1111_1111_1111 & sys_wdata[31:0]
   if (sys_addr[19:0]==20'h170) err_shift_idx_pre <= sys_wdata[31:0]; 
-  if (sys_addr[19:0]==20'h180) ladder_1st_offset <= sys_wdata[31:0];
+  if (sys_addr[19:0]==20'h180) ladder_1st_offset <= sys_wdata[31:0]; 
 end
 
 wire sys_en;
@@ -221,6 +221,7 @@ end else begin
     20'h00178: begin sys_ack <= sys_en;  sys_rdata <= {dac_ladder_pre_vth      }; end 
     20'h0017C: begin sys_ack <= sys_en;  sys_rdata <= {dac_ladder_2      }; end 
 	20'h00180: begin sys_ack <= sys_en;  sys_rdata <= {ladder_1st_offset      }; end
+	
       default: begin sys_ack <= sys_en;  sys_rdata <=  32'h0   ; end 
   endcase
 end
