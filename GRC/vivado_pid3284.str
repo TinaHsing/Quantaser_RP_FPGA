@@ -1,0 +1,122 @@
+/*
+
+Vivado v2017.2 (64-bit)
+SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+
+Process ID: 3284
+License: Customer
+
+Current time: 	1/7/20 12:53:18 PM CST
+Time zone: 	China Standard Time (Asia/Taipei)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 8 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Xilinx/Vivado/2017.2/tps/win64/jre
+JVM executable location: 	D:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/java.exe
+Java library paths: D:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o;C:/WINDOWS/Sun/Java/bin;C:/WINDOWS/system32;C:/WINDOWS;D:/Xilinx/Vivado/2017.2/bin;D:/Xilinx/Vivado/2017.2/lib/win64.o;D:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/server;D:/Xilinx/Vivado/2017.2/tps/win64/jre/bin;D:/Xilinx/SDK/2017.2/bin;D:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64;D:/Xilinx/Vivado_HLS/2017.2/bin;C:/Windows/system32;C:/Windows;C:/Windows/System32/Wbem;C:/Windows/System32/WindowsPowerShell/v1.0/;C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common;C:/WINDOWS/System32/OpenSSH/;C:/Program Files/dotnet/;C:/Users/adam/AppData/Local/Microsoft/WindowsApps;C:/Users/adam/AppData/Local/GitHubDesktop/bin;C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem;;D:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/bin;D:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/libexec/gcc/x86_64-w64-mingw32/6.2.0;.
+
+User name: 	adam
+User home directory: C:/Users/adam
+User working directory: C:/Users/adam/Documents/Quantaser_RP_FPGA/GRC
+User country: 	TW
+User language: 	zh
+User locale: 	zh_TW
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2017.2
+RDI_DATADIR: D:/Xilinx/Vivado/2017.2/data
+RDI_BINDIR: D:/Xilinx/Vivado/2017.2/bin
+
+User preferences location: C:/Users/adam/AppData/Roaming/Xilinx/Vivado
+Vivado preferences directory: C:/Users/adam/AppData/Roaming/Xilinx/Vivado/2017.2/vivado.xml
+Vivado layouts directory: C:/Users/adam/AppData/Roaming/Xilinx/Vivado/2017.2/layouts
+PlanAhead jar location: 	D:/Xilinx/Vivado/2017.2/lib/classes/planAhead.jar
+Vivado Look & Feel: 	[Synthetica - the extended Synth Look and Feel. - ui.g.i.H]
+Engine tmp dir: 	C:/Users/adam/Documents/Quantaser_RP_FPGA/GRC/.Xil/Vivado-3284-DESKTOP-L7VH7BR
+
+GUI allocated memory:	176 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 498 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 37 MB (+36266kb) [00:00:08]
+// [Engine Memory]: 452 MB (+321968kb) [00:00:08]
+// Opening Vivado Project: C:\Users\adam\Documents\Quantaser_RP_FPGA\GRC\project_tt.xpr. Version: Vivado v2017.2 
+// bs:g (cg:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/adam/Documents/Quantaser_RP_FPGA/GRC/project_tt.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [GUI Memory]: 49 MB (+10911kb) [00:00:13]
+// [Engine Memory]: 500 MB (+27550kb) [00:00:13]
+// HMemoryUtils.trashcanNow. Engine heap size: 509 MB. GUI used memory: 35 MB. Current time: 1/7/20 12:53:21 PM CST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 55 MB (+3557kb) [00:00:16]
+// [Engine Memory]: 607 MB (+85011kb) [00:00:16]
+// [GUI Memory]: 63 MB (+5718kb) [00:00:18]
+// Tcl Message: open_project C:/Users/adam/Documents/Quantaser_RP_FPGA/GRC/project_tt.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/adam/Desktop/FPGA_Projects/GRC' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.2/data/ip'. 
+// Project name: project_tt; location: C:/Users/adam/Documents/Quantaser_RP_FPGA/GRC; part: xc7z010clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 846.438 ; gain = 150.102 
+dismissDialog("Open Project"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 68 MB (+1252kb) [00:00:34]
+// [GUI Memory]: 72 MB (+1232kb) [00:06:44]
+// [GUI Memory]: 77 MB (+1037kb) [00:10:39]
+// [GUI Memory]: 81 MB (+439kb) [00:12:59]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 86 MB (+1200kb) [00:17:51]
+// Elapsed time: 1053 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bs:g (cg:JFrame)
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_LAUNCH
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Jan  7 13:11:03 2020] Launched synth_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/GRC/project_tt.runs/synth_1/runme.log [Tue Jan  7 13:11:03 2020] Launched impl_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/GRC/project_tt.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// [GUI Memory]: 92 MB (+1375kb) [00:18:05]
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// [Engine Memory]: 641 MB (+4785kb) [00:19:33]
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 47 MB. Current time: 1/7/20 1:12:41 PM CST
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 259 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a:JRadioButton (JPanel:JComponent, ah:x)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ah:x (cg:JFrame)

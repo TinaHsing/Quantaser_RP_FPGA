@@ -352,10 +352,10 @@ end else begin
                 end
                 if(counter2 == 32'd0) begin              
                     SM2 <= 3'd5;
-//                    adc_mem[adc_counter] <= adc_ch1_in; 
-//                    adc_mem_2[adc_counter] <= adc_ch2_in; 
-                    adc_mem[adc_counter] <= (adc_sum >>> 6); 
-                    adc_mem_2[adc_counter] <= (adc_sum_2 >>> 6); 
+                   adc_mem[adc_counter] <= adc_ch1_in; 
+                   adc_mem_2[adc_counter] <= adc_ch2_in; 
+                    // adc_mem[adc_counter] <= (adc_sum >>> 6); 
+                    // adc_mem_2[adc_counter] <= (adc_sum_2 >>> 6); 
                 end
                else 
                     SM2 <= 3'd4;            
