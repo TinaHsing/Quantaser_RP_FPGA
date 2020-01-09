@@ -372,9 +372,8 @@ logic [6:0] deMOD_mv_cnt = 7'd64;
 //assign dac_a_sum = dac_ladder[14:0]; //com5
 //assign dac_b_sum = dac_ladder_2[14:0];
 
-// assign dac_a_sum = measure; //kalman filter
-assign dac_a_sum = dac_ladder_out_2[14:0]; //kalman filter
-// assign dac_b_sum = x_apo_est_r;
+assign dac_a_sum = measure; //kalman filter
+// assign dac_a_sum = dac_ladder_out_2[14:0]; //kalman filter
 assign dac_b_sum = x_apo_est;
 
 // saturation
@@ -494,7 +493,7 @@ begin
             else 
                 ADC_reg_Diff <= ADC_reg_L - ADC_reg_H;
             SM_diff <= 3'd4;
-			// measure <= adc_dat[0];
+			measure <= adc_dat[0];
         end
         3'd4: begin
             if(ADC_reg_Diff>= $signed(Diff_vth) || ADC_reg_Diff<= $signed(-Diff_vth))
@@ -733,7 +732,7 @@ begin
         5'd17: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
         5'd18: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
      endcase
-	 measure <= dac_ladder_pre[13:0];
+	 // measure <= dac_ladder_pre[13:0];
 end
 
 always@(posedge dac_clk_1x) //ladder wave mid
@@ -945,13 +944,11 @@ begin
         begin
             mod <= reg_mod_H[13:0];
             mod_stat <= mod_stat_H;
-			// measure <= mod;
         end
         else if(mod_stat == mod_stat_H)
         begin
             mod <= reg_mod_L[13:0];
             mod_stat <= mod_stat_L;
-			// measure <= mod;
         end      
     end
     else

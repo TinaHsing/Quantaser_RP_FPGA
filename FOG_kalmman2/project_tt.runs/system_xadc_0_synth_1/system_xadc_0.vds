@@ -1,0 +1,118 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Aug 29 15:53:31 2018
+# Process ID: 30707
+# Current directory: /home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.runs/system_xadc_0_synth_1
+# Command line: vivado -log system_xadc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_xadc_0.tcl
+# Log file: /home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.runs/system_xadc_0_synth_1/system_xadc_0.vds
+# Journal file: /home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.runs/system_xadc_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source system_xadc_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1160.543 ; gain = 55.996 ; free physical = 328 ; free virtual = 1343
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0.v:53]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_axi_xadc' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0_axi_xadc.vhd:246]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_axi_lite_ipif' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/system_xadc_0_axi_lite_ipif.vhd:241]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_slave_attachment' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/system_xadc_0_slave_attachment.vhd:227]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_address_decoder' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/system_xadc_0_address_decoder.vhd:176]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized0' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized0' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized1' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized1' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized2' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized2' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized3' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized3' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized4' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized4' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized5' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized5' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized6' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized6' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized7' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized7' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized8' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized8' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized9' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized9' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized10' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized10' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized11' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized11' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized12' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized12' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized13' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized13' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized14' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized14' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized15' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized15' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized16' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized16' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized17' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized17' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized18' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized18' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized19' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized19' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized20' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized20' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized21' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized21' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized22' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized22' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized23' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized23' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized24' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized24' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_pselect_f__parameterized25' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_pselect_f__parameterized25' (1#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_address_decoder' (2#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/system_xadc_0_address_decoder.vhd:176]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_slave_attachment' (3#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/system_xadc_0_slave_attachment.vhd:227]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_axi_lite_ipif' (4#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/system_xadc_0_axi_lite_ipif.vhd:241]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_xadc_core_drp' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0_xadc_core_drp.vhd:194]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_xadc_core_drp' (5#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0_xadc_core_drp.vhd:194]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_soft_reset' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_soft_reset.vhd:142]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_soft_reset' (6#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/proc_common_v3_30_a/hdl/src/vhdl/system_xadc_0_soft_reset.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'system_xadc_0_interrupt_control' [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/interrupt_control_v2_01_a/hdl/src/vhdl/system_xadc_0_interrupt_control.vhd:240]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_interrupt_control' (7#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/interrupt_control_v2_01_a/hdl/src/vhdl/system_xadc_0_interrupt_control.vhd:240]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0_axi_xadc' (8#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0_axi_xadc.vhd:246]
+INFO: [Synth 8-256] done synthesizing module 'system_xadc_0' (9#1) [/home/quantaser/Github_RP/RedPitaya/fpga/prj/classic/project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0.v:53]
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1230.043 ; gain = 125.496 ; free physical = 323 ; free virtual = 1341
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1230.043 ; gain = 125.496 ; free physical = 327 ; free virtual = 1344
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1521.355 ; gain = 0.000 ; free physical = 78 ; free virtual = 1104
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:40 . Memory (MB): peak = 1521.355 ; gain = 416.809 ; free physical = 160 ; free virtual = 1185
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:40 . Memory (MB): peak = 1521.355 ; gain = 416.809 ; free physical = 160 ; free virtual = 1185
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:40 . Memory (MB): peak = 1521.355 ; gain = 416.809 ; free physical = 162 ; free virtual = 1187
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:42 . Memory (MB): peak = 1521.355 ; gain = 416.809 ; free physical = 153 ; free virtual = 1178
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:44 . Memory (MB): peak = 1521.355 ; gain = 416.809 ; free physical = 136 ; free virtual = 1162
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:58 . Memory (MB): peak = 1521.355 ; gain = 416.809 ; free physical = 73 ; free virtual = 1022
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:01:00 . Memory (MB): peak = 1537.363 ; gain = 432.816 ; free physical = 108 ; free virtual = 1027
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:01:00 . Memory (MB): peak = 1537.363 ; gain = 432.816 ; free physical = 109 ; free virtual = 1027
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1537.363 ; gain = 432.816 ; free physical = 109 ; free virtual = 1027
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1537.363 ; gain = 432.816 ; free physical = 109 ; free virtual = 1027
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1537.363 ; gain = 432.816 ; free physical = 109 ; free virtual = 1027
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1537.363 ; gain = 432.816 ; free physical = 109 ; free virtual = 1027
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1537.363 ; gain = 432.816 ; free physical = 109 ; free virtual = 1027
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1537.363 ; gain = 432.816 ; free physical = 109 ; free virtual = 1027
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |    37|
+|3     |LUT3 |    23|
+|4     |LUT4 |    21|
+|5     |LUT5 |    50|
+|6     |LUT6 |    63|
+|7     |XADC |     1|
+|8     |FDRE |   205|
+|9     |FDSE |    30|
++------+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1537.363 ; gain = 432.816 ; free physical = 109 ; free virtual = 1027
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:01:04 . Memory (MB): peak = 1537.371 ; gain = 445.410 ; free physical = 129 ; free virtual = 1057

@@ -120,3 +120,1122 @@ selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports
 selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
 // Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
 dismissDialog("Bitstream Generation Completed"); // ah:x (cg:JFrame)
+// [GUI Memory]: 97 MB (+397kb) [00:48:49]
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/7/20 1:42:41 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 2:12:41 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 2:42:42 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 3:12:42 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 3:42:42 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 4:12:42 PM CST
+// [GUI Memory]: 102 MB (+23kb) [03:37:47]
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 4:42:43 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 5:12:43 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 5:42:43 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 45 MB. Current time: 1/7/20 6:12:44 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 6:42:44 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 7:12:44 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 7:42:44 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 8:12:45 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 8:42:45 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 9:12:45 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 9:42:46 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 10:12:46 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 10:42:46 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 45 MB. Current time: 1/7/20 11:12:46 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/7/20 11:42:47 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 12:12:47 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 12:42:47 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 1:12:48 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 1:42:48 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 2:12:48 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 2:42:48 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 3:12:49 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 3:42:49 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 4:12:49 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 4:42:50 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 5:12:50 AM CST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 5:42:50 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 6:12:50 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 6:42:51 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 7:12:51 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 7:42:51 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 45 MB. Current time: 1/8/20 8:12:52 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 8:42:52 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 9:12:52 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 9:42:53 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 10:12:53 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 10:42:53 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 11:12:53 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 45 MB. Current time: 1/8/20 11:42:54 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 12:12:54 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 12:42:54 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 1:12:55 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 44 MB. Current time: 1/8/20 1:42:55 PM CST
+// PAPropertyPanels.initPanels (red_pitaya_top.sv) elapsed time: 0.2s
+// Elapsed time: 88418 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+// Launch External Editor: 'C:/Program Files/Notepad++/notepad++ "C:/Users/adam/Documents/Quantaser_RP_FPGA/GRC/project_tt.srcs/sources_1/imports/fpga/prj/classic/rtl/red_pitaya_top.sv"'
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 2:12:55 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 2:42:55 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 45 MB. Current time: 1/8/20 3:12:56 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 45 MB. Current time: 1/8/20 3:42:56 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 4:12:56 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 4:42:57 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 5:12:57 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 5:42:57 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 6:12:57 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 6:42:58 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 7:12:58 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 7:42:58 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 8:12:59 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 8:42:59 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 9:12:59 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 9:42:59 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 10:13:00 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 10:43:00 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 11:13:00 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/8/20 11:43:01 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 12:13:01 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 12:43:01 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 1:13:01 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 1:43:02 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 2:13:02 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 2:43:02 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 3:13:03 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 3:43:03 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 4:13:03 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 4:43:04 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 5:13:04 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 5:43:04 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 6:13:04 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 6:43:05 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 7:13:05 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 7:43:05 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 8:13:06 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 8:43:06 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 9:13:06 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 9:43:06 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 10:13:07 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 46 MB. Current time: 1/9/20 10:43:07 AM CST
+// Elapsed time: 76130 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open Project..."); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman/project_tt.xpr");
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 45 MB. Current time: 1/9/20 10:58:06 AM CST
+// Opening Vivado Project: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman/project_tt.xpr. Version: Vivado v2017.2 
+// bs:g (cg:JFrame):  Open Project : addNotify
+selectButton("PAResourceOtoP.PABaseTab_WOULD_YOU_LIKE_TO_CLOSE_CURRENTLY_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+// Tcl Message: close_project 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman/project_tt.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.2/data/ip'. 
+// Project name: project_tt; location: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman; part: xc7z010clg400-1
+// 'i' command handler elapsed time: 16 seconds
+// Tcl Message: open_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 896.527 ; gain = 2.934 
+dismissDialog("Open Project"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true); // B:i (D:JPanel, cg:JFrame) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+// Launch External Editor: 'C:/Program Files/Notepad++/notepad++ "C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman/project_tt.srcs/sources_1/imports/fpga/prj/classic/rtl/red_pitaya_top.sv"'
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 119 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bs:g (cg:JFrame)
+// TclEventType: RUN_LAUNCH
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Jan  9 11:00:26 2020] Launched synth_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman/project_tt.runs/synth_1/runme.log [Thu Jan  9 11:00:26 2020] Launched impl_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman/project_tt.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Bitstream Generation Completed: addNotify
+// [GUI Memory]: 107 MB (+70kb) [46:14:56]
+// Elapsed time: 457 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ah:x (cg:JFrame)
+// Elapsed time: 962 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open Project..."); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.xpr");
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 51 MB. Current time: 1/9/20 11:24:15 AM CST
+// Opening Vivado Project: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.xpr. Version: Vivado v2017.2 
+// bs:g (cg:JFrame):  Open Project : addNotify
+selectButton("PAResourceOtoP.PABaseTab_WOULD_YOU_LIKE_TO_CLOSE_CURRENTLY_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+// Tcl Message: close_project 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.2/data/ip'. 
+// Project name: project_tt; location: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2; part: xc7z010clg400-1
+// 'i' command handler elapsed time: 10 seconds
+dismissDialog("Open Project"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), pll : red_pitaya_pll (red_pitaya_pll.sv)]", 2, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// Launch External Editor: 'C:/Program Files/Notepad++/notepad++ "C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/imports/fpga/prj/classic/rtl/red_pitaya_top.sv"'
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 161 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bs:g (cg:JFrame)
+// TclEventType: RUN_LAUNCH
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Jan  9 11:27:10 2020] Launched synth_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/synth_1/runme.log [Thu Jan  9 11:27:10 2020] Launched impl_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 600 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ah:x (cg:JFrame)
+// [GUI Memory]: 113 MB (+294kb) [46:48:09]
+// Elapsed time: 270 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), z_measured_x_apri_est : subtractor2 (subtractor2.xci)]", 13, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), z_measured_x_apri_est : subtractor2 (subtractor2.xci)]", 13, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// TclEventType: LOAD_FEATURE
+// M:bs (cg:JFrame):  Re-customize IP : addNotify
+// TclEventType: LOAD_FEATURE
+// p:g (cg:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // M:bs (cg:JFrame)
+// Elapsed time: 15 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+dismissDialog("Re-customize IP"); // p:g (cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property -dict [list CONFIG.A_Width {32} CONFIG.B_Width {32} CONFIG.Out_Width {32} CONFIG.Latency {1} CONFIG.B_Value {00000000000000000000000000000000}] [get_ips subtractor2] 
+// au:p (cg:JFrame): Generate Output Products: addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a:JButton (JPanel:JComponent, au:p)
+// bs:g (cg:JFrame):  Managing Output Products : addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/subtractor2/subtractor2.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'subtractor2'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'subtractor2'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'subtractor2'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'subtractor2'... 
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/subtractor2/subtractor2.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_GENERATION_OF_OUTPUT_PRODUCTS_COMPLETED_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i:JideTabbedPane (N:aJ, cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, subtractor]", 12); // B:i (D:JPanel, cg:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, subtractor]", 12); // B:i (D:JPanel, cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, subtractor2]", 13); // B:i (D:JPanel, cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, subtractor2, Instantiation Template]", 14); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, subtractor2, Instantiation Template, subtractor2.veo]", 16, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, subtractor2, Instantiation Template, subtractor2.veo]", 16, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// Launch External Editor: 'C:/Program Files/Notepad++/notepad++ "c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/subtractor2/subtractor2.veo"'
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 119 MB (+475kb) [46:53:02]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 277 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, subtractor2]", 13); // B:i (D:JPanel, cg:JFrame)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i:JideTabbedPane (N:aJ, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), P_apo_est_shifted_Q : adder (adder.xci)]", 7, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), P_apo_est_shifted_Q : adder (adder.xci)]", 7, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// p:g (cg:JFrame): Re-customize IP: addNotify
+// Elapsed time: 14 seconds
+setText("A", "32"); // z:X (cS:y, p:g)
+setText("B", "32"); // z:X (cS:y, p:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Re-customize IP"); // p:g (cg:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property -dict [list CONFIG.A_Width {32} CONFIG.B_Width {32} CONFIG.Out_Width {32} CONFIG.Latency {1} CONFIG.B_Value {00000000000000000000000000000000}] [get_ips adder] 
+// au:p (cg:JFrame): Generate Output Products: addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a:JButton (JPanel:JComponent, au:p)
+// bs:g (cg:JFrame):  Managing Output Products : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder/adder.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'adder'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'adder'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'adder'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'adder'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder/adder.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// [GUI Memory]: 126 MB (+939kb) [46:54:24]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_GENERATION_OF_OUTPUT_PRODUCTS_COMPLETED_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i:JideTabbedPane (N:aJ, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder]", 1, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder]", 1, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// p:g (cg:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // p:g (cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder, Instantiation Template]", 2); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder, Instantiation Template, adder.veo]", 4, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder, Instantiation Template, adder.veo]", 4, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// Launch External Editor: 'C:/Program Files/Notepad++/notepad++ "c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder/adder.veo"'
+// [GUI Memory]: 132 MB (+150kb) [46:55:32]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 66 MB. Current time: 1/9/20 11:54:18 AM CST
+// Elapsed time: 727 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder2]", 8, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder2]", 8, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// p:g (cg:JFrame): Re-customize IP: addNotify
+setText("A", "32"); // z:X (cS:y, p:g)
+setText("B", "32"); // z:X (cS:y, p:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Re-customize IP"); // p:g (cg:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property -dict [list CONFIG.A_Width {32} CONFIG.B_Width {32} CONFIG.Out_Width {32} CONFIG.Latency {1} CONFIG.B_Value {00000000000000000000000000000000}] [get_ips adder2] 
+// au:p (cg:JFrame): Generate Output Products: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a:JButton (JPanel:JComponent, au:p)
+// TclEventType: DG_GRAPH_GENERATED
+// bs:g (cg:JFrame):  Managing Output Products : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder2/adder2.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'adder2'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'adder2'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'adder2'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'adder2'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder2/adder2.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_GENERATION_OF_OUTPUT_PRODUCTS_COMPLETED_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder2, Instantiation Template]", 9); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder2, Instantiation Template, adder2.veo]", 11, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder2, Instantiation Template, adder2.veo]", 11, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// Launch External Editor: 'C:/Program Files/Notepad++/notepad++ "c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder2/adder2.veo"'
+// HMemoryUtils.trashcanNow. Engine heap size: 663 MB. GUI used memory: 63 MB. Current time: 1/9/20 12:01:13 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 86 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder2]", 8); // B:i (D:JPanel, cg:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder]", 1); // B:i (D:JPanel, cg:JFrame)
+// Elapsed time: 41 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, divider]", 4, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, divider]", 4, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// p:g (cg:JFrame): Re-customize IP: addNotify
+// [Engine Memory]: 676 MB (+2238kb) [47:09:34]
+// Elapsed time: 37 seconds
+setText("Divisor Width", "32"); // z:X (cS:y, p:g)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Options", 1); // cR:i (C:JPanel, p:g)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Channel Settings", 0); // cR:i (C:JPanel, p:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Re-customize IP"); // p:g (cg:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property -dict [list CONFIG.divisor_width {32} CONFIG.fractional_width {32} CONFIG.latency {10}] [get_ips divider] 
+// au:p (cg:JFrame): Generate Output Products: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a:JButton (JPanel:JComponent, au:p)
+// bs:g (cg:JFrame):  Managing Output Products : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: generate_target all [get_files  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/divider/divider.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'divider'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'divider'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'divider'... INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'divider'... INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'divider'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'divider'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/divider/divider.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_GENERATION_OF_OUTPUT_PRODUCTS_COMPLETED_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, divider, Instantiation Template]", 5); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, divider, Instantiation Template, divider.veo]", 7, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, divider, Instantiation Template, divider.veo]", 7, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// Launch External Editor: 'C:/Program Files/Notepad++/notepad++ "c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/divider/divider.veo"'
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 66 MB. Current time: 1/9/20 12:04:03 PM CST
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 182 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, divider]", 4); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, subtractor]", 12, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, subtractor, Instantiation Template]", 13, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// p:g (cg:JFrame): Re-customize IP: addNotify
+// Elapsed time: 404 seconds
+dismissDialog("Re-customize IP"); // p:g (cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, subtractor]", 12, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, subtractor]", 12, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// p:g (cg:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // p:g (cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 143 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, multiplier]", 10, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, multiplier]", 10, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// M:bs (cg:JFrame):  Re-customize IP : addNotify
+// p:g (cg:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // M:bs (cg:JFrame)
+setText("Width", "32"); // z:X (aV:y, p:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Re-customize IP"); // p:g (cg:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property -dict [list CONFIG.PortAWidth {32} CONFIG.OutputWidthHigh {63}] [get_ips multiplier] 
+// au:p (cg:JFrame): Generate Output Products: addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a:JButton (JPanel:JComponent, au:p)
+// bs:g (cg:JFrame):  Managing Output Products : addNotify
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/multiplier/multiplier.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'multiplier'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'multiplier'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'multiplier'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'multiplier'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/multiplier/multiplier.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_GENERATION_OF_OUTPUT_PRODUCTS_COMPLETED_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, multiplier, Instantiation Template]", 11); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, multiplier, Instantiation Template, multiplier.veo]", 13, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, multiplier, Instantiation Template, multiplier.veo]", 13, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// Launch External Editor: 'C:/Program Files/Notepad++/notepad++ "c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/multiplier/multiplier.veo"'
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 174 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, multiplier]", 10); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, multiplier2]", 11, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, multiplier2]", 11, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// p:g (cg:JFrame): Re-customize IP: addNotify
+setText("Width", "32"); // z:X (aV:y, p:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+dismissDialog("Re-customize IP"); // p:g (cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property -dict [list CONFIG.PortBWidth {32} CONFIG.OutputWidthHigh {63}] [get_ips multiplier2] 
+// au:p (cg:JFrame): Generate Output Products: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a:JButton (JPanel:JComponent, au:p)
+// bs:g (cg:JFrame):  Managing Output Products : addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/multiplier2/multiplier2.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'multiplier2'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'multiplier2'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'multiplier2'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'multiplier2'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/multiplier2/multiplier2.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_GENERATION_OF_OUTPUT_PRODUCTS_COMPLETED_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, multiplier2, Instantiation Template]", 12); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, multiplier2, Instantiation Template, multiplier2.veo]", 14, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, multiplier2, Instantiation Template, multiplier2.veo]", 14, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// Launch External Editor: 'C:/Program Files/Notepad++/notepad++ "c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/multiplier2/multiplier2.veo"'
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 159 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, multiplier2]", 11); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder3]", 3, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder3]", 3, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// p:g (cg:JFrame): Re-customize IP: addNotify
+setText("A", "32"); // z:X (cS:y, p:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+dismissDialog("Re-customize IP"); // p:g (cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property -dict [list CONFIG.A_Width {32} CONFIG.Out_Width {32} CONFIG.Latency {1}] [get_ips adder3] 
+// au:p (cg:JFrame): Generate Output Products: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a:JButton (JPanel:JComponent, au:p)
+// bs:g (cg:JFrame):  Managing Output Products : addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder3/adder3.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'adder3'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'adder3'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'adder3'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'adder3'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder3/adder3.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_GENERATION_OF_OUTPUT_PRODUCTS_COMPLETED_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder3, Instantiation Template]", 4); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder3, Instantiation Template, adder3.veo]", 6, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, adder3, Instantiation Template, adder3.veo]", 6, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// Launch External Editor: 'C:/Program Files/Notepad++/notepad++ "c:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder3/adder3.veo"'
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 527 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bs:g (cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Jan  9 12:31:11 2020] Launched synth_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/synth_1/runme.log [Thu Jan  9 12:31:11 2020] Launched impl_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 80 MB. Current time: 1/9/20 12:34:03 PM CST
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 489 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ah:x (cg:JFrame)
+// Elapsed time: 206 seconds
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i:JideTabbedPane (N:aJ, cg:JFrame)
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_id : red_pitaya_id (red_pitaya_id.v)]", 17, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_id : red_pitaya_id (red_pitaya_id.v)]", 17, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// Launch External Editor: 'C:/Program Files/Notepad++/notepad++ "C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/imports/fpga/rtl/classic/red_pitaya_id.v"'
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 97 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Jan  9 12:44:46 2020] Launched synth_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/synth_1/runme.log [Thu Jan  9 12:44:46 2020] Launched impl_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 407 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ah:x (cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 37 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bs:g (cg:JFrame)
+// TclEventType: RUN_LAUNCH
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Jan  9 12:52:12 2020] Launched synth_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/synth_1/runme.log [Thu Jan  9 12:52:12 2020] Launched impl_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 469 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ah:x (cg:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 80 MB. Current time: 1/9/20 1:04:04 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 730 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bs:g (cg:JFrame)
+// TclEventType: RUN_LAUNCH
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Jan  9 13:12:14 2020] Launched synth_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/synth_1/runme.log [Thu Jan  9 13:12:14 2020] Launched impl_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// TclEventType: RUN_FAILED
+// ah:x (cg:JFrame): Synthesis Failed: addNotify
+// Elapsed time: 35 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah:x (cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bs:g (cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Jan  9 13:13:18 2020] Launched synth_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/synth_1/runme.log [Thu Jan  9 13:13:18 2020] Launched impl_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 587 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a:JRadioButton (JPanel:JComponent, ah:x)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ah:x (cg:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 77 MB. Current time: 1/9/20 1:34:04 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 2060 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bs:g (cg:JFrame)
+// TclEventType: RUN_LAUNCH
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Jan  9 13:57:29 2020] Launched synth_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/synth_1/runme.log [Thu Jan  9 13:57:29 2020] Launched impl_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 75 MB. Current time: 1/9/20 2:04:04 PM CST
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 445 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ah:x (cg:JFrame)
+//  *** Exceptions that should be ignored by HSystem.debug () - swept under the rug. *** 
+/*
+java.lang.NullPointerException
+*/
+//  *** Exceptions that should be ignored by HSystem.debug () - swept under the rug. *** 
+/*
+java.lang.NullPointerException
+*/
+//  *** Exceptions that should be ignored by HSystem.debug () - swept under the rug. *** 
+/*
+java.lang.NullPointerException
+*/
+//  *** Exceptions that should be ignored by HSystem.debug () - swept under the rug. *** 
+/*
+java.lang.NullPointerException
+*/
+// Elapsed time: 994 seconds
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationGadget_PROJECT_SUMMARY_UTILIZATION_GADGET_TABBED, PAResourceOtoP.ProjectSummaryUtilizationGadget_POST_SYNTHESIS, "Post-Synthesis", 0); // b:i (C:JPanel, cg:JFrame)
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationGadget_PROJECT_SUMMARY_UTILIZATION_GADGET_TABBED, PAResourceOtoP.ProjectSummaryUtilizationGadget_POST_IMPLEMENTATION, "Post-Implementation", 1); // b:i (C:JPanel, cg:JFrame)
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_PANEL_TABBED, PAResourceOtoP.ProjectSummaryUtilizationPanel_TABLE, "Table", 1); // f:i (C:JPanel, cg:JFrame)
+// Elapsed time: 106 seconds
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationGadget_PROJECT_SUMMARY_UTILIZATION_GADGET_TABBED, PAResourceOtoP.ProjectSummaryUtilizationGadget_POST_SYNTHESIS, "Post-Synthesis", 0); // b:i (C:JPanel, cg:JFrame)
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationGadget_PROJECT_SUMMARY_UTILIZATION_GADGET_TABBED, PAResourceOtoP.ProjectSummaryUtilizationGadget_POST_IMPLEMENTATION, "Post-Implementation", 1); // b:i (C:JPanel, cg:JFrame)
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationGadget_PROJECT_SUMMARY_UTILIZATION_GADGET_TABBED, PAResourceOtoP.ProjectSummaryUtilizationGadget_POST_SYNTHESIS, "Post-Synthesis", 0); // b:i (C:JPanel, cg:JFrame)
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_PANEL_TABBED, PAResourceOtoP.ProjectSummaryUtilizationPanel_TABLE, "Table", 1); // f:i (C:JPanel, cg:JFrame)
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationGadget_PROJECT_SUMMARY_UTILIZATION_GADGET_TABBED, PAResourceOtoP.ProjectSummaryUtilizationGadget_POST_IMPLEMENTATION, "Post-Implementation", 1); // b:i (C:JPanel, cg:JFrame)
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationGadget_PROJECT_SUMMARY_UTILIZATION_GADGET_TABBED, PAResourceOtoP.ProjectSummaryUtilizationGadget_POST_SYNTHESIS, "Post-Synthesis", 0); // b:i (C:JPanel, cg:JFrame)
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationGadget_PROJECT_SUMMARY_UTILIZATION_GADGET_TABBED, PAResourceOtoP.ProjectSummaryUtilizationGadget_POST_IMPLEMENTATION, "Post-Implementation", 1); // b:i (C:JPanel, cg:JFrame)
+// Elapsed time: 19 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open Project..."); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman/project_tt.xpr");
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 70 MB. Current time: 1/9/20 2:23:59 PM CST
+// Opening Vivado Project: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman/project_tt.xpr. Version: Vivado v2017.2 
+// bs:g (cg:JFrame):  Open Project : addNotify
+selectButton("PAResourceOtoP.PABaseTab_WOULD_YOU_LIKE_TO_CLOSE_CURRENTLY_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+// Tcl Message: close_project 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman/project_tt.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.2/data/ip'. 
+// Project name: project_tt; location: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman; part: xc7z010clg400-1
+// 'i' command handler elapsed time: 13 seconds
+dismissDialog("Open Project"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 280 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// 'cp' command handler elapsed time: 3 seconds
+selectButton("PAResourceQtoS.RunBitgen_BITSTREAM_GENERATION_HAS_ALREADY_COMPLETED_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_1 -prev_step  
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Thu Jan  9 14:28:48 2020] Launched impl_1... Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman/project_tt.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 91 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ah:x (cg:JFrame)
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationGadget_PROJECT_SUMMARY_UTILIZATION_GADGET_TABBED, PAResourceOtoP.ProjectSummaryUtilizationGadget_POST_SYNTHESIS, "Post-Synthesis", 0); // b:i (C:JPanel, cg:JFrame)
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationGadget_PROJECT_SUMMARY_UTILIZATION_GADGET_TABBED, PAResourceOtoP.ProjectSummaryUtilizationGadget_POST_IMPLEMENTATION, "Post-Implementation", 1); // b:i (C:JPanel, cg:JFrame)
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_PANEL_TABBED, PAResourceOtoP.ProjectSummaryUtilizationPanel_TABLE, "Table", 1); // f:i (C:JPanel, cg:JFrame)
