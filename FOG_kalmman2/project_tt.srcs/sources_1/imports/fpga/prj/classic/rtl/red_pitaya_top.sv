@@ -590,117 +590,117 @@ begin
             2'd1: begin
                 case(err_shift_idx_pre)
                    5'd0: begin
-                           if(dac_ladder_pre_vth >= rst_th_p_1st_int)
+                           if(dac_ladder_pre_vth > rst_th_p_1st_int)
                                dac_ladder_pre_vth <= rst_th_p_1st_int;
-                           else if(dac_ladder_pre_vth <= rst_th_n_1st_int)
+                           else if(dac_ladder_pre_vth < rst_th_n_1st_int)
                                dac_ladder_pre_vth <= rst_th_n_1st_int;                      
                          end 
                    5'd1: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);   
                            end 
                    5'd2: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                            end                                      
                    5'd3: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                            end  
                    5'd4: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                            end  
                    5'd5: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                            end  
                    5'd6: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);   
                            end 
                    5'd7: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                            end                                      
                    5'd8: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                            end  
                    5'd9: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                            end  
                    5'd10: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                            end
                    5'd11: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                            end
                    5'd12: begin
-                                     if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                                     if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                          dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                                     else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                                     else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                          dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                                    end
                    5'd13: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                            end
                    5'd14: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                            end
                    5'd15: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                            end
                    5'd16: begin
-                                     if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                                     if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                          dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                                     else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                                     else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                          dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                                    end
                    5'd17: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                            end
                    5'd18: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
+                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
+                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
                                  dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
                            end
                endcase 
@@ -1003,7 +1003,7 @@ logic [32-1:0] kal_Q, kal_R;
   // .CE(1'b1),    // input wire CE
   // .S(P_apri_est)      // output wire [14 : 0] S
 // );
-adder P_apo_est_shifted_Q 
+adder P_apo_est_shifted_Q //P_apo_est + Q
 (
   .A(P_apo_est),      // input wire [31 : 0] A
   .B(kal_Q),      // input wire [31 : 0] B, Q value set at 0.1 in decimal
@@ -1158,8 +1158,7 @@ begin
 	// If not resetting, update the register output on the busy's falling edge
 	else
 	begin
-		// P_apo_est <= out_divider_P_apo_est[45:32];
-		P_apo_est <= out_divider_P_apo_est[63:32];
+		P_apo_est <= out_divider_P_apo_est[63:32];	
 		x_apo_est <= out_adder_x_apri_est_divided_K_post_error;
 	end
 end
@@ -1232,7 +1231,19 @@ red_pitaya_id i_id (
   .ladder_1st_offset(ladder_1st_offset),
   .x_apo_est(x_apo_est),
   .kal_Q(kal_Q),
-  .kal_R(kal_R)
+  .kal_R(kal_R),
+  .measure(measure),
+  .P_apo_est(P_apo_est),
+  .P_apri_est(P_apri_est),
+  .out_adder_P_apri_est_R(out_adder_P_apri_est_R),
+  .K(K[63:32]),
+  .out_subtractor_1_K(out_subtractor_1_K),
+  .out_multiplier_P_apo_est(out_multiplier_P_apo_est[31:0]),
+  .out_divider_P_apo_est(out_divider_P_apo_est[63:32]),
+  .post_error(post_error),
+  .out_multiplier_K_post_error(out_multiplier_K_post_error[31:0]),
+  .out_divider_K_post_error(out_divider_K_post_error[63:32]),
+  .out_adder_x_apri_est_divided_K_post_error(out_adder_x_apri_est_divided_K_post_error)
 );
 
 ////////////////////////////////////////////////////////////////////////////////

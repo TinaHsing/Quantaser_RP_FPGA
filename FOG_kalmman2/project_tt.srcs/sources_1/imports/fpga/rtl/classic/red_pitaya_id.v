@@ -75,6 +75,18 @@ module red_pitaya_id #(
   , input [31:0] step_MV_sum_out
   , input [31:0] err_signal_pre
   , input [31:0] x_apo_est
+  , input [31:0] measure
+  , input [31:0] P_apo_est
+  , input [31:0] P_apri_est
+  , input [31:0] out_adder_P_apri_est_R
+  , input [31:0] K
+  , input [31:0] out_subtractor_1_K
+  , input [31:0] out_multiplier_P_apo_est
+  , input [31:0] out_divider_P_apo_est
+  , input [31:0] post_error
+  , input [31:0] out_multiplier_K_post_error
+  , input [31:0] out_divider_K_post_error
+  , input [31:0] out_adder_x_apri_est_divided_K_post_error
 );
 
 //---------------------------------------------------------------------------------
@@ -231,6 +243,19 @@ end else begin
 	20'h00184: begin sys_ack <= sys_en;  sys_rdata <= {x_apo_est      }; end 
 	20'h00188: begin sys_ack <= sys_en;  sys_rdata <= {kal_Q      }; end
 	20'h0018C: begin sys_ack <= sys_en;  sys_rdata <= {kal_R      }; end
+	20'h00190: begin sys_ack <= sys_en;  sys_rdata <= {  measure    }; end
+	20'h00194: begin sys_ack <= sys_en;  sys_rdata <= {  P_apo_est    }; end
+	20'h00198: begin sys_ack <= sys_en;  sys_rdata <= { P_apri_est     }; end
+	20'h0019c: begin sys_ack <= sys_en;  sys_rdata <= { out_adder_P_apri_est_R     }; end
+	20'h001A0: begin sys_ack <= sys_en;  sys_rdata <= {   K   }; end
+	20'h001A4: begin sys_ack <= sys_en;  sys_rdata <= {  out_subtractor_1_K    }; end
+	20'h001A8: begin sys_ack <= sys_en;  sys_rdata <= {  out_multiplier_P_apo_est    }; end
+	20'h001AC: begin sys_ack <= sys_en;  sys_rdata <= {  out_divider_P_apo_est    }; end
+	20'h001B0: begin sys_ack <= sys_en;  sys_rdata <= {  post_error    }; end
+	20'h001B4: begin sys_ack <= sys_en;  sys_rdata <= {  out_multiplier_K_post_error    }; end
+	20'h001B8: begin sys_ack <= sys_en;  sys_rdata <= {  out_divider_K_post_error    }; end
+	20'h001BC: begin sys_ack <= sys_en;  sys_rdata <= {  out_adder_x_apri_est_divided_K_post_error    }; end
+
       default: begin sys_ack <= sys_en;  sys_rdata <=  32'h0   ; end 
   endcase
 end
