@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Tue Jan 14 14:18:36 2020
+| Date             : Fri Jan 17 14:58:40 2020
 | Host             : DESKTOP-L7VH7BR running 64-bit major release  (build 9200)
 | Command          : report_power -file red_pitaya_top_power_routed.rpt -pb red_pitaya_top_power_summary_routed.pb -rpx red_pitaya_top_power_routed.rpx
 | Design           : red_pitaya_top
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 2.268 |
-| Dynamic (W)              | 2.120 |
-| Device Static (W)        | 0.148 |
+| Total On-Chip Power (W)  | 2.331 |
+| Dynamic (W)              | 2.182 |
+| Device Static (W)        | 0.150 |
 | Effective TJA (C/W)      | 11.5  |
-| Max Ambient (C)          | 58.8  |
-| Junction Temperature (C) | 51.2  |
+| Max Ambient (C)          | 58.1  |
+| Junction Temperature (C) | 51.9  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -49,25 +49,25 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.055 |       14 |       --- |             --- |
-| Slice Logic              |     0.137 |    28627 |       --- |             --- |
-|   LUT as Logic           |     0.115 |    13079 |     17600 |           74.31 |
-|   CARRY4                 |     0.016 |     2335 |      4400 |           53.07 |
-|   Register               |     0.004 |     7507 |     35200 |           21.33 |
-|   F7/F8 Muxes            |     0.001 |      748 |     17600 |            4.25 |
+| Clocks                   |     0.060 |       14 |       --- |             --- |
+| Slice Logic              |     0.167 |    31626 |       --- |             --- |
+|   LUT as Logic           |     0.141 |    14700 |     17600 |           83.52 |
+|   CARRY4                 |     0.020 |     2787 |      4400 |           63.34 |
+|   Register               |     0.005 |     7760 |     35200 |           22.05 |
+|   F7/F8 Muxes            |    <0.001 |      623 |     17600 |            3.54 |
 |   LUT as Distributed RAM |    <0.001 |      120 |      6000 |            2.00 |
 |   LUT as Shift Register  |    <0.001 |       65 |      6000 |            1.08 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
-|   Others                 |     0.000 |     1530 |       --- |             --- |
-| Signals                  |     0.162 |    18598 |       --- |             --- |
-| Block RAM                |     0.104 |       42 |        60 |           70.00 |
+|   Others                 |     0.000 |     1878 |       --- |             --- |
+| Signals                  |     0.189 |    21041 |       --- |             --- |
+| Block RAM                |     0.103 |       42 |        60 |           70.00 |
 | PLL                      |     0.097 |        1 |         2 |           50.00 |
 | DSPs                     |     0.011 |        8 |        80 |           10.00 |
 | I/O                      |     0.269 |       91 |       100 |           91.00 |
 | XADC                     |     0.004 |        1 |       --- |             --- |
 | PS7                      |     1.281 |        1 |       --- |             --- |
-| Static Power             |     0.148 |          |           |                 |
-| Total                    |     2.268 |          |           |                 |
+| Static Power             |     0.150 |          |           |                 |
+| Total                    |     2.331 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.480 |       0.469 |      0.011 |
+| Vccint    |       1.000 |     0.542 |       0.531 |      0.011 |
 | Vccaux    |       1.800 |     0.069 |       0.056 |      0.012 |
 | Vcco33    |       3.300 |     0.078 |       0.077 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -90,7 +90,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.705 |       0.668 |      0.038 |
+| Vccpint   |       1.000 |     0.706 |       0.668 |      0.039 |
 | Vccpaux   |       1.800 |     0.038 |       0.027 |      0.010 |
 | Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.356 |       0.354 |      0.002 |
@@ -160,11 +160,11 @@ Table of Contents
 +---------------------------------------------------------------------+-----------+
 | Name                                                                | Power (W) |
 +---------------------------------------------------------------------+-----------+
-| red_pitaya_top                                                      |     2.120 |
-|   K_post_error                                                      |     0.018 |
-|     U0                                                              |     0.018 |
-|       i_mult                                                        |     0.018 |
-|         gLUT.gLUT_speed.iLUT                                        |     0.018 |
+| red_pitaya_top                                                      |     2.182 |
+|   K_post_error                                                      |     0.035 |
+|     U0                                                              |     0.035 |
+|       i_mult                                                        |     0.035 |
+|         gLUT.gLUT_speed.iLUT                                        |     0.035 |
 |   P_apo_est_shifted_Q                                               |     0.003 |
 |     U0                                                              |     0.003 |
 |       xst_addsub                                                    |     0.003 |
@@ -182,18 +182,18 @@ Table of Contents
 |         i_baseblox.i_baseblox_addsub                                |     0.001 |
 |           no_pipelining.the_addsub                                  |     0.001 |
 |             i_lut6.i_lut6_addsub                                    |     0.001 |
-|               i_q.i_simple.qreg                                     |     0.001 |
-|   P_apri_est_R_P_apri_est                                           |     0.050 |
-|     U0                                                              |     0.050 |
-|       i_synth                                                       |     0.050 |
-|         i_nonzero_fract.i_synth                                     |     0.050 |
-|           i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider           |     0.050 |
-|             i_sdivider.divider_blk                                  |     0.050 |
+|               i_q.i_simple.qreg                                     |    <0.001 |
+|   P_apri_est_R_P_apri_est                                           |     0.052 |
+|     U0                                                              |     0.052 |
+|       i_synth                                                       |     0.052 |
+|         i_nonzero_fract.i_synth                                     |     0.052 |
+|           i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider           |     0.052 |
+|             i_sdivider.divider_blk                                  |     0.052 |
 |               div_loop[0].adder_gen.reg_req.adsu_mod                |    <0.001 |
 |                 add1                                                |    <0.001 |
 |                   no_pipelining.the_addsub                          |    <0.001 |
 |                     i_q_simple.qreg                                 |    <0.001 |
-|               div_loop[0].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
+|               div_loop[0].divisor_gen.divisor_dc1.del_divisor_msbs  |     0.001 |
 |               div_loop[0].num_stages.numerator_gen.del_numer        |    <0.001 |
 |               div_loop[10].adder_gen.reg_req.adsu_mod               |     0.001 |
 |                 add1                                                |     0.001 |
@@ -206,17 +206,17 @@ Table of Contents
 |                   no_pipelining.the_addsub                          |     0.001 |
 |                     i_q_simple.qreg                                 |    <0.001 |
 |               div_loop[12].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
-|               div_loop[13].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[13].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
 |               div_loop[13].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
 |               div_loop[13].num_stages.numerator_gen.del_numer       |    <0.001 |
 |               div_loop[14].adder_gen.reg_req.adsu_mod               |     0.001 |
 |                 add1                                                |     0.001 |
 |                   no_pipelining.the_addsub                          |     0.001 |
-|               div_loop[15].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[15].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
 |               div_loop[16].adder_gen.reg_req.adsu_mod               |     0.001 |
 |                 add1                                                |     0.001 |
 |                   no_pipelining.the_addsub                          |     0.001 |
@@ -225,14 +225,14 @@ Table of Contents
 |               div_loop[17].adder_gen.reg_req.adsu_mod               |     0.001 |
 |                 add1                                                |     0.001 |
 |                   no_pipelining.the_addsub                          |     0.001 |
-|               div_loop[17].divisor_gen.divisor_dc1.del_divisor_msbs |     0.001 |
+|               div_loop[17].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
 |               div_loop[17].num_stages.numerator_gen.del_numer       |    <0.001 |
 |               div_loop[18].adder_gen.reg_req.adsu_mod               |     0.001 |
 |                 add1                                                |     0.001 |
 |                   no_pipelining.the_addsub                          |     0.001 |
-|               div_loop[19].adder_gen.reg_req.adsu_mod               |     0.002 |
-|                 add1                                                |     0.002 |
-|                   no_pipelining.the_addsub                          |     0.002 |
+|               div_loop[19].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
 |                     i_q_simple.qreg                                 |    <0.001 |
 |               div_loop[19].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
 |               div_loop[1].adder_gen.reg_req.adsu_mod                |    <0.001 |
@@ -240,46 +240,46 @@ Table of Contents
 |                   no_pipelining.the_addsub                          |    <0.001 |
 |               div_loop[1].divisor_gen.divisor_dc1.del_divisor_msbs  |     0.001 |
 |               div_loop[1].num_stages.numerator_gen.del_numer        |    <0.001 |
-|               div_loop[20].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[20].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
 |               div_loop[20].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
 |               div_loop[20].num_stages.numerator_gen.del_numer       |     0.000 |
 |               div_loop[21].adder_gen.reg_req.adsu_mod               |     0.001 |
 |                 add1                                                |     0.001 |
 |                   no_pipelining.the_addsub                          |     0.001 |
-|               div_loop[22].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[23].adder_gen.reg_req.adsu_mod               |     0.001 |
+|               div_loop[22].adder_gen.reg_req.adsu_mod               |     0.001 |
 |                 add1                                                |     0.001 |
 |                   no_pipelining.the_addsub                          |     0.001 |
-|                     i_q_simple.qreg                                 |    <0.001 |
-|               div_loop[23].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
-|               div_loop[24].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[24].divisor_gen.divisor_dc1.del_divisor_msbs |     0.001 |
-|               div_loop[24].num_stages.numerator_gen.del_numer       |     0.000 |
-|               div_loop[25].adder_gen.reg_req.adsu_mod               |     0.001 |
-|                 add1                                                |     0.001 |
-|                   no_pipelining.the_addsub                          |     0.001 |
-|               div_loop[26].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[27].adder_gen.reg_req.adsu_mod               |     0.002 |
+|               div_loop[23].adder_gen.reg_req.adsu_mod               |     0.002 |
 |                 add1                                                |     0.002 |
 |                   no_pipelining.the_addsub                          |     0.002 |
 |                     i_q_simple.qreg                                 |    <0.001 |
-|               div_loop[27].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
-|               div_loop[28].adder_gen.reg_req.adsu_mod               |     0.001 |
+|               div_loop[23].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
+|               div_loop[24].adder_gen.reg_req.adsu_mod               |     0.001 |
 |                 add1                                                |     0.001 |
 |                   no_pipelining.the_addsub                          |     0.001 |
+|               div_loop[24].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
+|               div_loop[24].num_stages.numerator_gen.del_numer       |     0.000 |
+|               div_loop[25].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[26].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
+|               div_loop[27].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
+|                     i_q_simple.qreg                                 |    <0.001 |
+|               div_loop[27].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
+|               div_loop[28].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
 |               div_loop[28].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
 |               div_loop[28].num_stages.numerator_gen.del_numer       |     0.000 |
-|               div_loop[29].adder_gen.reg_req.adsu_mod               |     0.001 |
-|                 add1                                                |     0.001 |
-|                   no_pipelining.the_addsub                          |     0.001 |
+|               div_loop[29].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
 |               div_loop[2].adder_gen.reg_req.adsu_mod                |     0.001 |
 |                 add1                                                |     0.001 |
 |                   no_pipelining.the_addsub                          |     0.001 |
@@ -290,7 +290,7 @@ Table of Contents
 |                 add1                                                |    <0.001 |
 |                   no_pipelining.the_addsub                          |    <0.001 |
 |                     i_q_simple.qreg                                 |    <0.001 |
-|               div_loop[31].quot_gen.quot_reg.i_div1.quot_out        |     0.003 |
+|               div_loop[31].quot_gen.quot_reg.i_div1.quot_out        |     0.005 |
 |               div_loop[3].adder_gen.reg_req.adsu_mod                |     0.001 |
 |                 add1                                                |     0.001 |
 |                   no_pipelining.the_addsub                          |     0.001 |
@@ -310,15 +310,15 @@ Table of Contents
 |               div_loop[7].adder_gen.reg_req.adsu_mod                |     0.001 |
 |                 add1                                                |     0.001 |
 |                   no_pipelining.the_addsub                          |     0.001 |
-|               div_loop[8].adder_gen.reg_req.adsu_mod                |     0.001 |
-|                 add1                                                |     0.001 |
-|                   no_pipelining.the_addsub                          |     0.001 |
+|               div_loop[8].adder_gen.reg_req.adsu_mod                |     0.002 |
+|                 add1                                                |     0.002 |
+|                   no_pipelining.the_addsub                          |     0.002 |
 |                     i_q_simple.qreg                                 |    <0.001 |
 |               div_loop[8].quot_gen.quot_reg.i_div1.quot_out         |    <0.001 |
-|               div_loop[9].adder_gen.reg_req.adsu_mod                |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[9].divisor_gen.divisor_dc1.del_divisor_msbs  |     0.001 |
+|               div_loop[9].adder_gen.reg_req.adsu_mod                |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
+|               div_loop[9].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
 |               div_loop[9].num_stages.numerator_gen.del_numer        |    <0.001 |
 |   _1_K                                                              |     0.002 |
 |     U0                                                              |     0.002 |
@@ -328,13 +328,13 @@ Table of Contents
 |             i_lut6.i_lut6_addsub                                    |     0.002 |
 |               i_q.i_simple.qreg                                     |     0.002 |
 |   i_ams                                                             |     0.001 |
-|   i_asg                                                             |     0.083 |
-|     ch[0]                                                           |     0.039 |
-|     ch[1]                                                           |     0.039 |
-|   i_id                                                              |     0.040 |
+|   i_asg                                                             |     0.084 |
+|     ch[0]                                                           |     0.040 |
+|     ch[1]                                                           |     0.040 |
+|   i_id                                                              |     0.045 |
 |   i_pid                                                             |     0.002 |
-|   i_scope                                                           |     0.077 |
-|     i_dfilt1_cha                                                    |     0.012 |
+|   i_scope                                                           |     0.076 |
+|     i_dfilt1_cha                                                    |     0.011 |
 |     i_dfilt1_chb                                                    |     0.013 |
 |     i_wr0                                                           |     0.002 |
 |     i_wr1                                                           |     0.002 |
@@ -413,12 +413,243 @@ Table of Contents
 |   pwm[1]                                                            |     0.001 |
 |   pwm[2]                                                            |     0.001 |
 |   pwm[3]                                                            |     0.001 |
-|   shifted_K_post_error                                              |     0.032 |
+|   shifted_K_post_error                                              |     0.064 |
+|     U0                                                              |     0.064 |
+|       i_synth                                                       |     0.064 |
+|         i_nonzero_fract.i_synth                                     |     0.064 |
+|           i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider           |     0.064 |
+|             i_sdivider.divider_blk                                  |     0.060 |
+|               div_loop[0].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[0].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
+|               div_loop[0].num_stages.numerator_gen.del_numer        |     0.001 |
+|               div_loop[10].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[11].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[12].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[13].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|                     i_q_simple.qreg                                 |    <0.001 |
+|               div_loop[14].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[14].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
+|               div_loop[14].num_stages.numerator_gen.del_numer       |     0.001 |
+|               div_loop[15].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[16].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[17].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
+|               div_loop[18].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
+|               div_loop[19].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[1].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[20].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
+|               div_loop[21].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[22].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
+|                     i_q_simple.qreg                                 |    <0.001 |
+|               div_loop[23].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[23].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
+|               div_loop[23].num_stages.numerator_gen.del_numer       |    <0.001 |
+|               div_loop[24].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[25].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[26].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[27].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[28].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[29].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[2].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[30].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[31].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[32].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
+|                     i_q_simple.qreg                                 |    <0.001 |
+|               div_loop[33].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[33].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
+|               div_loop[33].num_stages.numerator_gen.del_numer       |    <0.001 |
+|               div_loop[34].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[35].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[36].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[37].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[38].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[39].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[3].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|                     i_q_simple.qreg                                 |    <0.001 |
+|               div_loop[40].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[41].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
+|                     i_q_simple.qreg                                 |    <0.001 |
+|               div_loop[41].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
+|               div_loop[42].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[42].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
+|               div_loop[42].num_stages.numerator_gen.del_numer       |    <0.001 |
+|               div_loop[43].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[44].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[45].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[46].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[47].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[48].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[49].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[4].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[4].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
+|               div_loop[4].num_stages.numerator_gen.del_numer        |     0.001 |
+|               div_loop[50].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
+|                     i_q_simple.qreg                                 |    <0.001 |
+|               div_loop[50].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
+|               div_loop[51].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
+|               div_loop[51].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
+|               div_loop[51].num_stages.numerator_gen.del_numer       |    <0.001 |
+|               div_loop[52].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[53].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[54].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[55].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[56].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[57].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[58].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[59].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[5].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[60].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
+|                     i_q_simple.qreg                                 |    <0.001 |
+|               div_loop[60].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
+|               div_loop[61].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
+|               div_loop[61].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
+|               div_loop[61].num_stages.numerator_gen.del_numer       |    <0.001 |
+|               div_loop[62].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[63].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[6].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[7].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[8].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[9].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
+|             sgned_input.cmp_dividend                                |     0.003 |
+|               twos_comp                                             |     0.003 |
+|             sgned_input.cmp_divisor                                 |    <0.001 |
+|               twos_comp                                             |    <0.001 |
+|             sign_pipeline.i_unrolled.sign_pipe                      |    <0.001 |
+|             signed_output.cmp_quot                                  |    <0.001 |
+|               twos_comp                                             |    <0.001 |
+|   shifted_P_apo_est                                                 |     0.032 |
 |     U0                                                              |     0.032 |
 |       i_synth                                                       |     0.032 |
 |         i_nonzero_fract.i_synth                                     |     0.032 |
 |           i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider           |     0.032 |
-|             i_sdivider.divider_blk                                  |     0.029 |
+|             i_sdivider.divider_blk                                  |     0.030 |
 |               div_loop[0].adder_gen.reg_req.adsu_mod                |    <0.001 |
 |                 add1                                                |    <0.001 |
 |                   no_pipelining.the_addsub                          |    <0.001 |
@@ -437,9 +668,9 @@ Table of Contents
 |                   no_pipelining.the_addsub                          |    <0.001 |
 |               div_loop[12].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
 |               div_loop[12].num_stages.numerator_gen.del_numer       |    <0.001 |
-|               div_loop[13].adder_gen.reg_req.adsu_mod               |     0.001 |
-|                 add1                                                |     0.001 |
-|                   no_pipelining.the_addsub                          |     0.001 |
+|               div_loop[13].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
 |               div_loop[14].adder_gen.reg_req.adsu_mod               |    <0.001 |
 |                 add1                                                |    <0.001 |
 |                   no_pipelining.the_addsub                          |    <0.001 |
@@ -480,20 +711,20 @@ Table of Contents
 |               div_loop[22].adder_gen.reg_req.adsu_mod               |    <0.001 |
 |                 add1                                                |    <0.001 |
 |                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[23].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[24].adder_gen.reg_req.adsu_mod               |     0.001 |
+|               div_loop[23].adder_gen.reg_req.adsu_mod               |     0.001 |
 |                 add1                                                |     0.001 |
 |                   no_pipelining.the_addsub                          |     0.001 |
+|               div_loop[24].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                 add1                                                |    <0.001 |
+|                   no_pipelining.the_addsub                          |    <0.001 |
 |               div_loop[25].adder_gen.reg_req.adsu_mod               |     0.001 |
 |                 add1                                                |     0.001 |
 |                   no_pipelining.the_addsub                          |     0.001 |
 |                     i_q_simple.qreg                                 |    <0.001 |
 |               div_loop[25].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
-|               div_loop[26].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
+|               div_loop[26].adder_gen.reg_req.adsu_mod               |     0.001 |
+|                 add1                                                |     0.001 |
+|                   no_pipelining.the_addsub                          |     0.001 |
 |               div_loop[26].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
 |               div_loop[26].num_stages.numerator_gen.del_numer       |    <0.001 |
 |               div_loop[27].adder_gen.reg_req.adsu_mod               |    <0.001 |
@@ -510,10 +741,10 @@ Table of Contents
 |                   no_pipelining.the_addsub                          |    <0.001 |
 |               div_loop[2].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
 |               div_loop[2].num_stages.numerator_gen.del_numer        |    <0.001 |
-|               div_loop[30].adder_gen.reg_req.adsu_mod               |     0.001 |
-|                 add1                                                |     0.001 |
-|                   no_pipelining.the_addsub                          |     0.001 |
-|                     i_q_simple.qreg                                 |    <0.001 |
+|               div_loop[30].adder_gen.reg_req.adsu_mod               |     0.002 |
+|                 add1                                                |     0.002 |
+|                   no_pipelining.the_addsub                          |     0.002 |
+|                     i_q_simple.qreg                                 |     0.001 |
 |               div_loop[30].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
 |               div_loop[31].adder_gen.reg_req.adsu_mod               |    <0.001 |
 |                 add1                                                |    <0.001 |
@@ -542,150 +773,11 @@ Table of Contents
 |               div_loop[8].adder_gen.reg_req.adsu_mod                |    <0.001 |
 |                 add1                                                |    <0.001 |
 |                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[9].adder_gen.reg_req.adsu_mod                |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|             sgned_input.cmp_dividend                                |     0.001 |
-|               twos_comp                                             |     0.001 |
-|             sgned_input.cmp_divisor                                 |    <0.001 |
-|               twos_comp                                             |    <0.001 |
-|             sign_pipeline.i_unrolled.sign_pipe                      |    <0.001 |
-|             signed_output.cmp_quot                                  |    <0.001 |
-|               twos_comp                                             |    <0.001 |
-|   shifted_P_apo_est                                                 |     0.032 |
-|     U0                                                              |     0.032 |
-|       i_synth                                                       |     0.032 |
-|         i_nonzero_fract.i_synth                                     |     0.032 |
-|           i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider           |     0.032 |
-|             i_sdivider.divider_blk                                  |     0.029 |
-|               div_loop[0].adder_gen.reg_req.adsu_mod                |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[0].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
-|               div_loop[0].num_stages.numerator_gen.del_numer        |    <0.001 |
-|               div_loop[10].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[11].adder_gen.reg_req.adsu_mod               |     0.001 |
-|                 add1                                                |     0.001 |
-|                   no_pipelining.the_addsub                          |     0.001 |
-|                     i_q_simple.qreg                                 |    <0.001 |
-|               div_loop[11].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
-|               div_loop[12].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[12].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
-|               div_loop[12].num_stages.numerator_gen.del_numer       |    <0.001 |
-|               div_loop[13].adder_gen.reg_req.adsu_mod               |     0.001 |
-|                 add1                                                |     0.001 |
-|                   no_pipelining.the_addsub                          |     0.001 |
-|               div_loop[14].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[15].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[16].adder_gen.reg_req.adsu_mod               |     0.001 |
-|                 add1                                                |     0.001 |
-|                   no_pipelining.the_addsub                          |     0.001 |
-|                     i_q_simple.qreg                                 |    <0.001 |
-|               div_loop[16].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
-|               div_loop[17].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[17].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
-|               div_loop[17].num_stages.numerator_gen.del_numer       |    <0.001 |
-|               div_loop[18].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[19].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[1].adder_gen.reg_req.adsu_mod                |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|                     i_q_simple.qreg                                 |    <0.001 |
-|               div_loop[1].quot_gen.quot_reg.i_div1.quot_out         |    <0.001 |
-|               div_loop[20].adder_gen.reg_req.adsu_mod               |     0.001 |
-|                 add1                                                |     0.001 |
-|                   no_pipelining.the_addsub                          |     0.001 |
-|                     i_q_simple.qreg                                 |    <0.001 |
-|               div_loop[20].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
-|               div_loop[21].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[21].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
-|               div_loop[21].num_stages.numerator_gen.del_numer       |    <0.001 |
-|               div_loop[22].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[23].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[24].adder_gen.reg_req.adsu_mod               |     0.001 |
-|                 add1                                                |     0.001 |
-|                   no_pipelining.the_addsub                          |     0.001 |
-|               div_loop[25].adder_gen.reg_req.adsu_mod               |     0.001 |
-|                 add1                                                |     0.001 |
-|                   no_pipelining.the_addsub                          |     0.001 |
-|                     i_q_simple.qreg                                 |    <0.001 |
-|               div_loop[25].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
-|               div_loop[26].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[26].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
-|               div_loop[26].num_stages.numerator_gen.del_numer       |    <0.001 |
-|               div_loop[27].adder_gen.reg_req.adsu_mod               |     0.001 |
-|                 add1                                                |     0.001 |
-|                   no_pipelining.the_addsub                          |     0.001 |
-|               div_loop[28].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[29].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[2].adder_gen.reg_req.adsu_mod                |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[2].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
-|               div_loop[2].num_stages.numerator_gen.del_numer        |    <0.001 |
-|               div_loop[30].adder_gen.reg_req.adsu_mod               |     0.001 |
-|                 add1                                                |     0.001 |
-|                   no_pipelining.the_addsub                          |     0.001 |
-|                     i_q_simple.qreg                                 |    <0.001 |
-|               div_loop[30].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
-|               div_loop[31].adder_gen.reg_req.adsu_mod               |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[31].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
-|               div_loop[31].num_stages.numerator_gen.del_numer       |    <0.001 |
-|               div_loop[3].adder_gen.reg_req.adsu_mod                |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[4].adder_gen.reg_req.adsu_mod                |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[5].adder_gen.reg_req.adsu_mod                |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[6].adder_gen.reg_req.adsu_mod                |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|                     i_q_simple.qreg                                 |    <0.001 |
-|               div_loop[6].quot_gen.quot_reg.i_div1.quot_out         |    <0.001 |
-|               div_loop[7].adder_gen.reg_req.adsu_mod                |    <0.001 |
-|                 add1                                                |    <0.001 |
-|                   no_pipelining.the_addsub                          |    <0.001 |
-|               div_loop[7].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
-|               div_loop[7].num_stages.numerator_gen.del_numer        |    <0.001 |
-|               div_loop[8].adder_gen.reg_req.adsu_mod                |     0.001 |
-|                 add1                                                |     0.001 |
-|                   no_pipelining.the_addsub                          |     0.001 |
 |               div_loop[9].adder_gen.reg_req.adsu_mod                |     0.001 |
 |                 add1                                                |     0.001 |
 |                   no_pipelining.the_addsub                          |     0.001 |
-|             sgned_input.cmp_dividend                                |     0.001 |
-|               twos_comp                                             |     0.001 |
+|             sgned_input.cmp_dividend                                |    <0.001 |
+|               twos_comp                                             |    <0.001 |
 |             sgned_input.cmp_divisor                                 |    <0.001 |
 |               twos_comp                                             |    <0.001 |
 |             sign_pipeline.i_unrolled.sign_pipe                      |    <0.001 |
@@ -728,13 +820,13 @@ Table of Contents
 |           no_pipelining.the_addsub                                  |     0.001 |
 |             i_lut6.i_lut6_addsub                                    |     0.001 |
 |               i_q.i_simple.qreg                                     |    <0.001 |
-|   z_measured_x_apri_est                                             |     0.002 |
-|     U0                                                              |     0.002 |
-|       xst_addsub                                                    |     0.002 |
-|         i_baseblox.i_baseblox_addsub                                |     0.002 |
-|           no_pipelining.the_addsub                                  |     0.002 |
-|             i_lut6.i_lut6_addsub                                    |     0.002 |
-|               i_q.i_simple.qreg                                     |     0.002 |
+|   z_measured_x_apri_est                                             |     0.003 |
+|     U0                                                              |     0.003 |
+|       xst_addsub                                                    |     0.003 |
+|         i_baseblox.i_baseblox_addsub                                |     0.003 |
+|           no_pipelining.the_addsub                                  |     0.003 |
+|             i_lut6.i_lut6_addsub                                    |     0.003 |
+|               i_q.i_simple.qreg                                     |     0.003 |
 +---------------------------------------------------------------------+-----------+
 
 

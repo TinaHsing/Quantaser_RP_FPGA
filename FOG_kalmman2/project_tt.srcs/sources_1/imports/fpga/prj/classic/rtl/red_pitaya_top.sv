@@ -555,7 +555,8 @@ end
 logic [13:0] reg_vth; 
 logic [31:0] reg_vth_1st_int;//8191 = 1V
 logic mod_off;
-logic signed [31:0] dac_ladder = 32'd0, dac_ladder_pre_vth = 32'd0, dac_ladder_pre = 32'd0, dac_ladder_2 = 32'd0, dac_ladder_out = 32'd0, dac_ladder_out_2 = 32'd0, err_signal, err_signal_pre = 32'd0;
+logic signed [31:0] dac_ladder = 32'd0, dac_ladder_pre_vth = 32'd0, dac_ladder_pre = 32'd0, dac_ladder_pre2 = 32'd0, dac_ladder_2 = 32'd0, dac_ladder_out = 32'd0, dac_ladder_out_2 = 32'd0, err_signal, err_signal_pre = 32'd0;
+logic signed [31:0] w_th_p, w_th_n;
 logic signed [13:0] rst_th_p = $signed(reg_vth), rst_th_n = $signed(-reg_vth);
 logic signed [31:0] rst_th_p_1st_int = $signed(reg_vth_1st_int), rst_th_n_1st_int = $signed(-reg_vth_1st_int);
 logic signed [19:0] err_signal_shift;
@@ -710,30 +711,36 @@ begin
     end
 end
 
+
 always@(posedge dac_clk_1x) 
 begin 
-    case(err_shift_idx_pre)
-        5'd0: dac_ladder_pre <= dac_ladder_pre_vth + ladder_1st_offset;
-        5'd1: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;   
-        5'd2: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
-        5'd3: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd4: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
-        5'd5: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd6: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd7: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;   
-        5'd8: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
-        5'd9: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd10: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
-        5'd11: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd12: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd13: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
-        5'd14: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd15: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd16: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
-        5'd17: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd18: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-     endcase
-	 measure <= dac_ladder_pre;
+
+			case(err_shift_idx_pre)
+				5'd0: dac_ladder_pre <= dac_ladder_pre_vth + ladder_1st_offset;
+				5'd1: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;   
+				5'd2: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
+				5'd3: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+				5'd4: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
+				5'd5: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+				5'd6: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+				5'd7: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;   
+				5'd8: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
+				5'd9: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+				5'd10: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
+				5'd11: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+				5'd12: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+				5'd13: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
+				5'd14: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+				5'd15: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+				5'd16: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
+				5'd17: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+				5'd18: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
+			endcase
+			if(dac_ladder_pre < 0 && dac_ladder_pre > w_th_n) dac_ladder_pre2 <= w_th_n;
+			else if(dac_ladder_pre >= 0 && dac_ladder_pre < w_th_p) dac_ladder_pre2 <= w_th_p;
+			else dac_ladder_pre2 <= dac_ladder_pre;
+			measure <= dac_ladder_pre2;
+
 end
 
 always@(posedge dac_clk_1x) //ladder wave mid
@@ -907,20 +914,6 @@ end
 
 always@(posedge dac_clk_1x) //ladder wave
 begin 
-//    if(dac_ladder_2 >= 0) begin
-//        if(dac_ladder_out > rst_th_p)
-//            dac_ladder_out_2 <= dac_ladder_out - reg_vth;
-//        else if(dac_ladder_out < 0)
-//            dac_ladder_out_2 <= dac_ladder_out + reg_vth;
-//        else dac_ladder_out_2 <= dac_ladder_out;
-//    end
-//    else begin
-//        if(dac_ladder_out <= rst_th_n)
-//            dac_ladder_out_2 <= dac_ladder_out + reg_vth;
-//        else if(dac_ladder_out > 0)
-//            dac_ladder_out_2 <= dac_ladder_out - reg_vth;
-//        else dac_ladder_out_2 <= dac_ladder_out;
-//    end
     
     if(dac_ladder_out > rst_th_p)
         dac_ladder_out_2 <= dac_ladder_out - reg_vth;
@@ -989,7 +982,7 @@ logic signed [64-1:0] out_multiplier_P_apo_est;
 
 logic signed [32-1:0] post_error;
 logic signed [64-1:0] out_multiplier_K_post_error;
-logic signed [64-1:0] out_divider_K_post_error;
+logic signed [96-1:0] out_divider_K_post_error;
 logic signed [31:0] out_adder_x_apri_est_divided_K_post_error;
 logic signed [64-1:0] out_divider_P_apo_est;
 logic signed [31:0] measure;
@@ -1045,7 +1038,7 @@ divider P_apri_est_R_P_apri_est //P_apri_est/(R+P_apri_est)
   .s_axis_divisor_tvalid(1'b1),    // input wire s_axis_divisor_tvalid
   .s_axis_divisor_tdata(out_adder_P_apri_est_R),      // input wire [31 : 0] s_axis_divisor_tdata
   .s_axis_dividend_tvalid(1'b1),  // input wire s_axis_dividend_tvalid
-  .s_axis_dividend_tdata((32'b0|P_apri_est) << 13),    // input wire [31 : 0] s_axis_dividend_tdata
+  .s_axis_dividend_tdata(P_apri_est << 13),    // input wire [31 : 0] s_axis_dividend_tdata
   .m_axis_dout_tvalid(),          // output wire m_axis_dout_tvalid
   .m_axis_dout_tdata(K)            // output wire [63 : 0] m_axis_dout_tdata
 );
@@ -1112,7 +1105,7 @@ subtractor2 z_measured_x_apri_est //z_measure - x_apri_est
   // .CE(1'b1),
   // .P(out_multiplier_K_post_error)      // output wire [46 : 0] P
 // );
-multiplier2 K_post_error 
+multiplier2 K_post_error //K * (z_measure-x_apri_est)
 (
   .CLK(dac_clk_1x),  // input wire CLK
   .A(K[63:32]),      // input wire [31 : 0] A
@@ -1120,16 +1113,26 @@ multiplier2 K_post_error
   .CE(1'b1),    // input wire CE
   .P(out_multiplier_K_post_error)      // output wire [63 : 0] P
 );
-divider3 shifted_K_post_error  //K*(z_measure-x_apri_est) / 2^15
-(
+// divider3 shifted_K_post_error  //K*(z_measure-x_apri_est) / 2^15
+// (
+  // .aclk(dac_clk_1x),                                      // input wire aclk
+  // .aclken(1'b1),                                  // input wire aclken
+  // .s_axis_divisor_tvalid(1'b1),    // input wire s_axis_divisor_tvalid
+  // .s_axis_divisor_tdata(32'd8192), // input wire [31 : 0] s_axis_divisor_tdata
+  // .s_axis_dividend_tvalid(1'b1),  // input wire s_axis_dividend_tvalid
+  // .s_axis_dividend_tdata(out_multiplier_K_post_error),    // input wire [31 : 0] s_axis_dividend_tdata
+  // .m_axis_dout_tvalid(),          // output wire m_axis_dout_tvalid
+  // .m_axis_dout_tdata(out_divider_K_post_error)            // output wire [63 : 0] m_axis_dout_tdata
+// );
+divider3 shifted_K_post_error ( //K*(z_measure-x_apri_est) / 2^15
   .aclk(dac_clk_1x),                                      // input wire aclk
   .aclken(1'b1),                                  // input wire aclken
   .s_axis_divisor_tvalid(1'b1),    // input wire s_axis_divisor_tvalid
-  .s_axis_divisor_tdata(32'd8192), // input wire [31 : 0] s_axis_divisor_tdata
+  .s_axis_divisor_tdata(32'd8192),      // input wire [31 : 0] s_axis_divisor_tdata
   .s_axis_dividend_tvalid(1'b1),  // input wire s_axis_dividend_tvalid
-  .s_axis_dividend_tdata(out_multiplier_K_post_error),    // input wire [31 : 0] s_axis_dividend_tdata
+  .s_axis_dividend_tdata(out_multiplier_K_post_error),    // input wire [63 : 0] s_axis_dividend_tdata
   .m_axis_dout_tvalid(),          // output wire m_axis_dout_tvalid
-  .m_axis_dout_tdata(out_divider_K_post_error)            // output wire [63 : 0] m_axis_dout_tdata
+  .m_axis_dout_tdata(out_divider_K_post_error)            // output wire [95 : 0] m_axis_dout_tdata
 );
 // adder3 x_apri_est_shifted_K_post_error	//x_apri_est + K*(z_measure-x_apri_est)/2^15 
 // (
@@ -1139,13 +1142,20 @@ divider3 shifted_K_post_error  //K*(z_measure-x_apri_est) / 2^15
   // .CE(1'b1),    // input wire CE
   // .S(out_adder_x_apri_est_divided_K_post_error)      // output wire [31 : 0] S
 // );
-adder3 x_apri_est_shifted_K_post_error //x_apri_est + K*(z_measure-x_apri_est)/2^15 
-(
+// adder3 x_apri_est_shifted_K_post_error //x_apri_est + K*(z_measure-x_apri_est)/2^15 
+// (
+  // .A(x_apo_est),      // input wire [31 : 0] A
+  // .B(out_divider_K_post_error[63:32]),      // input wire [31 : 0] B
+  // .CLK(dac_clk_1x),  // input wire CLK
+  // .CE(1'b1),    // input wire CE
+  // .S(out_adder_x_apri_est_divided_K_post_error)      // output wire [31 : 0] S
+// );
+adder3 x_apri_est_shifted_K_post_error ( //x_apri_est + K*(z_measure-x_apri_est)/2^15 
   .A(x_apo_est),      // input wire [31 : 0] A
-  .B(out_divider_K_post_error[63:32]),      // input wire [31 : 0] B
+  .B(out_divider_K_post_error[95:32]),      // input wire [63 : 0] B
   .CLK(dac_clk_1x),  // input wire CLK
   .CE(1'b1),    // input wire CE
-  .S(out_adder_x_apri_est_divided_K_post_error)      // output wire [31 : 0] S
+  .S(out_adder_x_apri_est_divided_K_post_error)      // output wire [63 : 0] S
 );
 always @ (negedge adc_rstn or posedge ladder_start_strobe)
 begin
@@ -1224,6 +1234,7 @@ red_pitaya_id i_id (
   .Diff_vth(Diff_vth),
   .step_MV_sum_out(step_MV_sum_out),
   .dac_ladder_pre(dac_ladder_pre),
+  .dac_ladder_pre2(dac_ladder_pre2),
   .err_shift_idx_pre(err_shift_idx_pre),
   .err_signal_pre(err_signal_pre),
   .dac_ladder_pre_vth(dac_ladder_pre_vth),
@@ -1243,7 +1254,9 @@ red_pitaya_id i_id (
   .post_error(post_error),
   .out_multiplier_K_post_error(out_multiplier_K_post_error[31:0]),
   .out_divider_K_post_error(out_divider_K_post_error[63:32]),
-  .out_adder_x_apri_est_divided_K_post_error(out_adder_x_apri_est_divided_K_post_error)
+  .out_adder_x_apri_est_divided_K_post_error(out_adder_x_apri_est_divided_K_post_error),
+  .w_th_p(w_th_p),
+  .w_th_n(w_th_n)
 );
 
 ////////////////////////////////////////////////////////////////////////////////

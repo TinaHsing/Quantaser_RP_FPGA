@@ -58,9 +58,12 @@ module red_pitaya_id #(
   , output reg [4:0] err_shift_idx_pre 
   , output reg [31:0] kal_Q
   , output reg [31:0] kal_R
+  , output reg [31:0] w_th_p
+  , output reg [31:0] w_th_n
   , input [31:0] dac_ladder
   , input [31:0] dac_ladder_2
   , input [31:0] dac_ladder_pre 
+  , input [31:0] dac_ladder_pre2 
   , input [31:0] dac_ladder_pre_vth
   , input [13:0] ADC_reg_H
   , input [13:0] ADC_reg_L
@@ -168,6 +171,8 @@ if (rstn_i == 1'b0) begin
   err_shift_idx_pre <= 5'd0;
   kal_Q <= 32'd819;
   kal_R <= 32'd8191;
+  w_th_p <= 32'd1000;
+  w_th_n <= $signed(-32'd1000);
 end else if (sys_wen) begin
   if (sys_addr[19:0]==20'h0c)   digital_loop <= sys_wdata[0];
   if (sys_addr[19:0]==20'h100) reg_mod_H <= sys_wdata[31:0];
@@ -189,6 +194,8 @@ end else if (sys_wen) begin
   if (sys_addr[19:0]==20'h180) ladder_1st_offset <= sys_wdata[31:0]; 
   if (sys_addr[19:0]==20'h188) kal_Q <= sys_wdata[31:0]; 
   if (sys_addr[19:0]==20'h18C) kal_R <= sys_wdata[31:0]; 
+  if (sys_addr[19:0]==20'h1C0) w_th_p <= sys_wdata[31:0]; 
+  if (sys_addr[19:0]==20'h1C4) w_th_n <= sys_wdata[31:0]; 
 
 end
 
@@ -255,7 +262,9 @@ end else begin
 	20'h001B4: begin sys_ack <= sys_en;  sys_rdata <= {  out_multiplier_K_post_error    }; end
 	20'h001B8: begin sys_ack <= sys_en;  sys_rdata <= {  out_divider_K_post_error    }; end
 	20'h001BC: begin sys_ack <= sys_en;  sys_rdata <= {  out_adder_x_apri_est_divided_K_post_error    }; end
-
+	20'h001C0: begin sys_ack <= sys_en;  sys_rdata <= {  w_th_p    }; end
+	20'h001C4: begin sys_ack <= sys_en;  sys_rdata <= {  w_th_n    }; end
+	20'h001C8: begin sys_ack <= sys_en;  sys_rdata <= {dac_ladder_pre2      }; end
       default: begin sys_ack <= sys_en;  sys_rdata <=  32'h0   ; end 
   endcase
 end
