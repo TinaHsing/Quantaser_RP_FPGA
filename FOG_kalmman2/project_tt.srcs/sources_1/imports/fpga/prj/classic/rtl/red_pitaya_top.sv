@@ -376,6 +376,7 @@ logic [6:0] deMOD_mv_cnt = 7'd64;
 assign dac_a_sum = dac_ladder_out_2[14:0]; //kalman filter
 assign dac_b_sum = x_apo_est;
 
+
 // saturation
 assign dac_a = (^dac_a_sum[15-1:15-2]) ? {dac_a_sum[15-1], {13{~dac_a_sum[15-1]}}} : dac_a_sum[14-1:0];
 assign dac_b = (^dac_b_sum[15-1:15-2]) ? {dac_b_sum[15-1], {13{~dac_b_sum[15-1]}}} : dac_b_sum[14-1:0];
@@ -447,7 +448,7 @@ begin
                 if(mv_cnt != 7'd0  && !MV) begin
                     mv_cnt <= mv_cnt - 1'b1;
                     ADC_reg_H_sum <= ADC_reg_H_sum + adc_dat[1];
-                    test_sum <= test_sum + test_add;
+                    test_sum <= test_sum + test_add; // test if moving average is correct
                 end
                 else if(mv_cnt == 7'd0  && !MV) begin
                     ADC_reg_H <= (ADC_reg_H_sum >>> mv_shift) + ADC_reg_H_offset ;
