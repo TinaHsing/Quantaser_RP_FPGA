@@ -349,3 +349,7 @@ selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sourc
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_GRAPH_GENERATED
 // HMemoryUtils.trashcanNow. Engine heap size: 779 MB. GUI used memory: 46 MB. Current time: 2/11/20 3:31:55 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 779 MB. GUI used memory: 48 MB. Current time: 2/11/20 4:01:55 PM CST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking too long to process. Increasing delay to 4000 ms.
