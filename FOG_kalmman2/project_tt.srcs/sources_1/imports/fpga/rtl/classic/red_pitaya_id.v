@@ -44,7 +44,7 @@ module red_pitaya_id #(
   , output reg [31:0] reg_mod_freq_cnt
   , output reg [31:0] Init_stable_cnt
   , output reg [16:0] reg_err_gain
-  , output reg [13:0] reg_vth
+  , output reg [31:0] reg_vth
   , output reg [31:0] reg_vth_1st_int
   , output reg [14:0] Diff_vth
   , output reg err_polarity
@@ -90,6 +90,8 @@ module red_pitaya_id #(
   , input [31:0] out_multiplier_K_post_error
   , input [31:0] out_divider_K_post_error
   , input [31:0] out_adder_x_apri_est_divided_K_post_error
+  , input [31:0] shift_figure_p
+  , input [31:0] shift_figure_n
 );
 
 //---------------------------------------------------------------------------------
@@ -157,7 +159,7 @@ if (rstn_i == 1'b0) begin
   reg_mod_freq_cnt <= 32'd125; // 1KHz
   Init_stable_cnt <= 32'd30; //for 500KH
   reg_err_gain <= 17'd1;
-  reg_vth <= 14'd4915; //8191 = 1V
+  reg_vth <= 32'd8191; //8191 = 1V
   reg_vth_1st_int <= 32'd16777216;
   Diff_vth <= 15'd0;
   err_polarity <= 1'b0;
@@ -179,7 +181,7 @@ end else if (sys_wen) begin
   if (sys_addr[19:0]==20'h104) reg_mod_L <= sys_wdata[31:0]; 
   if (sys_addr[19:0]==20'h108) reg_mod_freq_cnt <= sys_wdata[31:0];
   if (sys_addr[19:0]==20'h110) reg_err_gain <= sys_wdata[31:0]; //0011_1111 & sys_wdata[31:0]
-  if (sys_addr[19:0]==20'h114) reg_vth <= 32'h3fff & sys_wdata[31:0]; //0011_1111_1111_1111 & sys_wdata[31:0]
+  if (sys_addr[19:0]==20'h114) reg_vth <= sys_wdata[31:0]; //0011_1111_1111_1111 & sys_wdata[31:0]
   if (sys_addr[19:0]==20'h11C) err_polarity <= 32'h1 & sys_wdata[31:0];
   if (sys_addr[19:0]==20'h120) mod_off <= 32'h1 & sys_wdata[31:0];
   if (sys_addr[19:0]==20'h138) Init_stable_cnt <= sys_wdata[31:0]; 
@@ -264,7 +266,9 @@ end else begin
 	20'h001BC: begin sys_ack <= sys_en;  sys_rdata <= {  out_adder_x_apri_est_divided_K_post_error    }; end
 	20'h001C0: begin sys_ack <= sys_en;  sys_rdata <= {  w_th_p    }; end
 	20'h001C4: begin sys_ack <= sys_en;  sys_rdata <= {  w_th_n    }; end
-	20'h001C8: begin sys_ack <= sys_en;  sys_rdata <= {dac_ladder_pre2      }; end
+	20'h001C8: begin sys_ack <= sys_en;  sys_rdata <= {dac_ladder_pre2      }; end 
+	20'h001CC: begin sys_ack <= sys_en;  sys_rdata <= {shift_figure_p      }; end 
+	20'h001D0: begin sys_ack <= sys_en;  sys_rdata <= {shift_figure_n      }; end 
       default: begin sys_ack <= sys_en;  sys_rdata <=  32'h0   ; end 
   endcase
 end

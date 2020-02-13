@@ -373,8 +373,15 @@ logic [6:0] deMOD_mv_cnt = 7'd64;
 //assign dac_b_sum = dac_ladder_2[14:0];
 
 // assign dac_a_sum = measure; //kalman filter
-assign dac_a_sum = dac_ladder_out_2[14:0]; //kalman filter
-assign dac_b_sum = x_apo_est;
+assign dac_a_sum = dac_ladder_out_2; //kalman filter 
+// assign dac_b_sum = x_apo_est;
+// assign dac_b_sum = measure;
+
+
+// assign dac_a_sum = dac_ladder_out; 
+// assign dac_b_sum = dac_ladder_out_2;
+// assign dac_a_sum = dac_ladder_out_2; 
+// assign dac_b_sum = dac_ladder_out;
 
 
 // saturation
@@ -553,13 +560,13 @@ begin
     endcase
 end
 
-logic [13:0] reg_vth; 
+logic [31:0] reg_vth; 
 logic [31:0] reg_vth_1st_int;//8191 = 1V
 logic mod_off;
 logic signed [31:0] dac_ladder = 32'd0, dac_ladder_pre_vth = 32'd0, dac_ladder_pre = 32'd0, dac_ladder_pre2 = 32'd0, dac_ladder_2 = 32'd0, dac_ladder_out = 32'd0, dac_ladder_out_2 = 32'd0, err_signal, err_signal_pre = 32'd0;
 logic signed [31:0] w_th_p, w_th_n;
-logic signed [13:0] rst_th_p = $signed(reg_vth), rst_th_n = $signed(-reg_vth);
-logic signed [31:0] rst_th_p_1st_int = $signed(reg_vth_1st_int), rst_th_n_1st_int = $signed(-reg_vth_1st_int);
+logic signed [31:0] rst_th_p = $signed(reg_vth), rst_th_n = $signed(-reg_vth);
+logic signed [31:0] rst_th_p_1st_int = $signed(reg_vth_1st_int), rst_th_n_1st_int = $signed(-reg_vth_1st_int), shift_figure_p, shift_figure_n;
 logic signed [19:0] err_signal_shift;
 logic ladder_rst;
 logic [4:0] err_shift_idx, err_shift_idx_pre;
@@ -580,136 +587,18 @@ begin
     if(ladder_rst)
         dac_ladder_pre_vth <= 32'd0;
     else begin
-        case(pre_ladder_index)
-            2'd0: begin
-                if(ladder_start_strobe == 1'b1) begin    
-                        dac_ladder_pre_vth <= dac_ladder_pre_vth + err_signal;
-                        pre_ladder_index = 2'd1;
-                end
-                else dac_ladder_pre_vth <= dac_ladder_pre_vth;
-            end
-            
-            2'd1: begin
-                case(err_shift_idx_pre)
-                   5'd0: begin
-                           if(dac_ladder_pre_vth > rst_th_p_1st_int)
-                               dac_ladder_pre_vth <= rst_th_p_1st_int;
-                           else if(dac_ladder_pre_vth < rst_th_n_1st_int)
-                               dac_ladder_pre_vth <= rst_th_n_1st_int;                      
-                         end 
-                   5'd1: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);   
-                           end 
-                   5'd2: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end                                      
-                   5'd3: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end  
-                   5'd4: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end  
-                   5'd5: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end  
-                   5'd6: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);   
-                           end 
-                   5'd7: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end                                      
-                   5'd8: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end  
-                   5'd9: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end  
-                   5'd10: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end
-                   5'd11: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end
-                   5'd12: begin
-                                     if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                         dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                                     else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                         dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                                   end
-                   5'd13: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end
-                   5'd14: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end
-                   5'd15: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end
-                   5'd16: begin
-                                     if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                         dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                                     else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                         dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                                   end
-                   5'd17: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end
-                   5'd18: begin
-                             if(dac_ladder_pre_vth > (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth < (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end
-               endcase 
-               pre_ladder_index = 2'd0;
-            end
-        endcase
+		if(ladder_start_strobe == 1'b1) begin    
+			dac_ladder_pre_vth <= dac_ladder_pre_vth + err_signal;
+			pre_ladder_index = 2'd1;
+		end
+		else dac_ladder_pre_vth <= dac_ladder_pre_vth;
+		
+		if(dac_ladder_pre_vth > rst_th_p_1st_int)
+		   dac_ladder_pre_vth <= rst_th_p_1st_int;
+	    else if(dac_ladder_pre_vth < rst_th_n_1st_int)
+		   dac_ladder_pre_vth <= rst_th_n_1st_int; 
     end
+        
 end
 
 
@@ -754,7 +643,8 @@ begin
         end
         else 
             dac_ladder <= dac_ladder;
-                           
+		   shift_figure_p <= (rst_th_p<<<err_shift_idx);
+		   shift_figure_n <= (rst_th_n<<<err_shift_idx);
         case(err_shift_idx)
             5'd0: begin
                     if(dac_ladder >= rst_th_p)
@@ -763,112 +653,112 @@ begin
                         dac_ladder <= dac_ladder + reg_vth;   
                   end
             5'd1: begin
-                    if(dac_ladder >= (rst_th_p<<<1))
-                        dac_ladder <= dac_ladder - (reg_vth<<<1);
-                    else if(dac_ladder <= (rst_th_n<<<1))
-                        dac_ladder <= dac_ladder + (reg_vth<<<1);     
+                    if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);     
                   end
             5'd2: begin
-                      if(dac_ladder >= (rst_th_p<<<2))
-                          dac_ladder <= dac_ladder - (reg_vth<<<2);
-                      else if(dac_ladder <= (rst_th_n<<<2))
-                          dac_ladder <= dac_ladder + (reg_vth<<<2);      
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);       
                     end        
             5'd3: begin
-                      if(dac_ladder >= (rst_th_p<<<3))
-                          dac_ladder <= dac_ladder - (reg_vth<<<3);
-                      else if(dac_ladder <= (rst_th_n<<<3))
-                          dac_ladder <= dac_ladder + (reg_vth<<<3);             
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);              
                     end
             5'd4: begin
-                      if(dac_ladder >= (rst_th_p<<<4))
-                           dac_ladder <= dac_ladder - (reg_vth<<<4);
-                      else if(dac_ladder <= (rst_th_n<<<4))
-                          dac_ladder <= dac_ladder + (reg_vth<<<4);       
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);        
                     end
             5'd5: begin
-                      if(dac_ladder >= (rst_th_p<<<5))
-                          dac_ladder <= dac_ladder - (reg_vth<<<5);
-                      else if(dac_ladder <= (rst_th_n<<<5))
-                          dac_ladder <= dac_ladder + (reg_vth<<<5);            
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);              
                     end
             5'd6: begin
-                      if(dac_ladder >= (rst_th_p<<<6))
-                           dac_ladder <= dac_ladder - (reg_vth<<<6);
-                      else if(dac_ladder <= (rst_th_n<<<6))
-                           dac_ladder <= dac_ladder + (reg_vth<<<6);      
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);     
                     end
             5'd7: begin
-                      if(dac_ladder >= (rst_th_p<<<7))
-                          dac_ladder <= dac_ladder - (reg_vth<<<7);
-                      else if(dac_ladder <= (rst_th_n<<<7))
-                          dac_ladder <= dac_ladder + (reg_vth<<<7);                 
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);               
                     end
             5'd8: begin
-                      if(dac_ladder >= (rst_th_p<<<8))
-                          dac_ladder <= dac_ladder - (reg_vth<<<8);
-                      else if(dac_ladder <= (rst_th_n<<<8))
-                          dac_ladder <= dac_ladder + (reg_vth<<<8);          
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);         
                     end
             5'd9: begin
-                      if(dac_ladder >= (rst_th_p<<<9))
-                          dac_ladder <= dac_ladder - (reg_vth<<<9);
-                      else if(dac_ladder <= (rst_th_n<<<9))
-                          dac_ladder <= dac_ladder + (reg_vth<<<9);            
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);            
                     end
             5'd10: begin
-                      if(dac_ladder >= (rst_th_p<<<10))
-                          dac_ladder <= dac_ladder - (reg_vth<<<10);
-                      else if(dac_ladder <= (rst_th_n<<<10))
-                           dac_ladder <= dac_ladder + (reg_vth<<<10);        
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);       
                     end
             5'd11: begin
-                      if(dac_ladder >= (rst_th_p<<<11))
-                          dac_ladder <= dac_ladder - (reg_vth<<<11);
-                      else if(dac_ladder <= (rst_th_n<<<11))
-                           dac_ladder <= dac_ladder + (reg_vth<<<11);        
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);      
                     end
             5'd12: begin
-                      if(dac_ladder >= (rst_th_p<<<12))
-                          dac_ladder <= dac_ladder - (reg_vth<<<12);
-                      else if(dac_ladder <= (rst_th_n<<<12))
-                           dac_ladder <= dac_ladder + (reg_vth<<<12);        
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);        
                     end
             5'd13: begin
-                      if(dac_ladder >= (rst_th_p<<<13))
-                          dac_ladder <= dac_ladder - (reg_vth<<<13);
-                      else if(dac_ladder <= (rst_th_n<<<13))
-                           dac_ladder <= dac_ladder + (reg_vth<<<13);        
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);      
                     end                            
             5'd14: begin
-                      if(dac_ladder >= (rst_th_p<<<14))
-                          dac_ladder <= dac_ladder - (reg_vth<<<14);
-                      else if(dac_ladder <= (rst_th_n<<<14))
-                           dac_ladder <= dac_ladder + (reg_vth<<<14);        
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);        
                     end                           
             5'd15: begin
-                      if(dac_ladder >= (rst_th_p<<<15))
-                          dac_ladder <= dac_ladder - (reg_vth<<<15);
-                      else if(dac_ladder <= (rst_th_n<<<15))
-                           dac_ladder <= dac_ladder + (reg_vth<<<15);        
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);       
                     end                           
             5'd16: begin
-                      if(dac_ladder >= (rst_th_p<<<16))
-                          dac_ladder <= dac_ladder - (reg_vth<<<16);
-                      else if(dac_ladder <= (rst_th_n<<<16))
-                           dac_ladder <= dac_ladder + (reg_vth<<<16);        
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);      
                     end                           
             5'd17: begin
-                      if(dac_ladder >= (rst_th_p<<<17))
-                          dac_ladder <= dac_ladder - (reg_vth<<<17);
-                      else if(dac_ladder <= (rst_th_n<<<17))
-                           dac_ladder <= dac_ladder + (reg_vth<<<17);        
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);       
                     end                           
             5'd18: begin
-                      if(dac_ladder >= (rst_th_p<<<18))
-                          dac_ladder <= dac_ladder - (reg_vth<<<18);
-                      else if(dac_ladder <= (rst_th_n<<<18))
-                           dac_ladder <= dac_ladder + (reg_vth<<<18);        
+                      if(dac_ladder >= shift_figure_p)
+                        dac_ladder <= dac_ladder - (reg_vth<<<err_shift_idx);
+                    else if(dac_ladder <= shift_figure_n)
+                        dac_ladder <= dac_ladder + (reg_vth<<<err_shift_idx);       
                     end                           
                                                 
         endcase
@@ -1257,7 +1147,9 @@ red_pitaya_id i_id (
   .out_divider_K_post_error(out_divider_K_post_error[63:32]),
   .out_adder_x_apri_est_divided_K_post_error(out_adder_x_apri_est_divided_K_post_error),
   .w_th_p(w_th_p),
-  .w_th_n(w_th_n)
+  .w_th_n(w_th_n),
+  .shift_figure_p(shift_figure_p),
+  .shift_figure_n(shift_figure_n)
 );
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,111 @@
+/*
+
+Vivado v2017.2 (64-bit)
+SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+
+Process ID: 12568
+License: Customer
+
+Current time: 	2/12/20 5:03:06 PM CST
+Time zone: 	China Standard Time (Asia/Taipei)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 9 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Xilinx/Vivado/2017.2/tps/win64/jre
+JVM executable location: 	D:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/java.exe
+Java library paths: D:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o;C:/WINDOWS/Sun/Java/bin;C:/WINDOWS/system32;C:/WINDOWS;D:/Xilinx/Vivado/2017.2/bin;D:/Xilinx/Vivado/2017.2/lib/win64.o;D:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/server;D:/Xilinx/Vivado/2017.2/tps/win64/jre/bin;D:/Xilinx/SDK/2017.2/bin;D:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64;D:/Xilinx/Vivado_HLS/2017.2/bin;C:/Windows/system32;C:/Windows;C:/Windows/System32/Wbem;C:/Windows/System32/WindowsPowerShell/v1.0/;C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common;C:/WINDOWS/System32/OpenSSH/;C:/Program Files/dotnet/;C:/Users/adam/AppData/Local/Microsoft/WindowsApps;C:/Users/adam/AppData/Local/GitHubDesktop/bin;C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem;;D:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/bin;D:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/libexec/gcc/x86_64-w64-mingw32/6.2.0;.
+
+User name: 	adam
+User home directory: C:/Users/adam
+User working directory: C:/Users/adam/Desktop/Quantaser_RP_FPGA-master/Quantaser_RP_FPGA-master/FOG_kalmman2
+User country: 	TW
+User language: 	zh
+User locale: 	zh_TW
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2017.2
+RDI_DATADIR: D:/Xilinx/Vivado/2017.2/data
+RDI_BINDIR: D:/Xilinx/Vivado/2017.2/bin
+
+User preferences location: C:/Users/adam/AppData/Roaming/Xilinx/Vivado
+Vivado preferences directory: C:/Users/adam/AppData/Roaming/Xilinx/Vivado/2017.2/vivado.xml
+Vivado layouts directory: C:/Users/adam/AppData/Roaming/Xilinx/Vivado/2017.2/layouts
+PlanAhead jar location: 	D:/Xilinx/Vivado/2017.2/lib/classes/planAhead.jar
+Vivado Look & Feel: 	[Synthetica - the extended Synth Look and Feel. - ui.g.i.H]
+Engine tmp dir: 	C:/Users/adam/Desktop/Quantaser_RP_FPGA-master/Quantaser_RP_FPGA-master/FOG_kalmman2/.Xil/Vivado-12568-DESKTOP-L7VH7BR
+
+GUI allocated memory:	182 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 540 MB
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 53 MB (+52688kb) [00:00:05]
+// [Engine Memory]: 482 MB (+354454kb) [00:00:05]
+// bs:g (cg:JFrame):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\adam\Desktop\Quantaser_RP_FPGA-master\Quantaser_RP_FPGA-master\FOG_kalmman2\project_tt.xpr. Version: Vivado v2017.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/adam/Desktop/Quantaser_RP_FPGA-master/Quantaser_RP_FPGA-master/FOG_kalmman2/project_tt.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/adam/Desktop/Quantaser_RP_FPGA-master/Quantaser_RP_FPGA-master/FOG_kalmman2' 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 76 MB (+21257kb) [00:00:09]
+// [Engine Memory]: 615 MB (+113543kb) [00:00:09]
+// [GUI Memory]: 82 MB (+2327kb) [00:00:10]
+// Tcl Message: open_project C:/Users/adam/Desktop/Quantaser_RP_FPGA-master/Quantaser_RP_FPGA-master/FOG_kalmman2/project_tt.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/adam/Desktop/Quantaser_RP_FPGA-master/Quantaser_RP_FPGA-master/FOG_kalmman2' INFO: [Project 1-313] Project file moved from 'C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 649 MB. GUI used memory: 51 MB. Current time: 2/12/20 5:03:12 PM CST
+// Tcl Message: open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 839.566 ; gain = 134.543 
+// [Engine Memory]: 653 MB (+8014kb) [00:00:13]
+// Project name: project_tt; location: C:/Users/adam/Desktop/Quantaser_RP_FPGA-master/Quantaser_RP_FPGA-master/FOG_kalmman2; part: xc7z010clg400-1
+dismissDialog("Open Project"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (red_pitaya_top.sv) elapsed time: 0.2s
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), pll : red_pitaya_pll (red_pitaya_pll.sv)]", 2, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// Launch External Editor: 'C:/Program Files/Notepad++/notepad++ "C:/Users/adam/Desktop/Quantaser_RP_FPGA-master/Quantaser_RP_FPGA-master/FOG_kalmman2/project_tt.srcs/sources_1/imports/fpga/prj/classic/rtl/red_pitaya_top.sv"'
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bs:g (cg:JFrame)
+// TclEventType: RUN_LAUNCH
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Feb 12 17:03:56 2020] Launched synth_1... Run output will be captured here: C:/Users/adam/Desktop/Quantaser_RP_FPGA-master/Quantaser_RP_FPGA-master/FOG_kalmman2/project_tt.runs/synth_1/runme.log [Wed Feb 12 17:03:56 2020] Launched impl_1... Run output will be captured here: C:/Users/adam/Desktop/Quantaser_RP_FPGA-master/Quantaser_RP_FPGA-master/FOG_kalmman2/project_tt.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 667 MB. GUI used memory: 46 MB. Current time: 2/12/20 5:04:23 PM CST
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 92 MB (+6661kb) [00:04:14]
+// TclEventType: RUN_STEP_COMPLETED

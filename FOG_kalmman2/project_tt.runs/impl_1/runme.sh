@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/impl_1'
+HD_PWD='C:/Users/adam/Desktop/FOG_kalmman2/project_tt.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
