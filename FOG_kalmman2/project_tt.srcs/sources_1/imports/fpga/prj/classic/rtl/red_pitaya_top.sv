@@ -362,6 +362,7 @@ logic [6:0] deMOD_mv_cnt = 7'd64;
 
 // assign dac_a_sum = dac_ladder_out_2[14:0]; //close loop, com2
 // assign dac_b_sum = dac_ladder_pre[14:0];
+assign dac_a_sum = ADC_reg_Diff;
 
 //assign dac_a_sum = dac_ladder_out_2[14:0]; //com3
 //assign dac_b_sum = ADC_reg_Diff;
@@ -373,7 +374,7 @@ logic [6:0] deMOD_mv_cnt = 7'd64;
 //assign dac_b_sum = dac_ladder_2[14:0];
 
 // assign dac_a_sum = measure; //kalman filter
-assign dac_a_sum = dac_ladder_out_2; //kalman filter 
+// assign dac_a_sum = dac_ladder_out_2; //kalman filter 
 // assign dac_b_sum = x_apo_est;
 // assign dac_b_sum = measure;
 
@@ -407,6 +408,7 @@ logic [2:0] SM_diff = 3'd0;
 
 logic MV = 1'b0;
 logic diff_MV_flag = 1'b0;
+logic plot_data;
 
 always @(posedge dac_clk_1x) //MV
 begin
@@ -1149,7 +1151,8 @@ red_pitaya_id i_id (
   .w_th_p(w_th_p),
   .w_th_n(w_th_n),
   .shift_figure_p(shift_figure_p),
-  .shift_figure_n(shift_figure_n)
+  .shift_figure_n(shift_figure_n),
+  .plot_data(plot_data)
 );
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -50,39 +50,39 @@ set rc [catch {
   create_project -in_memory -part xc7z010clg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/adam/Desktop/FOG_kalmman2/project_tt.cache/wt [current_project]
-  set_property parent.project_path C:/Users/adam/Desktop/FOG_kalmman2/project_tt.xpr [current_project]
-  set_property ip_output_repo C:/Users/adam/Desktop/FOG_kalmman2/project_tt.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.cache/wt [current_project]
+  set_property parent.project_path C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.xpr [current_project]
+  set_property ip_output_repo C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/adam/Desktop/FOG_kalmman2/project_tt.runs/synth_1/red_pitaya_top.dcp
+  add_files -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.runs/synth_1/red_pitaya_top.dcp
   set_msg_config -source 4 -id {BD 41-1661} -suppress
   set_param project.isImplRun true
-  read_ip -quiet C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder3/adder3.xci
-  set_property is_locked true [get_files C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder3/adder3.xci]
-  read_ip -quiet C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/divider3/divider3.xci
-  set_property is_locked true [get_files C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/divider3/divider3.xci]
-  read_ip -quiet C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/multiplier2/multiplier2.xci
-  set_property is_locked true [get_files C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/multiplier2/multiplier2.xci]
-  read_ip -quiet C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/subtractor2/subtractor2.xci
-  set_property is_locked true [get_files C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/subtractor2/subtractor2.xci]
-  read_ip -quiet C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/divider2/divider2.xci
-  set_property is_locked true [get_files C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/divider2/divider2.xci]
-  read_ip -quiet C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/multiplier/multiplier.xci
-  set_property is_locked true [get_files C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/multiplier/multiplier.xci]
-  read_ip -quiet C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/subtractor/subtractor.xci
-  set_property is_locked true [get_files C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/subtractor/subtractor.xci]
-  read_ip -quiet C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/divider/divider.xci
-  set_property is_locked true [get_files C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/divider/divider.xci]
-  read_ip -quiet C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder2/adder2.xci
-  set_property is_locked true [get_files C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder2/adder2.xci]
-  read_ip -quiet C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder/adder.xci
-  set_property is_locked true [get_files C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder/adder.xci]
-  read_ip -quiet C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/mult_gen_1/mult_gen_1.xci
-  set_property is_locked true [get_files C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/ip/mult_gen_1/mult_gen_1.xci]
-  add_files C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/bd/system/system.bd
-  set_property is_locked true [get_files C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/sources_1/bd/system/system.bd]
+  read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder3/adder3.xci
+  set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder3/adder3.xci]
+  read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/divider3/divider3.xci
+  set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/divider3/divider3.xci]
+  read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/multiplier2/multiplier2.xci
+  set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/multiplier2/multiplier2.xci]
+  read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/subtractor2/subtractor2.xci
+  set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/subtractor2/subtractor2.xci]
+  read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/divider2/divider2.xci
+  set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/divider2/divider2.xci]
+  read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/multiplier/multiplier.xci
+  set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/multiplier/multiplier.xci]
+  read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/subtractor/subtractor.xci
+  set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/subtractor/subtractor.xci]
+  read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/divider/divider.xci
+  set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/divider/divider.xci]
+  read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder2/adder2.xci
+  set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder2/adder2.xci]
+  read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder/adder.xci
+  set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/adder/adder.xci]
+  read_ip -quiet C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/mult_gen_1/mult_gen_1.xci
+  set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/ip/mult_gen_1/mult_gen_1.xci]
+  add_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/bd/system/system.bd
+  set_property is_locked true [get_files C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/sources_1/bd/system/system.bd]
   set_param project.isImplRun false
-  read_xdc C:/Users/adam/Desktop/FOG_kalmman2/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc
+  read_xdc C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman2/project_tt.srcs/constrs_1/imports/sdc/red_pitaya.xdc
   set_param project.isImplRun true
   link_design -top red_pitaya_top -part xc7z010clg400-1
   set_param project.isImplRun false
