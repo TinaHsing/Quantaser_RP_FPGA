@@ -880,15 +880,7 @@ logic signed [31:0] out_adder_x_apri_est_divided_K_post_error;
 logic signed [64-1:0] out_divider_P_apo_est;
 logic signed [31:0] measure;
 logic [32-1:0] kal_Q, kal_R;
-//  p
-// adder P_apo_est_shifted_Q //P_apo_est + Q
-// (
-  // .A(P_apo_est),      
-  // .B(32'd819),      //Q value set at 0.1 in decimal
-  // .CLK(dac_clk_1x),  // input wire CLK
-  // .CE(1'b1),    // input wire CE
-  // .S(P_apri_est)      // output wire [14 : 0] S
-// );
+
 adder P_apo_est_shifted_Q //P_apo_est + Q
 (
   .A(P_apo_est),      // input wire [31 : 0] A
@@ -897,14 +889,7 @@ adder P_apo_est_shifted_Q //P_apo_est + Q
   .CE(1'b1),    // input wire CE
   .S(P_apri_est)      // output wire [31 : 0] S
 );
-// adder2 P_apri_est_R //R + P_apri_est
-// (
-  // .A(P_apri_est),      // input wire [14 : 0] A
-  // .B(14'd8191),      // input wire [13 : 0] B, R value set at 1 in decimal
-  // .CLK(dac_clk_1x),  // input wire CLK
-  // .CE(1'b1),    // input wire CE
-  // .S(out_adder_P_apri_est_R)      // output wire [15 : 0] S
-// );
+
 adder2 P_apri_est_R //R + P_apri_est
 (
   .A(P_apri_est),      // input wire [31 : 0] A
@@ -913,17 +898,7 @@ adder2 P_apri_est_R //R + P_apri_est
   .CE(1'b1),    // input wire CE
   .S(out_adder_P_apri_est_R)      // output wire [31 : 0] S
 );
-// divider P_apri_est_R_P_apri_est //P_apri_est/(R+P_apri_est)
-// (
-  // .aclk(dac_clk_1x),                                      // input wire aclk
-  // .aclken(1'b1),                                  // input wire aclken
-  // .s_axis_divisor_tvalid(1'b1),    // input wire s_axis_divisor_tvalid
- // .s_axis_divisor_tdata(out_adder_P_apri_est_R),      // input wire [15 : 0] s_axis_divisor_tdata
-  // .s_axis_dividend_tvalid(1'b1),  // input wire s_axis_dividend_tvalid
- // .s_axis_dividend_tdata((32'b0|P_apri_est) << 13),    // input wire [31 : 0] s_axis_dividend_tdata
-  // .m_axis_dout_tvalid(),          // output wire m_axis_dout_tvalid
-  // .m_axis_dout_tdata(K)            // output wire [47 : 0] m_axis_dout_tdata
-// );
+
 divider P_apri_est_R_P_apri_est //P_apri_est/(R+P_apri_est)
 (
   .aclk(dac_clk_1x),                                      // input wire aclk
@@ -944,14 +919,7 @@ subtractor _1_K  //1-K
   .CE(1'b1),    // input wire CE
   .S(out_subtractor_1_K)      // output wire [31 : 0] S
 );
-// multiplier P_apri_est_1_K					//P_apri_est * (1-K) 
-// (
-  // .CLK(dac_clk_1x),  // input wire CLK
-  // .A(P_apri_est),      // input wire [14 : 0] A
-  // .B(out_subtractor_1_K),      // input wire [31 : 0] B
-  // .CE(1'b1),    // input wire CE
-  // .P(out_multiplier_P_apo_est)      // output wire [46 : 0] P
-// );
+
 multiplier P_apri_est_1_K //P_apri_est * (1-K) 
 (
   .CLK(dac_clk_1x),  // input wire CLK
@@ -973,15 +941,6 @@ divider2 shifted_P_apo_est			//Divide by 2^14
   .m_axis_dout_tdata(out_divider_P_apo_est)            // output wire [63 : 0] m_axis_dout_tdata
 );
 
-// x
-// subtractor2 z_measured_x_apri_est //z_measure - x_apri_est
-// (
-  // .A(measure),      // input wire [13 : 0] A
-  // .B(x_apo_est),      // input wire [13 : 0] B
-  // .CLK(dac_clk_1x),  // input wire CLK
-  // .CE(1'b1),    // input wire CE
-  // .S(post_error)      // output wire [14 : 0] S
-// );
 subtractor2 z_measured_x_apri_est //z_measure - x_apri_est
 (
   .A(measure),      // input wire [31 : 0] A
@@ -990,14 +949,7 @@ subtractor2 z_measured_x_apri_est //z_measure - x_apri_est
   .CE(1'b1),    // input wire CE
   .S(post_error)      // output wire [31 : 0] S
 );
-// multiplier2 K_post_error		//K * (z_measure-x_apri_est)
-// (
-  // .CLK(dac_clk_1x),  // input wire CLK
-  // .A(K[47:16]),      // input wire [31 : 0] A
-  // .B(post_error),      // input wire [14 : 0] B
-  // .CE(1'b1),
-  // .P(out_multiplier_K_post_error)      // output wire [46 : 0] P
-// );
+
 multiplier2 K_post_error //K * (z_measure-x_apri_est)
 (
   .CLK(dac_clk_1x),  // input wire CLK
@@ -1006,17 +958,7 @@ multiplier2 K_post_error //K * (z_measure-x_apri_est)
   .CE(1'b1),    // input wire CE
   .P(out_multiplier_K_post_error)      // output wire [63 : 0] P
 );
-// divider3 shifted_K_post_error  //K*(z_measure-x_apri_est) / 2^15
-// (
-  // .aclk(dac_clk_1x),                                      // input wire aclk
-  // .aclken(1'b1),                                  // input wire aclken
-  // .s_axis_divisor_tvalid(1'b1),    // input wire s_axis_divisor_tvalid
-  // .s_axis_divisor_tdata(32'd8192), // input wire [31 : 0] s_axis_divisor_tdata
-  // .s_axis_dividend_tvalid(1'b1),  // input wire s_axis_dividend_tvalid
-  // .s_axis_dividend_tdata(out_multiplier_K_post_error),    // input wire [31 : 0] s_axis_dividend_tdata
-  // .m_axis_dout_tvalid(),          // output wire m_axis_dout_tvalid
-  // .m_axis_dout_tdata(out_divider_K_post_error)            // output wire [63 : 0] m_axis_dout_tdata
-// );
+
 divider3 shifted_K_post_error ( //K*(z_measure-x_apri_est) / 2^15
   .aclk(dac_clk_1x),                                      // input wire aclk
   .aclken(1'b1),                                  // input wire aclken
@@ -1027,22 +969,7 @@ divider3 shifted_K_post_error ( //K*(z_measure-x_apri_est) / 2^15
   .m_axis_dout_tvalid(),          // output wire m_axis_dout_tvalid
   .m_axis_dout_tdata(out_divider_K_post_error)            // output wire [95 : 0] m_axis_dout_tdata
 );
-// adder3 x_apri_est_shifted_K_post_error	//x_apri_est + K*(z_measure-x_apri_est)/2^15 
-// (
-  // .A(x_apo_est),      // input wire [13 : 0] A
-  // .B(out_divider_K_post_error[63:32]),      // input wire [31 : 0] B
-  // .CLK(dac_clk_1x),  // input wire CLK
-  // .CE(1'b1),    // input wire CE
-  // .S(out_adder_x_apri_est_divided_K_post_error)      // output wire [31 : 0] S
-// );
-// adder3 x_apri_est_shifted_K_post_error //x_apri_est + K*(z_measure-x_apri_est)/2^15 
-// (
-  // .A(x_apo_est),      // input wire [31 : 0] A
-  // .B(out_divider_K_post_error[63:32]),      // input wire [31 : 0] B
-  // .CLK(dac_clk_1x),  // input wire CLK
-  // .CE(1'b1),    // input wire CE
-  // .S(out_adder_x_apri_est_divided_K_post_error)      // output wire [31 : 0] S
-// );
+
 adder3 x_apri_est_shifted_K_post_error ( //x_apri_est + K*(z_measure-x_apri_est)/2^15 
   .A(x_apo_est),      // input wire [31 : 0] A
   .B(out_divider_K_post_error[95:32]),      // input wire [63 : 0] B
