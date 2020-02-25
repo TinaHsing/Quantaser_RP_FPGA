@@ -587,3 +587,68 @@ INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK 
 write_bitstream completed successfully
 write_bitstream: Time (s): cpu = 00:00:27 ; elapsed = 00:00:21 . Memory (MB): peak = 1874.391 ; gain = 390.770
 INFO: [Common 17-206] Exiting Vivado at Fri Feb 21 15:46:00 2020...
+
+*** Running vivado
+    with args -log red_pitaya_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source red_pitaya_top.tcl -notrace
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source red_pitaya_top.tcl -notrace
+Command: open_checkpoint red_pitaya_top_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 221.336 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3916 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman3/project_tt.runs/impl_1/.Xil/Vivado-3300-DESKTOP-L7VH7BR/dcp3/red_pitaya_top_board.xdc]
+Finished Parsing XDC File [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman3/project_tt.runs/impl_1/.Xil/Vivado-3300-DESKTOP-L7VH7BR/dcp3/red_pitaya_top_board.xdc]
+Parsing XDC File [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman3/project_tt.runs/impl_1/.Xil/Vivado-3300-DESKTOP-L7VH7BR/dcp3/red_pitaya_top_early.xdc]
+Finished Parsing XDC File [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman3/project_tt.runs/impl_1/.Xil/Vivado-3300-DESKTOP-L7VH7BR/dcp3/red_pitaya_top_early.xdc]
+Parsing XDC File [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman3/project_tt.runs/impl_1/.Xil/Vivado-3300-DESKTOP-L7VH7BR/dcp3/red_pitaya_top.xdc]
+Finished Parsing XDC File [C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman3/project_tt.runs/impl_1/.Xil/Vivado-3300-DESKTOP-L7VH7BR/dcp3/red_pitaya_top.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 664.945 ; gain = 40.148
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 664.945 ; gain = 40.148
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 53 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 23 instances
+  RAM256X1S => RAM256X1S (RAMS64E, RAMS64E, RAMS64E, RAMS64E, MUXF7, MUXF7, MUXF8): 30 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2017.2 (64-bit) build 1909853
+open_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 664.945 ; gain = 445.375
+Command: write_bitstream -force red_pitaya_top.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010-clg400'
+Running DRC as a precondition to command write_bitstream
+Command: report_drc (run_mandatory_drcs) for: bitstream_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port exp_n_io[0] expects both input and output buffering but the buffers are incomplete.
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./red_pitaya_top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+15 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:34 ; elapsed = 00:00:27 . Memory (MB): peak = 1142.938 ; gain = 477.992
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 25 17:19:26 2020...

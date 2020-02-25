@@ -63,3 +63,7 @@ launch_runs impl_1 -to_step write_bitstream -jobs 2
 Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman3/project_tt.runs/synth_1/runme.log
 [Fri Feb 21 15:37:44 2020] Launched impl_1...
 Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman3/project_tt.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Feb 25 17:18:18 2020] Launched impl_1...
+Run output will be captured here: C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman3/project_tt.runs/impl_1/runme.log
