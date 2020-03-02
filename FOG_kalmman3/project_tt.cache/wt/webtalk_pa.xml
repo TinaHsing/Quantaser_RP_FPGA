@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Tue Feb 25 17:18:18 2020">
+<application name="pa" timeStamp="Mon Mar  2 11:00:43 2020">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="63b6e1fdd5fb4f879e7a4eb4afd67d8c" type="ProjectID"/>
-<property name="ProjectIteration" value="319" type="ProjectIteration"/>
+<property name="ProjectIteration" value="320" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -25,22 +25,22 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="EditUndo" value="16" type="JavaHandler"/>
 <property name="FileExit" value="1" type="JavaHandler"/>
 <property name="OpenBlockDesign" value="1" type="JavaHandler"/>
-<property name="OpenProject" value="22" type="JavaHandler"/>
+<property name="OpenProject" value="24" type="JavaHandler"/>
 <property name="RecustomizeCore" value="21" type="JavaHandler"/>
-<property name="RunBitgen" value="305" type="JavaHandler"/>
+<property name="RunBitgen" value="306" type="JavaHandler"/>
 <property name="RunImplementation" value="28" type="JavaHandler"/>
 <property name="RunSynthesis" value="27" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="11" type="JavaHandler"/>
 <property name="SaveProjectAs" value="1" type="JavaHandler"/>
 <property name="ShowProductGuide" value="1" type="JavaHandler"/>
-<property name="ShowView" value="286" type="JavaHandler"/>
+<property name="ShowView" value="287" type="JavaHandler"/>
 <property name="ToggleViewNavigator" value="16" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
 <property name="AbstractFileView_RELOAD" value="2" type="GuiResourceData"/>
 <property name="AddressTreeTablePanel_ADDRESS_TREE_TABLE" value="4" type="GuiResourceData"/>
 <property name="BaseDialog_CANCEL" value="9" type="GuiResourceData"/>
-<property name="BaseDialog_OK" value="368" type="GuiResourceData"/>
+<property name="BaseDialog_OK" value="369" type="GuiResourceData"/>
 <property name="BaseDialog_YES" value="10" type="GuiResourceData"/>
 <property name="CoreTreeTablePanel_CORE_TREE_TABLE" value="98" type="GuiResourceData"/>
 <property name="CustomizeCoreDialog_DOCUMENTATION" value="2" type="GuiResourceData"/>
@@ -48,9 +48,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="DDRConfigTreeTablePanel_DDR_CONFIG_TREE_TABLE" value="1" type="GuiResourceData"/>
 <property name="ExpReportTreePanel_EXP_REPORT_TREE_TABLE" value="2" type="GuiResourceData"/>
 <property name="ExpRunTreePanel_EXP_RUN_TREE_TABLE" value="6" type="GuiResourceData"/>
-<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="594" type="GuiResourceData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="603" type="GuiResourceData"/>
 <property name="FileSetPanel_RELOAD" value="2" type="GuiResourceData"/>
-<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="574" type="GuiResourceData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="575" type="GuiResourceData"/>
 <property name="GICTreeTablePanel_GIC_TREE_TABLE" value="3" type="GuiResourceData"/>
 <property name="HACGCIPSymbol_SHOW_DISABLED_PORTS" value="4" type="GuiResourceData"/>
 <property name="HACGCTabbedPane_TABBED_PANE" value="1" type="GuiResourceData"/>
@@ -61,10 +61,10 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="LaunchPanel_DONT_SHOW_THIS_DIALOG_AGAIN" value="1" type="GuiResourceData"/>
 <property name="MainMenuMgr_EDIT" value="2" type="GuiResourceData"/>
 <property name="MainMenuMgr_EXPORT" value="2" type="GuiResourceData"/>
-<property name="MainMenuMgr_FILE" value="52" type="GuiResourceData"/>
+<property name="MainMenuMgr_FILE" value="56" type="GuiResourceData"/>
 <property name="MainMenuMgr_FLOW" value="4" type="GuiResourceData"/>
 <property name="MainMenuMgr_OPEN_RECENT_FILE" value="1" type="GuiResourceData"/>
-<property name="MainMenuMgr_OPEN_RECENT_PROJECT" value="25" type="GuiResourceData"/>
+<property name="MainMenuMgr_OPEN_RECENT_PROJECT" value="27" type="GuiResourceData"/>
 <property name="MainMenuMgr_TOOLS" value="5" type="GuiResourceData"/>
 <property name="MainMenuMgr_VIEW" value="4" type="GuiResourceData"/>
 <property name="MainMenuMgr_WINDOW" value="8" type="GuiResourceData"/>
@@ -77,8 +77,8 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="MsgView_WARNING_MESSAGES" value="1" type="GuiResourceData"/>
 <property name="PACommandNames_AUTO_UPDATE_HIER" value="4" type="GuiResourceData"/>
 <property name="PACommandNames_EXIT" value="1" type="GuiResourceData"/>
-<property name="PACommandNames_OPEN_PROJECT" value="22" type="GuiResourceData"/>
-<property name="PACommandNames_REPORTS_WINDOW" value="38" type="GuiResourceData"/>
+<property name="PACommandNames_OPEN_PROJECT" value="24" type="GuiResourceData"/>
+<property name="PACommandNames_REPORTS_WINDOW" value="39" type="GuiResourceData"/>
 <property name="PACommandNames_RUN_BITGEN" value="15" type="GuiResourceData"/>
 <property name="PACommandNames_RUN_IMPLEMENTATION" value="10" type="GuiResourceData"/>
 <property name="PACommandNames_RUN_SYNTHESIS" value="5" type="GuiResourceData"/>
@@ -106,6 +106,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="1" type="GuiResourceData"/>
 <property name="SyntheticaStateMonitor_CANCEL" value="7" type="GuiResourceData"/>
 <property name="SystemTreeView_SYSTEM_TREE" value="6" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="56" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="53" type="TclMode"/>
 </item>
 </section>
 </application>

@@ -768,7 +768,8 @@ begin
         dac_ladder <= 32'd0;
     else begin
         if(ladder_start_strobe == 1'b1) begin    
-            dac_ladder <= dac_ladder + x_apo_est;
+            // dac_ladder <= dac_ladder + x_apo_est;
+			dac_ladder <= dac_ladder + dac_ladder_pre2;
         end
         else 
             dac_ladder <= dac_ladder;
