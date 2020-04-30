@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Tue Jan  7 13:13:24 2020
-| Host         : DESKTOP-L7VH7BR running 64-bit major release  (build 9200)
+| Date         : Thu Apr 30 10:45:50 2020
+| Host         : LAPTOP-MFH2O9HI running 64-bit major release  (build 9200)
 | Command      : report_drc -file red_pitaya_top_drc_opted.rpt
 | Design       : red_pitaya_top
 | Device       : xc7z010clg400-1
@@ -40,12 +40,12 @@ Table of Contents
 -----------------
 DPIP-1#1 Warning
 Input pipelining  
-DSP i_asg/ch[0]/dac_mult_reg input i_asg/ch[0]/dac_mult_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP i_asg/ch0/dac_mult_reg input i_asg/ch0/dac_mult_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#2 Warning
 Input pipelining  
-DSP i_asg/ch[1]/dac_mult_reg input i_asg/ch[1]/dac_mult_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP i_asg/ch1/dac_mult_reg input i_asg/ch1/dac_mult_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#3 Warning
@@ -160,12 +160,12 @@ Related violations: <none>
 
 DPOP-1#1 Warning
 PREG Output pipelining  
-DSP i_asg/ch[0]/dac_mult_reg output i_asg/ch[0]/dac_mult_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP i_asg/ch0/dac_mult_reg output i_asg/ch0/dac_mult_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#2 Warning
 PREG Output pipelining  
-DSP i_asg/ch[1]/dac_mult_reg output i_asg/ch[1]/dac_mult_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP i_asg/ch1/dac_mult_reg output i_asg/ch1/dac_mult_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#3 Warning
