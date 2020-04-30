@@ -992,7 +992,7 @@ ODDR oddr_dac_rst          (.Q(dac_rst_o), .D1(dac_rst  ), .D2(dac_rst  ), .C(da
 ODDR oddr_dac_dat [14-1:0] (.Q(dac_dat_o), .D1(dac_dat_b), .D2(dac_dat_a), .C(dac_clk_1x), .CE(1'b1), .R(dac_rst), .S(1'b0));
 
 ////////////////////////////////////////////////////////////////////////////////
-//Kalman filter
+//Kalman filter for 1st integrate
 ////////////////////////////////////////////////////////////////////////////////
 logic signed [32-1:0] x_apo_est, P_apo_est;
 logic signed [32-1:0] P_apri_est;
