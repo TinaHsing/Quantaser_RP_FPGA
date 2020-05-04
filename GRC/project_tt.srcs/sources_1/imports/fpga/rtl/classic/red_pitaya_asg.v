@@ -110,7 +110,8 @@ wire              trig_a_done  , trig_b_done  ;
 integer i;
 reg signed [31:0] adc_sum=32'd0, adc_sum_2=32'd0;
 reg [13:0] adc_mem [16383:0],  adc_mem_2 [16383:0]; 
-reg [13:0] adc_counter = 14'd0, adc_idx = 14'd0, adc_rd_data, adc_rd_data_2, test = 14'd0;
+reg [13:0] adc_rd_data, adc_rd_data_2, test = 14'd0;
+reg [31:0] adc_counter = 32'd0, adc_idx = 32'd0, adc_idx_temp = 32'd0;
 
 always @(posedge dac_clk_i)
 begin
@@ -302,11 +303,12 @@ end else begin
       if (sys_addr[19:0]==20'h54)  cyc4 <= sys_wdata[  32-1: 0] ; 
       if (sys_addr[19:0]==20'h58)  end_write <= sys_wdata[0] ; 
       if (sys_addr[19:0]==20'h5C)  end_read <= sys_wdata[0] ; 
-      if (sys_addr[19:0]==20'h64)  adc_idx <= sys_wdata[13:0] ; 
+      if (sys_addr[19:0]==20'h64)  adc_idx <= sys_wdata ; 
       if (sys_addr[19:0]==20'h78)  force_int <= sys_wdata[0] ;
    end
 
     set_a_amp_temp <= set_a_amp;
+	adc_idx_temp <= adc_idx;
 	set_b_step <= set_b_step_temp + set_b_step_temp;
     
     case(SM2)
@@ -327,7 +329,7 @@ end else begin
                     SM2 <= 3'd0;
                     
                 if(end_read==1'b1) begin
-                    adc_counter <= 14'd0;
+                    adc_counter <= 32'd0;
                     end_read <= 1'b0;
                 end
            end
@@ -471,7 +473,8 @@ end else begin
 end
 
 //assign integrator_measure_strobe = integrator_measure_reg[0];// & ~integrator_measure_reg[2];
-wire amp_change_strobe = (set_a_amp == set_a_amp_temp)? 1'b0 : 1'b1;
+// wire amp_change_strobe = (set_a_amp == set_a_amp_temp)? 1'b0 : 1'b1;
+wire amp_change_strobe = (adc_idx == adc_idx_temp)? 1'b0 : 1'b1;
 wire [32-1: 0] r0_rd = {7'h0,set_b_rgate, set_b_zero,set_b_rst,set_b_once,set_b_wrap, 1'b0,trig_b_src,
                         7'h0,set_a_rgate, set_a_zero,set_a_rst,set_a_once,set_a_wrap, 1'b0,trig_a_src };
 
