@@ -48,7 +48,7 @@ module red_pitaya_asg_ch #(
    output                trig_done_o     ,  //!< trigger event
    // buffer ctrl
    input                 buf_we_i        ,  //!< buffer write enable
-   input      [ 14-1: 0] buf_addr_i      ,  //!< buffer address
+   input      [ RSZ-1: 0] buf_addr_i      ,  //!< buffer address
    input      [ 14-1: 0] buf_wdata_i     ,  //!< buffer write data
    output reg [ 14-1: 0] buf_rdata_o     ,  //!< buffer read data
    output reg [RSZ-1: 0] buf_rpnt_o      ,  //!< buffer current read pointer
@@ -66,6 +66,9 @@ module red_pitaya_asg_ch #(
    input     [  16-1: 0] set_rnum_i      ,  //!< set number of repetitions
    input     [  32-1: 0] set_rdly_i      ,  //!< set delay between repetitions
    input                 set_rgate_i        //!< set external gated repetition
+   // test nonitor
+   , output reg [31:0] reg_dac_npnt
+   , output reg  reg_dac_npnt_sub_neg
 );
 
 //---------------------------------------------------------------------------------
@@ -94,6 +97,11 @@ begin
    dac_rdat   <= dac_rd ;  // improve timing
 end
 
+always @(posedge dac_clk_i)
+begin
+	reg_dac_npnt <= dac_npnt;
+	reg_dac_npnt_sub_neg <= dac_npnt_sub_neg;
+end
 // write
 always @(posedge dac_clk_i)
 if (buf_we_i)  dac_buf[buf_addr_i] <= buf_wdata_i[14-1:0] ;
