@@ -711,13 +711,13 @@ end
 
 logic [1:0] ladder_pre_case = 2'd0;
 
-always@(posedge dac_clk_1x) //1st integrator
+always@(posedge dac_clk_1x) 
 begin
     if(ladder_rst)
         dac_ladder_pre_vth <= 32'd0;
     else begin
 		if(ladder_start_strobe == 1'b1) begin    
-			dac_ladder_pre_vth <= dac_ladder_pre_vth + x_apo_est_2;
+			dac_ladder_pre_vth <= dac_ladder_pre_vth + x_apo_est_2; //1st integrator
 			pre_ladder_index = 2'd1;
 		end
 		else dac_ladder_pre_vth <= dac_ladder_pre_vth;
@@ -734,7 +734,7 @@ end
 always@(posedge dac_clk_1x) 
 begin 
 
-			case(err_shift_idx_pre)
+			case(err_shift_idx_pre) // 一次積分後先加再除
 				5'd0: dac_ladder_pre <= dac_ladder_pre_vth + ladder_1st_offset;
 				5'd1: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;   
 				5'd2: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
@@ -755,21 +755,21 @@ begin
 				5'd17: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
 				5'd18: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
 			endcase
-			if(dac_ladder_pre < 0 && dac_ladder_pre > w_th_n) dac_ladder_pre2 <= w_th_n;
+			if(dac_ladder_pre < 0 && dac_ladder_pre > w_th_n) dac_ladder_pre2 <= w_th_n; //dac_ladder_pre2 = 一次積分結果卡band
 			else if(dac_ladder_pre >= 0 && dac_ladder_pre < w_th_p) dac_ladder_pre2 <= w_th_p;
 			else dac_ladder_pre2 <= dac_ladder_pre;
-			measure <= dac_ladder_pre2;
+			measure <= dac_ladder_pre2; //進kalmman filter
 
 end
 
-always@(posedge dac_clk_1x) //ladder wave mid
+always@(posedge dac_clk_1x) 
 begin
     if(ladder_rst)
         dac_ladder <= 32'd0;
     else begin
         if(ladder_start_strobe == 1'b1) begin    
             // dac_ladder <= dac_ladder + x_apo_est;
-			dac_ladder <= dac_ladder + dac_ladder_pre2;
+			dac_ladder <= dac_ladder + dac_ladder_pre2; //二次積分，沒有累加kalmman
         end
         else 
             dac_ladder <= dac_ladder;
@@ -935,12 +935,21 @@ end
 
 always@(posedge dac_clk_1x) //ladder wave
 begin 
-    
-    if(dac_ladder_out > rst_th_p)
-        dac_ladder_out_2 <= dac_ladder_out - reg_vth;
-    else if(dac_ladder_out <= rst_th_n)
-        dac_ladder_out_2 <= dac_ladder_out + reg_vth;
-    else dac_ladder_out_2 <= dac_ladder_out;
+    if(dac_ladder_2 >= 0)begin
+		if(dac_ladder_out > rst_th_p) dac_ladder_out_2 <= dac_ladder_out - reg_vth;
+		else if(dac_ladder_out < 0) dac_ladder_out_2 <= dac_ladder_out + reg_vth;
+		else dac_ladder_out_2 <= dac_ladder_out;
+	end
+	else begin
+		if(dac_ladder_out < rst_th_n) dac_ladder_out_2 <= dac_ladder_out + reg_vth;
+		else if(dac_ladder_out > 0) dac_ladder_out_2 <= dac_ladder_out - reg_vth;
+		else dac_ladder_out_2 <= dac_ladder_out;
+	end
+    // if(dac_ladder_out > rst_th_p)
+        // dac_ladder_out_2 <= dac_ladder_out - reg_vth;
+    // else if(dac_ladder_out <= rst_th_n)
+        // dac_ladder_out_2 <= dac_ladder_out + reg_vth;
+    // else dac_ladder_out_2 <= dac_ladder_out;
 end
 
 mult_gen_1 m2 (

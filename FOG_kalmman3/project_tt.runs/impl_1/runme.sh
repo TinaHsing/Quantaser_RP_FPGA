@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/adam/Desktop/Quantaser_RP_FPGA-master/FOG_kalmman3/project_tt.runs/impl_1'
+HD_PWD='C:/Users/adam/Documents/Quantaser_RP_FPGA/FOG_kalmman3/project_tt.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log red_pitaya_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source red_pitaya_top.tcl -notrace
 
 
