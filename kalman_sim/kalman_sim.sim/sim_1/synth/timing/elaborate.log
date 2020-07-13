@@ -1,7 +1,0 @@
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 79ec3f924296465e942e37cdcc7c64d5 --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot kalman_tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.kalman_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 46 differs from formal bit length 47 for port out_multiplier_K_post_error [C:/Users/adam/Documents/Quantaser_RP_FPGA/kalman_sim/kalman_sim.srcs/sim_1/new/kalman_tb.v:59]
-Completed static elaboration

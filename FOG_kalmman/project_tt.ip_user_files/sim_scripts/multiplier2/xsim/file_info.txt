@@ -1,1 +1,0 @@
-multiplier2.vhd,vhdl,xil_defaultlib,../../../../project_tt.srcs/sources_1/ip/multiplier2/sim/multiplier2.vhd,

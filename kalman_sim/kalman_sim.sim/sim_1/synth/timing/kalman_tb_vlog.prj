@@ -1,6 +1,0 @@
-# compile verilog/system verilog design source files
-verilog xil_defaultlib  "kalman_tb_time_synth.v"
-verilog xil_defaultlib  "../../../../kalman_sim.srcs/sim_1/new/kalman_tb.v"
-
-# Do not sort compile order
-nosort

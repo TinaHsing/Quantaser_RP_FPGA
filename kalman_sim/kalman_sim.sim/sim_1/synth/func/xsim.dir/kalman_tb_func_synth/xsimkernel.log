@@ -1,4 +1,0 @@
-Running: xsim.dir/kalman_tb_func_synth/xsimk.exe -simmode gui -wdb kalman_tb_func_synth.wdb -simrunnum 0 -socket 50189
-Design successfully loaded
-Design Loading Memory Usage: 60464 KB (Peak: 60464 KB)
-Design Loading CPU Usage: 155 ms
