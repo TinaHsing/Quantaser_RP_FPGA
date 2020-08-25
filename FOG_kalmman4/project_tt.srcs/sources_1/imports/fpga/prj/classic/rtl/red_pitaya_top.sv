@@ -353,13 +353,13 @@ logic [16:0] reg_err_gain;
 logic [2:0] mv_shift = 3'd6, mv_mode;
 logic [6:0] deMOD_mv_cnt = 7'd64;
 
-assign dac_a_sum = mod; //open loop, com1
-assign dac_b_sum = $signed(-mod_cp);  //fog_v1.bit，08/12 改成-mod
+//assign dac_a_sum = mod; //open loop, com1
+//assign dac_b_sum = $signed(-mod_cp);  //fog_v1.bit，08/12 改成-mod
 // assign dac_b_sum = ADC_reg_Diff;  //fog_v1.bit
 // assign dac_b_sum = ADC_reg_Diff_MV; //fog_v1_1.bit ~ fog_v1_10.bit
 
-// assign dac_a_sum = dac_ladder_out_2[14:0]; //close loop, com2
-// assign dac_b_sum = ~dac_ladder_out_2_cp + 1'b1;
+ assign dac_a_sum = dac_ladder_out_2[14:0]; //close loop, com2
+ assign dac_b_sum = ~dac_ladder_out_2_cp + 1'b1;
 // assign dac_b_sum = dac_ladder_pre[14:0];
 // assign dac_b_sum = x_apo_est_2;
  

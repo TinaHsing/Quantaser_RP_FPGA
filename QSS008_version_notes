@@ -1,0 +1,6 @@
+v4:
+FPGA:　GitHub\Quantaser_RP_FPGA\FOG_kalmman4
+2020/08/11,
+close output1為階梯波，output2 = -output1，output range : -1~1
+open loop optput1 = MOD, output2 = -MOD
+
