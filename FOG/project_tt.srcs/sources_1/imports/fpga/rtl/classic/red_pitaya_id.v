@@ -44,8 +44,9 @@ module red_pitaya_id #(
   , output reg [31:0] reg_mod_freq_cnt
   , output reg [31:0] Init_stable_cnt
   , output reg [16:0] reg_err_gain
-  , output reg [13:0] reg_vth
-  , output reg [13:0] reg_vth_1st_int
+  , output reg [31:0] reg_vth 
+  , output reg [31:0] reg_vth_pre 
+  , output reg [31:0] reg_vth_1st_int
   , output reg [14:0] Diff_vth
   , output reg err_polarity
   , output reg mod_off
@@ -56,6 +57,9 @@ module red_pitaya_id #(
   , output reg ladder_rst
   , output reg [4:0] err_shift_idx 
   , output reg [4:0] err_shift_idx_pre 
+  , output reg int_zero
+  , output reg int_gain_mode
+  , output reg vth_cut_mode
   , input [31:0] dac_ladder
   , input [31:0] dac_ladder_2
   , input [31:0] dac_ladder_pre 
@@ -134,23 +138,27 @@ assign id_value[ 3: 0] =  4'h1; // board type   1 - release 1
 always @(posedge clk_i)
 if (rstn_i == 1'b0) begin
   digital_loop <= 1'b0;
-  reg_mod_H <= 32'd0 | {1'b0, 13'd4890};
-  reg_mod_L <= 32'd0 | {1'b0, 13'd3276};
+  reg_mod_H <= 32'd500;
+  reg_mod_L <= $signed(-32'd500);
   reg_mod_freq_cnt <= 32'd125; // 1KHz
-  Init_stable_cnt <= 32'd30; //for 500KH
+  Init_stable_cnt <= 32'd64; //for 500KH
   reg_err_gain <= 17'd1;
-  reg_vth <= 14'd4915; //8191 = 1V
-  reg_vth_1st_int <= 14'd8191;
+  reg_vth <= 32'd8000; //8191 = 1V
+  reg_vth_pre <= 32'd1_000_000_000;
+  reg_vth_1st_int <= 32'd1000;
   Diff_vth <= 15'd0;
   err_polarity <= 1'b0;
   mod_off <= 0;
   ADC_reg_H_offset <= 32'd0;
   ladder_1st_offset <= 32'd0;
-  mv_mode <= 3'd7;
+  mv_mode <= 3'd4;
   test_add <= 32'd10;
   ladder_rst <= 1'b0;
-  err_shift_idx <= 5'd0;
-  err_shift_idx_pre <= 5'd0;
+  err_shift_idx <= 5'd4;
+  err_shift_idx_pre <= 5'd5;
+  int_zero <= 0;
+  int_gain_mode <= 0;
+  vth_cut_mode <= 1;
   
 end else if (sys_wen) begin
   if (sys_addr[19:0]==20'h0c)   digital_loop <= sys_wdata[0];
@@ -158,7 +166,7 @@ end else if (sys_wen) begin
   if (sys_addr[19:0]==20'h104) reg_mod_L <= sys_wdata[31:0]; 
   if (sys_addr[19:0]==20'h108) reg_mod_freq_cnt <= sys_wdata[31:0];
   if (sys_addr[19:0]==20'h110) reg_err_gain <= sys_wdata[31:0]; //0011_1111 & sys_wdata[31:0]
-  if (sys_addr[19:0]==20'h114) reg_vth <= 32'h3fff & sys_wdata[31:0]; //0011_1111_1111_1111 & sys_wdata[31:0]
+  if (sys_addr[19:0]==20'h114) reg_vth <= sys_wdata[31:0]; //0011_1111_1111_1111 & sys_wdata[31:0]
   if (sys_addr[19:0]==20'h11C) err_polarity <= 32'h1 & sys_wdata[31:0];
   if (sys_addr[19:0]==20'h120) mod_off <= 32'h1 & sys_wdata[31:0];
   if (sys_addr[19:0]==20'h138) Init_stable_cnt <= sys_wdata[31:0]; 
@@ -168,9 +176,13 @@ end else if (sys_wen) begin
   if (sys_addr[19:0]==20'h14C) ladder_rst <= sys_wdata[31:0]; 
   if (sys_addr[19:0]==20'h150) err_shift_idx <= sys_wdata[31:0]; 
   if (sys_addr[19:0]==20'h160) Diff_vth <= sys_wdata[31:0];
-  if (sys_addr[19:0]==20'h168) reg_vth_1st_int <= 32'h3fff & sys_wdata[31:0]; //0011_1111_1111_1111 & sys_wdata[31:0]
+  if (sys_addr[19:0]==20'h168) reg_vth_1st_int <= sys_wdata[31:0]; //0011_1111_1111_1111 & sys_wdata[31:0]
   if (sys_addr[19:0]==20'h170) err_shift_idx_pre <= sys_wdata[31:0]; 
   if (sys_addr[19:0]==20'h180) ladder_1st_offset <= sys_wdata[31:0]; 
+  if (sys_addr[19:0]==20'h184) int_zero <= sys_wdata[31:0]; 
+  if (sys_addr[19:0]==20'h188) int_gain_mode <= sys_wdata[31:0];  
+  if (sys_addr[19:0]==20'h18C) vth_cut_mode <= sys_wdata[31:0]; 
+  if (sys_addr[19:0]==20'h190) reg_vth_pre <= sys_wdata[31:0];
 end
 
 wire sys_en;
@@ -221,6 +233,10 @@ end else begin
     20'h00178: begin sys_ack <= sys_en;  sys_rdata <= {dac_ladder_pre_vth      }; end 
     20'h0017C: begin sys_ack <= sys_en;  sys_rdata <= {dac_ladder_2      }; end 
 	20'h00180: begin sys_ack <= sys_en;  sys_rdata <= {ladder_1st_offset      }; end
+    20'h00184: begin sys_ack <= sys_en;  sys_rdata <= {int_zero      }; end
+    20'h00188: begin sys_ack <= sys_en;  sys_rdata <= {int_gain_mode      }; end 
+    20'h0018C: begin sys_ack <= sys_en;  sys_rdata <= {vth_cut_mode      }; end  
+	20'h00190: begin sys_ack <= sys_en;  sys_rdata <= {reg_vth_pre      }; end 
 	
       default: begin sys_ack <= sys_en;  sys_rdata <=  32'h0   ; end 
   endcase

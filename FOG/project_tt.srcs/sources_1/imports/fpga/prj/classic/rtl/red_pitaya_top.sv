@@ -349,168 +349,226 @@ assign adc_dat[1] = digital_loop ? dac_b : {adc_dat_raw[1][14-1], ~adc_dat_raw[1
 // Sumation of ASG and PID signal perform saturation before sending to DAC 
 //assign dac_a_sum = asg_dat[0] + pid_dat[0];
 //assign dac_b_sum = asg_dat[1] + pid_dat[1];
-logic signed [31:0] reg_mod_H, reg_mod_L;
-logic [31:0] reg_mod_freq_cnt; 
-logic [31:0] Init_stable_cnt;
+
+
+
 logic [16:0] reg_err_gain;
-logic [2:0] mv_shift = 3'd6, mv_mode;
+logic [2:0] mv_shift = 3'd6;
 logic [6:0] deMOD_mv_cnt = 7'd64;
 
-// assign dac_a_sum = mod; //open loop, com1
-// assign dac_b_sum = ADC_reg_Diff;  //fog_v1.bit
-// assign dac_b_sum = ADC_reg_Diff_MV; //fog_v1_1.bit ~ fog_v1_10.bit
+/*** dac output here***/
+assign dac_a_sum = dac_ladder_pre[14:0]; 
+assign dac_b_sum = dac_ladder[14:0];
 
-// assign dac_a_sum = dac_ladder_out_2[14:0]; //close loop, com2
-// assign dac_b_sum = dac_ladder_pre[14:0];
-
-//assign dac_a_sum = dac_ladder_out_2[14:0]; //com3
-//assign dac_b_sum = ADC_reg_Diff;
-
-//assign dac_a_sum = mod; //com4
-//assign dac_b_sum = dac_ladder_2[14:0];
-
-//assign dac_a_sum = dac_ladder[14:0]; //com5
-//assign dac_b_sum = dac_ladder_2[14:0];
-
-// assign dac_a_sum = measure; //kalman filter
-assign dac_a_sum = dac_ladder_out_2[14:0]; //kalman filter
-// assign dac_b_sum = x_apo_est_r;
-assign dac_b_sum = x_apo_est;
 
 // saturation
 assign dac_a = (^dac_a_sum[15-1:15-2]) ? {dac_a_sum[15-1], {13{~dac_a_sum[15-1]}}} : dac_a_sum[14-1:0];
 assign dac_b = (^dac_b_sum[15-1:15-2]) ? {dac_b_sum[15-1], {13{~dac_b_sum[15-1]}}} : dac_b_sum[14-1:0];
 
-localparam mod_stat_H = 1'b1;
-localparam mod_stat_L = 1'b0;
+
+/***modulation logic***/
+logic [31:0] reg_mod_freq_cnt; 
+logic [31:0] reg_mod_H, reg_mod_L;
+logic signed [13:0] mod;
+logic mod_stat;
+
+modulation_gen 
+#(.OUTPUT_BIT(14))
+u_mod
+(
+.i_clk(dac_clk_1x),
+.i_rst_n(adc_rstn),
+/*** modulation half period clk cnt ***/
+.i_freq_cnt(reg_mod_freq_cnt), 	//[31:0] 
+.i_amp_H(reg_mod_H), 	//[13:0] 
+.i_amp_L(reg_mod_L), 	//[13:0] 
+.o_mod_out(mod), 	//[13:0] 
+/*** modulation H/L status***/
+.o_status(mod_stat)
+);
+
+
+/***err signal logic***/
+logic err_polarity;
+logic [31:0] Init_stable_cnt;
+logic signed [31:0] ADC_reg_H_offset;
+logic [2:0] mv_mode;
+logic [31:0] Diff_vth;
+logic ladder_start_strobe;
+logic signed [31:0] err_w_th;
+
+err_signal_gen u_err
+(
+.i_clk(dac_clk_1x),
+.i_rst_n(adc_rstn),
+.i_status(mod_stat),
+.i_polarity(err_polarity),
+.i_wait_cnt(Init_stable_cnt),
+.i_err_offset_H(ADC_reg_H_offset), 
+.i_adc_data(0),
+.i_avg_sel(mv_mode),
+.i_err_th(Diff_vth),
+
+.o_mv_cnt(),
+.o_errsignal(),
+.o_errsignal_w_th(err_w_th),
+.o_adc_reg_H(), 
+.o_adc_reg_L(),
+.o_err_done(ladder_start_strobe)
+);
+
+/***1st integrator logic ***/
+
+logic [4:0] err_shift_idx_pre;
+logic int_zero, int_gain_mode;
+logic [31:0] reg_vth_1st_int;
+logic [31:0] dac_ladder_pre;
+logic [31:0] reg_vth_pre;
+
+integrator_vth_v2
+#(.EXT_SIG_BIT(14))
+u_integrator
+(
+.i_clk(dac_clk_1x),
+.i_rst_n(adc_rstn),
+/*** 0~15 for gain decrease by 2^0 ~ 2^-15 ***/
+.i_gain_sel(err_shift_idx_pre), 	// [5:0] 
+.i_err(err_w_th), 		//[31:0]
+.i_en(ladder_start_strobe),
+.i_zero(int_zero),
+.i_add_sig_en(1'b0),
+.i_gain_mode(i_gain_mode),
+.i_ext_sig(14'b0), 	//[EXT_SIG_BIT-1:0]
+.i_saturation(reg_vth_1st_int),//[31:0]
+.i_vth(reg_vth_pre), 		//[31:0]
+.i_vth_cut_mode(0),
+.o_int(dac_ladder_pre)		//[31:0]
+
+/*** for simulation ***/
+// , .o_sat_p()		//[31:0]
+// , .o_sat_n()		//[31:0]
+// , .o_cstate(o_cstate)		//[3:0]
+// , .o_nstate(o_nstate)		//[3:0]
+// , .o_dv()			//[31:0]
+// , .o_vo(ladder_out_v0)			//[31:0]
+// , .o_change() 
+// , .o_shift_idx()	//[4:0]
+// , .o_sat_flag_p()
+// , .o_sat_flag_n()
+// , .o_err_pol_change()
+// , .o_zero_flag()
+// , .o_vth_flag_p(o_vth_flag_p)
+// , .o_vth_flag_n(o_vth_flag_n)
+// , .o_vth_cut_p()	//[31:0]
+// , .o_vth_cut_n()	//[31:0]
+);
+
+// integrator 
+// #(.EXT_SIG_BIT(16))
+// u_integrator
+// (
+// .i_clk(dac_clk_1x),
+// .i_rst_n(adc_rstn),
+// /*** 0~15 for gain decrease by 2^0 ~ 2^-15 ***/
+// .i_gain_sel(err_shift_idx_pre), 	// [5:0] 
+// .i_err(err_w_th),		//[31:0]
+// .i_en(ladder_start_strobe),
+// .i_zero(int_zero),
+// .i_add_sig_en(0),
+// .i_gain_mode(int_gain_mode),
+// .i_ext_sig(16'd0),	//[EXT_SIG_BIT-1:0]
+// .i_saturation(reg_vth_1st_int),//[31:0]
+// .o_int(dac_ladder_pre)		//[31:0]
+
+/*** for simulation ***/
+// , .o_sat_p(o_sat_p) 	//[31:0]
+// , .o_sat_n(o_sat_n) 	//[31:0]
+// , .o_cstate(first_cstate) 	//[3:0]
+// , .o_nstate(first_nstate) 	//[3:0]
+// , .o_dv() 		//[31:0]
+// , .o_vo(first_int_vo) 		//[31:0]
+// , .o_change() 
+// , .o_shift_idx() //[4:0]
+// , .o_sat_flag_p(o_sat_flag_p)
+// , .o_sat_flag_n(o_sat_flag_n)
+// , .o_limit_flag_p(o_limit_flag_p)
+// , .o_limit_flag_n(o_limit_flag_n)
+// , .o_err_pol_change()
+// , .o_zero_flag()
+// );
+
+/***2nd integrator logic ***/
+
+logic [4:0] err_shift_idx;
+logic mod_off;
+logic [31:0] reg_vth;
+logic vth_cut_mode;
+logic [31:0] dac_ladder_2;
+
+integrator_vth_v2
+#(.EXT_SIG_BIT(14))
+u_int_vth
+(
+.i_clk(dac_clk_1x),
+.i_rst_n(adc_rstn),
+/*** 0~15 for gain decrease by 2^0 ~ 2^-15 ***/
+.i_gain_sel(err_shift_idx), 	// [5:0] 
+.i_err(dac_ladder_pre), 		//[31:0]
+.i_en(ladder_start_strobe),
+.i_zero(int_zero),
+.i_add_sig_en(mod_off),
+.i_gain_mode(i_gain_mode),
+.i_ext_sig(mod), 	//[EXT_SIG_BIT-1:0]
+.i_saturation(32'd1_000_000_000),//[31:0]
+.i_vth(reg_vth), 		//[31:0]
+.i_vth_cut_mode(vth_cut_mode),
+.o_int(dac_ladder_2)		//[31:0]
+
+/*** for simulation ***/
+// , .o_sat_p()		//[31:0]
+// , .o_sat_n()		//[31:0]
+// , .o_cstate(o_cstate)		//[3:0]
+// , .o_nstate(o_nstate)		//[3:0]
+// , .o_dv()			//[31:0]
+// , .o_vo(ladder_out_v0)			//[31:0]
+// , .o_change() 
+// , .o_shift_idx()	//[4:0]
+// , .o_sat_flag_p()
+// , .o_sat_flag_n()
+// , .o_err_pol_change()
+// , .o_zero_flag()
+// , .o_vth_flag_p(o_vth_flag_p)
+// , .o_vth_flag_n(o_vth_flag_n)
+// , .o_vth_cut_p()	//[31:0]
+// , .o_vth_cut_n()	//[31:0]
+);
+
+logic [31:0] dac_ladder;
+
+threshold_cut u4
+(
+.i_sig(dac_ladder_2),
+.i_vth(reg_vth),
+.i_vth_cut_mode(vth_cut_mode),
+.o_out(dac_ladder)
+);
 
 logic [31:0] mod_cnt = 32'd0, initial_cnt = Init_stable_cnt;
 logic [6:0] mv_cnt = deMOD_mv_cnt;
-logic signed [13:0] mod = reg_mod_H[13:0] ;
 logic signed [13:0] ADC_reg_H, ADC_reg_L;
-logic signed [14:0] ADC_reg_Diff, ADC_reg_Diff_ex_vth, Diff_vth;
-logic signed [31:0] ADC_reg_H_sum=32'd0, ADC_reg_L_sum=32'd0, step_MV_sum = 32'd0, ADC_reg_H_offset, ladder_1st_offset;
+logic signed [14:0] ADC_reg_Diff, ADC_reg_Diff_ex_vth;
+logic signed [31:0] ADC_reg_H_sum=32'd0, ADC_reg_L_sum=32'd0, step_MV_sum = 32'd0, ladder_1st_offset;
 logic [9:0] step_MV_index = 10'd0;
-logic mod_stat = mod_stat_H;
-logic ladder_start_strobe = 1'b0;
-logic err_polarity;
-logic signed [31:0] test_sum = 32'd0, test_add = $signed(-32'd1000), test, test_reg1, test_reg2;
+
+
+logic signed [31:0] test_sum = 32'd0, test_add, test, test_reg1, test_reg2;
 
 logic [2:0] SM_diff = 3'd0;
 
 logic MV = 1'b0;
 logic diff_MV_flag = 1'b0;
 
-always @(posedge dac_clk_1x) //MV
-begin
-    if(mv_mode == 3'd1) begin //no MV
-        deMOD_mv_cnt <= 7'd1;
-        mv_shift <= 3'd0;
-    end
-    else if(mv_mode == 3'd2) begin//MV  2
-        deMOD_mv_cnt <= 7'd2;
-        mv_shift <= 3'd1;
-    end    
-    else if(mv_mode == 3'd3) begin// MV 4
-        deMOD_mv_cnt <= 7'd4;
-        mv_shift <= 3'd2;
-    end
-    else if(mv_mode == 3'd4) begin// MV 8
-        deMOD_mv_cnt <= 7'd8;
-        mv_shift <= 3'd3;
-    end
-    else if(mv_mode == 3'd5) begin// MV 16
-        deMOD_mv_cnt <= 7'd16;
-        mv_shift <= 3'd4;
-    end
-    else if(mv_mode == 3'd6) begin// MV 32
-        deMOD_mv_cnt <= 7'd32;
-        mv_shift <= 3'd5;
-    end
-    else if(mv_mode == 3'd7) begin// MV 64
-        deMOD_mv_cnt <= 7'd64;
-        mv_shift <= 3'd6;
-    end
-end
 
-always @(posedge dac_clk_1x) //demodulation, MV
-begin
-    case (SM_diff)
-        3'd0: begin
-            if(mod_stat == mod_stat_H)
-                SM_diff <= 3'd1;
-            else 
-                SM_diff <= 3'd0;
-        end
-        3'd1: begin
-            if(initial_cnt != 32'd0) initial_cnt <= initial_cnt - 1'b1;
-            else begin
-                if(mv_cnt != 7'd0  && !MV) begin
-                    mv_cnt <= mv_cnt - 1'b1;
-                    ADC_reg_H_sum <= ADC_reg_H_sum + adc_dat[1];
-                    test_sum <= test_sum + test_add;
-                end
-                else if(mv_cnt == 7'd0  && !MV) begin
-                    ADC_reg_H <= (ADC_reg_H_sum >>> mv_shift) + ADC_reg_H_offset ;
-                    test <= test_sum >> mv_shift;
-                    MV = 1'b1;
-                end
-                else if(mod_stat == mod_stat_L) begin
-                    SM_diff <= 3'd2;
-                    initial_cnt <= Init_stable_cnt;
-                    mv_cnt <= deMOD_mv_cnt;
-                    test_sum <= 32'd0;
-                    ADC_reg_H_sum <= 32'd0;
-                    MV = 1'b0;
-                end
-                else 
-                    SM_diff <= 3'd1;         
-            end      
-        end
-        3'd2: begin
-            if(initial_cnt != 32'd0) initial_cnt <= initial_cnt - 1'b1;
-            else begin
-                if(mv_cnt != 7'd0  && !MV) begin           
-                    mv_cnt <= mv_cnt - 1'b1;
-                    ADC_reg_L_sum <= ADC_reg_L_sum + adc_dat[1];
-                end   
-                else if(mv_cnt == 7'd0  && !MV) begin
-                    ADC_reg_L <= ADC_reg_L_sum >>> mv_shift;
-                    MV = 1'b1;
-                end 
-                else begin
-                    SM_diff <= 3'd3;
-                    initial_cnt <= Init_stable_cnt;
-                    MV = 1'b0;
-                    ADC_reg_L_sum <= 32'd0;
-                    mv_cnt <= deMOD_mv_cnt;
-                end
-            end
-        end
-        3'd3: begin
-            diff_MV_flag = 1'b1;
-            if(!err_polarity)
-                ADC_reg_Diff <= ADC_reg_H - ADC_reg_L;
-            else 
-                ADC_reg_Diff <= ADC_reg_L - ADC_reg_H;
-            SM_diff <= 3'd4;
-			// measure <= adc_dat[0];
-        end
-        3'd4: begin
-            if(ADC_reg_Diff>= $signed(Diff_vth) || ADC_reg_Diff<= $signed(-Diff_vth))
-                ADC_reg_Diff_ex_vth <= ADC_reg_Diff;
-            else
-                ADC_reg_Diff_ex_vth <= 15'd0;
-            diff_MV_flag = 1'b0;
-            ladder_start_strobe <= 1'b1;
-            SM_diff <= 3'd5;
-        end
-        3'd5: begin
-            ladder_start_strobe <= 1'b0;
-            SM_diff <= 3'd0;
-        end
-    endcase
-end
 
 // moving average for open loop
 // var for step moving average
@@ -527,436 +585,31 @@ integer i;
 initial begin
     for(i=0; i<STEP_MV_TIMES; i=i+1) step_array[i] = 15'd0;
 end
-always@(posedge dac_clk_1x)
-begin
-    case(step_MV_case_sel)
-        3'd0: begin
-            if(diff_MV_flag) begin
-                step_MV_sum <= step_MV_sum - step_array[step_array_idx] ; //substract old value first
-                step_MV_case_sel <= 3'd1;
-            end
-        end
-        3'd1: begin
-            step_MV_sum <= step_MV_sum + ADC_reg_Diff; //add new value 
-            step_array[step_array_idx] <= ADC_reg_Diff;
-//            step_MV_sum <= step_MV_sum + $signed(-15'd1000);          
-//            step_array[step_array_idx] <= $signed(-15'd1000);
-            step_MV_case_sel <= 3'd2;
-        end
-        3'd2: begin
-            if(step_array_idx < STEP_MV_TIMES-1) step_array_idx <= step_array_idx + 1'b1;
-            else step_array_idx <= 11'd0;
-            step_MV_sum_out <= step_MV_sum;
-            ADC_reg_Diff_MV <= (step_MV_sum >>> STEP_MV_SHIFT);
-            step_MV_case_sel <= 3'd0;        
-        end
-    endcase
-end
 
-logic [13:0] reg_vth, reg_vth_1st_int; //8191 = 1V
-logic mod_off;
-logic signed [31:0] dac_ladder = 32'd0, dac_ladder_pre_vth = 32'd0, dac_ladder_pre = 32'd0, dac_ladder_2 = 32'd0, dac_ladder_out = 32'd0, dac_ladder_out_2 = 32'd0, err_signal, err_signal_pre = 32'd0;
+
+
+
+logic signed [31:0] dac_ladder_pre_vth = 32'd0, dac_ladder_out = 32'd0, dac_ladder_out_2 = 32'd0, err_signal, err_signal_pre = 32'd0;
 logic signed [13:0] rst_th_p = $signed(reg_vth), rst_th_n = $signed(-reg_vth);
 logic signed [13:0] rst_th_p_1st_int = $signed(reg_vth_1st_int), rst_th_n_1st_int = $signed(-reg_vth_1st_int);
 logic signed [19:0] err_signal_shift;
 logic ladder_rst;
-logic [4:0] err_shift_idx, err_shift_idx_pre;
 logic [1:0] pre_ladder_index = 2'd0;
 
-always@(posedge dac_clk_1x)
-begin
-    rst_th_p = $signed(reg_vth);
-    rst_th_n = $signed(-reg_vth);
-    rst_th_p_1st_int = $signed(reg_vth_1st_int);
-    rst_th_n_1st_int = $signed(-reg_vth_1st_int);
-end
+
 
 logic [1:0] ladder_pre_case = 2'd0;
 
-always@(posedge dac_clk_1x) //1st integrator
-begin
-    if(ladder_rst)
-        dac_ladder_pre_vth <= 32'd0;
-    else begin
-        case(pre_ladder_index)
-            2'd0: begin
-                if(ladder_start_strobe == 1'b1) begin    
-                        dac_ladder_pre_vth <= dac_ladder_pre_vth + err_signal;
-                        pre_ladder_index = 2'd1;
-                end
-                else dac_ladder_pre_vth <= dac_ladder_pre_vth;
-            end
-            
-            2'd1: begin
-                case(err_shift_idx_pre)
-                   5'd0: begin
-                           if(dac_ladder_pre_vth >= rst_th_p_1st_int)
-                               dac_ladder_pre_vth <= rst_th_p_1st_int;
-                           else if(dac_ladder_pre_vth <= rst_th_n_1st_int)
-                               dac_ladder_pre_vth <= rst_th_n_1st_int;                      
-                         end 
-                   5'd1: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);   
-                           end 
-                   5'd2: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end                                      
-                   5'd3: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end  
-                   5'd4: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end  
-                   5'd5: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end  
-                   5'd6: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);   
-                           end 
-                   5'd7: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end                                      
-                   5'd8: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end  
-                   5'd9: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end  
-                   5'd10: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end
-                   5'd11: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end
-                   5'd12: begin
-                                     if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                         dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                                     else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                         dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                                   end
-                   5'd13: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end
-                   5'd14: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end
-                   5'd15: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end
-                   5'd16: begin
-                                     if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                         dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                                     else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                         dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                                   end
-                   5'd17: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end
-                   5'd18: begin
-                             if(dac_ladder_pre_vth >= (rst_th_p_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_p_1st_int<<<err_shift_idx_pre);
-                             else if(dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre))
-                                 dac_ladder_pre_vth <= (rst_th_n_1st_int<<<err_shift_idx_pre);  
-                           end
-               endcase 
-               pre_ladder_index = 2'd0;
-            end
-        endcase
-    end
-end
 
-always@(posedge dac_clk_1x) 
-begin 
-    case(err_shift_idx_pre)
-        5'd0: dac_ladder_pre <= dac_ladder_pre_vth + ladder_1st_offset;
-        5'd1: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;   
-        5'd2: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
-        5'd3: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd4: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
-        5'd5: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd6: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd7: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;   
-        5'd8: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
-        5'd9: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd10: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
-        5'd11: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd12: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd13: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
-        5'd14: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd15: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd16: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset;
-        5'd17: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-        5'd18: dac_ladder_pre <= (dac_ladder_pre_vth >>> err_shift_idx_pre) + ladder_1st_offset; 
-     endcase
-	 measure <= dac_ladder_pre[13:0];
-end
 
-always@(posedge dac_clk_1x) //ladder wave mid
-begin
-    if(ladder_rst)
-        dac_ladder <= 32'd0;
-    else begin
-        if(ladder_start_strobe == 1'b1) begin    
-            dac_ladder <= dac_ladder + dac_ladder_pre;
-        end
-        else 
-            dac_ladder <= dac_ladder;
-                           
-        case(err_shift_idx)
-            5'd0: begin
-                    if(dac_ladder >= rst_th_p)
-                        dac_ladder <= dac_ladder - reg_vth;
-                    else if(dac_ladder <= rst_th_n)
-                        dac_ladder <= dac_ladder + reg_vth;   
-                  end
-            5'd1: begin
-                    if(dac_ladder >= (rst_th_p<<<1))
-                        dac_ladder <= dac_ladder - (reg_vth<<<1);
-                    else if(dac_ladder <= (rst_th_n<<<1))
-                        dac_ladder <= dac_ladder + (reg_vth<<<1);     
-                  end
-            5'd2: begin
-                      if(dac_ladder >= (rst_th_p<<<2))
-                          dac_ladder <= dac_ladder - (reg_vth<<<2);
-                      else if(dac_ladder <= (rst_th_n<<<2))
-                          dac_ladder <= dac_ladder + (reg_vth<<<2);      
-                    end        
-            5'd3: begin
-                      if(dac_ladder >= (rst_th_p<<<3))
-                          dac_ladder <= dac_ladder - (reg_vth<<<3);
-                      else if(dac_ladder <= (rst_th_n<<<3))
-                          dac_ladder <= dac_ladder + (reg_vth<<<3);             
-                    end
-            5'd4: begin
-                      if(dac_ladder >= (rst_th_p<<<4))
-                           dac_ladder <= dac_ladder - (reg_vth<<<4);
-                      else if(dac_ladder <= (rst_th_n<<<4))
-                          dac_ladder <= dac_ladder + (reg_vth<<<4);       
-                    end
-            5'd5: begin
-                      if(dac_ladder >= (rst_th_p<<<5))
-                          dac_ladder <= dac_ladder - (reg_vth<<<5);
-                      else if(dac_ladder <= (rst_th_n<<<5))
-                          dac_ladder <= dac_ladder + (reg_vth<<<5);            
-                    end
-            5'd6: begin
-                      if(dac_ladder >= (rst_th_p<<<6))
-                           dac_ladder <= dac_ladder - (reg_vth<<<6);
-                      else if(dac_ladder <= (rst_th_n<<<6))
-                           dac_ladder <= dac_ladder + (reg_vth<<<6);      
-                    end
-            5'd7: begin
-                      if(dac_ladder >= (rst_th_p<<<7))
-                          dac_ladder <= dac_ladder - (reg_vth<<<7);
-                      else if(dac_ladder <= (rst_th_n<<<7))
-                          dac_ladder <= dac_ladder + (reg_vth<<<7);                 
-                    end
-            5'd8: begin
-                      if(dac_ladder >= (rst_th_p<<<8))
-                          dac_ladder <= dac_ladder - (reg_vth<<<8);
-                      else if(dac_ladder <= (rst_th_n<<<8))
-                          dac_ladder <= dac_ladder + (reg_vth<<<8);          
-                    end
-            5'd9: begin
-                      if(dac_ladder >= (rst_th_p<<<9))
-                          dac_ladder <= dac_ladder - (reg_vth<<<9);
-                      else if(dac_ladder <= (rst_th_n<<<9))
-                          dac_ladder <= dac_ladder + (reg_vth<<<9);            
-                    end
-            5'd10: begin
-                      if(dac_ladder >= (rst_th_p<<<10))
-                          dac_ladder <= dac_ladder - (reg_vth<<<10);
-                      else if(dac_ladder <= (rst_th_n<<<10))
-                           dac_ladder <= dac_ladder + (reg_vth<<<10);        
-                    end
-            5'd11: begin
-                      if(dac_ladder >= (rst_th_p<<<11))
-                          dac_ladder <= dac_ladder - (reg_vth<<<11);
-                      else if(dac_ladder <= (rst_th_n<<<11))
-                           dac_ladder <= dac_ladder + (reg_vth<<<11);        
-                    end
-            5'd12: begin
-                      if(dac_ladder >= (rst_th_p<<<12))
-                          dac_ladder <= dac_ladder - (reg_vth<<<12);
-                      else if(dac_ladder <= (rst_th_n<<<12))
-                           dac_ladder <= dac_ladder + (reg_vth<<<12);        
-                    end
-            5'd13: begin
-                      if(dac_ladder >= (rst_th_p<<<13))
-                          dac_ladder <= dac_ladder - (reg_vth<<<13);
-                      else if(dac_ladder <= (rst_th_n<<<13))
-                           dac_ladder <= dac_ladder + (reg_vth<<<13);        
-                    end                            
-            5'd14: begin
-                      if(dac_ladder >= (rst_th_p<<<14))
-                          dac_ladder <= dac_ladder - (reg_vth<<<14);
-                      else if(dac_ladder <= (rst_th_n<<<14))
-                           dac_ladder <= dac_ladder + (reg_vth<<<14);        
-                    end                           
-            5'd15: begin
-                      if(dac_ladder >= (rst_th_p<<<15))
-                          dac_ladder <= dac_ladder - (reg_vth<<<15);
-                      else if(dac_ladder <= (rst_th_n<<<15))
-                           dac_ladder <= dac_ladder + (reg_vth<<<15);        
-                    end                           
-            5'd16: begin
-                      if(dac_ladder >= (rst_th_p<<<16))
-                          dac_ladder <= dac_ladder - (reg_vth<<<16);
-                      else if(dac_ladder <= (rst_th_n<<<16))
-                           dac_ladder <= dac_ladder + (reg_vth<<<16);        
-                    end                           
-            5'd17: begin
-                      if(dac_ladder >= (rst_th_p<<<17))
-                          dac_ladder <= dac_ladder - (reg_vth<<<17);
-                      else if(dac_ladder <= (rst_th_n<<<17))
-                           dac_ladder <= dac_ladder + (reg_vth<<<17);        
-                    end                           
-            5'd18: begin
-                      if(dac_ladder >= (rst_th_p<<<18))
-                          dac_ladder <= dac_ladder - (reg_vth<<<18);
-                      else if(dac_ladder <= (rst_th_n<<<18))
-                           dac_ladder <= dac_ladder + (reg_vth<<<18);        
-                    end                           
-                                                
-        endcase
-    end
-     
-end
+// mult_gen_1 m2 (
+  // .CLK(dac_clk_1x),  // input wire CLK
+  // .A(ADC_reg_Diff_ex_vth),      // input wire [14 : 0] A
+  // .B(reg_err_gain),      // input wire [16 : 0] B
+  // .P(err_signal)      // output wire [31: 0] P
+// );
 
-always@(posedge dac_clk_1x) 
-begin 
-    if(ladder_rst)
-        dac_ladder_2 <= 32'd0;
-    else begin
-        case(err_shift_idx)
-            5'd0: dac_ladder_2 <= dac_ladder;
-            5'd1: dac_ladder_2 <= (dac_ladder >>> 1);   
-            5'd2: dac_ladder_2 <= (dac_ladder >>> 2);
-            5'd3: dac_ladder_2 <= (dac_ladder >>> 3); 
-            5'd4: dac_ladder_2 <= (dac_ladder >>> 4);
-            5'd5: dac_ladder_2 <= (dac_ladder >>> 5); 
-            5'd6: dac_ladder_2 <= (dac_ladder >>> 6);    
-            5'd7: dac_ladder_2 <= (dac_ladder >>> 7);  
-            5'd8: dac_ladder_2 <= (dac_ladder >>> 8);   
-            5'd9: dac_ladder_2 <= (dac_ladder >>> 9);   
-            5'd10: dac_ladder_2 <= (dac_ladder >>> 10);
-            5'd11: dac_ladder_2 <= (dac_ladder >>> 11);
-            5'd12: dac_ladder_2 <= (dac_ladder >>> 12);
-            5'd13: dac_ladder_2 <= (dac_ladder >>> 13);
-            5'd14: dac_ladder_2 <= (dac_ladder >>> 14);
-            5'd15: dac_ladder_2 <= (dac_ladder >>> 15);
-            5'd16: dac_ladder_2 <= (dac_ladder >>> 16);
-            5'd17: dac_ladder_2 <= (dac_ladder >>> 17);
-            5'd18: dac_ladder_2 <= (dac_ladder >>> 18);
-         endcase
-     end
-end
 
-always@(posedge dac_clk_1x) //ladder wave
-begin 
-    if(mod_off)
-        dac_ladder_out <= dac_ladder_2;
-    else
-        dac_ladder_out <= dac_ladder_2 + mod; 
-end
-
-always@(posedge dac_clk_1x) //ladder wave
-begin 
-//    if(dac_ladder_2 >= 0) begin
-//        if(dac_ladder_out > rst_th_p)
-//            dac_ladder_out_2 <= dac_ladder_out - reg_vth;
-//        else if(dac_ladder_out < 0)
-//            dac_ladder_out_2 <= dac_ladder_out + reg_vth;
-//        else dac_ladder_out_2 <= dac_ladder_out;
-//    end
-//    else begin
-//        if(dac_ladder_out <= rst_th_n)
-//            dac_ladder_out_2 <= dac_ladder_out + reg_vth;
-//        else if(dac_ladder_out > 0)
-//            dac_ladder_out_2 <= dac_ladder_out - reg_vth;
-//        else dac_ladder_out_2 <= dac_ladder_out;
-//    end
-    
-    if(dac_ladder_out > rst_th_p)
-        dac_ladder_out_2 <= dac_ladder_out - reg_vth;
-    else if(dac_ladder_out <= rst_th_n)
-        dac_ladder_out_2 <= dac_ladder_out + reg_vth;
-    else dac_ladder_out_2 <= dac_ladder_out;
-end
-
-mult_gen_1 m2 (
-  .CLK(dac_clk_1x),  // input wire CLK
-  .A(ADC_reg_Diff_ex_vth),      // input wire [14 : 0] A
-  .B(reg_err_gain),      // input wire [16 : 0] B
-  .P(err_signal)      // output wire [31: 0] P
-);
-
-always @(posedge dac_clk_1x) //MOD
-begin
-    if(mod_cnt == 0)
-    begin
-        mod_cnt <= reg_mod_freq_cnt;
-        if(mod_stat == mod_stat_L)
-        begin
-            mod <= reg_mod_H[13:0];
-            mod_stat <= mod_stat_H;
-			// measure <= mod;
-        end
-        else if(mod_stat == mod_stat_H)
-        begin
-            mod <= reg_mod_L[13:0];
-            mod_stat <= mod_stat_L;
-			// measure <= mod;
-        end      
-    end
-    else
-        mod_cnt <= mod_cnt - 1'b1;
-end
 // output registers + signed to unsigned (also to negative slope)
 always @(posedge dac_clk_1x)
 begin
@@ -982,20 +635,20 @@ ODDR oddr_dac_dat [14-1:0] (.Q(dac_dat_o), .D1(dac_dat_b), .D2(dac_dat_a), .C(da
 ////////////////////////////////////////////////////////////////////////////////
 //Kalman filter
 ////////////////////////////////////////////////////////////////////////////////
-logic signed [14-1:0] x_apo_est, P_apo_est;
-logic signed [14-1:0] P_apri_est;
-logic signed [15-1:0] out_adder_P_apri_est_R;
-logic signed [48-1:0] K;
-logic signed [32-1:0] out_subtractor_1_K;
-logic signed [47-1:0] out_multiplier_P_apo_est;
+// logic signed [14-1:0] x_apo_est, P_apo_est;
+// logic signed [14-1:0] P_apri_est;
+// logic signed [15-1:0] out_adder_P_apri_est_R;
+// logic signed [48-1:0] K;
+// logic signed [32-1:0] out_subtractor_1_K;
+// logic signed [47-1:0] out_multiplier_P_apo_est;
 
-logic signed [14-1:0] post_error;
-logic signed [47-1:0] out_multiplier_K_post_error;
-logic signed [64-1:0] out_divider_K_post_error;
-logic signed [31:0] out_adder_x_apri_est_divided_K_post_error;
-logic signed [64-1:0] out_divider_P_apo_est;
-logic signed [13:0] measure;
-
+// logic signed [14-1:0] post_error;
+// logic signed [47-1:0] out_multiplier_K_post_error;
+// logic signed [64-1:0] out_divider_K_post_error;
+// logic signed [31:0] out_adder_x_apri_est_divided_K_post_error;
+// logic signed [64-1:0] out_divider_P_apo_est;
+// logic signed [13:0] measure;
+/***
 //  p
 adder P_apo_est_shifted_Q //P_apo_est + Q
 (
@@ -1125,6 +778,7 @@ begin
         x_apo_est_r <= x_apo_est;
     end
 end
+***/
 ////////////////////////////////////////////////////////////////////////////////
 //  House Keeping
 ////////////////////////////////////////////////////////////////////////////////
@@ -1156,7 +810,7 @@ red_pitaya_id i_id (
   .ADC_reg_H(ADC_reg_H),
   .ADC_reg_L(ADC_reg_L),
   .ADC_reg_Diff(ADC_reg_Diff),
-  .err_signal(err_signal),
+  .err_signal(err_w_th),
   .ADC_reg_H_sum(ADC_reg_H_sum),
   .Init_stable_cnt(Init_stable_cnt),
   .ADC_reg_H_offset(ADC_reg_H_offset),
@@ -1175,8 +829,11 @@ red_pitaya_id i_id (
   .err_signal_pre(err_signal_pre),
   .dac_ladder_pre_vth(dac_ladder_pre_vth),
   .dac_ladder_2(dac_ladder_2),
-  .ladder_1st_offset(ladder_1st_offset)
-  
+  .ladder_1st_offset(ladder_1st_offset),
+  .int_zero(int_zero),
+  .int_gain_mode(int_gain_mode)
+  , .vth_cut_mode(vth_cut_mode)
+  , .reg_vth_pre(reg_vth_pre)
 );
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1260,5 +917,7 @@ red_pitaya_pid i_pid (
   .sys_err         (sys[3].err  ),
   .sys_ack         (sys[3].ack  )
 );
+
+
 
 endmodule: red_pitaya_top

@@ -166,7 +166,7 @@ if (rstn_i == 1'b0) begin
   Init_stable_cnt <= 32'd100; //for 500KH
   reg_err_gain <= 17'd1;
   reg_vth <= 32'd8191; //8191 = 1V
-  reg_vth_1st_int <= 32'd4096;
+  reg_vth_1st_int <= 32'd16777216;
   Diff_vth <= 15'd0;
   err_polarity <= 1'b0;
   mod_off <= 0;
